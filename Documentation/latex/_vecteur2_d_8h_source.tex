@@ -1,0 +1,67 @@
+\hypertarget{_vecteur2_d_8h_source}{}\doxysection{Vecteur2\+D.\+h}
+\label{_vecteur2_d_8h_source}\index{Vecteur2D.h@{Vecteur2D.h}}
+\mbox{\hyperlink{_vecteur2_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{19 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{20 \textcolor{keyword}{const} T \mbox{\hyperlink{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}{operator-\/}}(\textcolor{keyword}{const} T\& u, \textcolor{keyword}{const} T\& v) \{}
+\DoxyCodeLine{21     \textcolor{keywordflow}{return} u + -\/v;}
+\DoxyCodeLine{22 \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \textcolor{keywordtype}{double} x, y;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \textcolor{keyword}{inline} \textcolor{keyword}{explicit} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& x = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& y = 0);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{inline} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s);}
+\DoxyCodeLine{36     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator + (\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& u) \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator * (\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& a) \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator-\/ () \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keyword}{operator} string() \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} operator *(\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& u)}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} u * a;}
+\DoxyCodeLine{47 \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{inline} Vecteur2D::Vecteur2D(\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& x, \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& y) : x(x), y(y) \{\}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2D::operator + (\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& u)\textcolor{keyword}{ const}}
+\DoxyCodeLine{52 \textcolor{keyword}{}\{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(x + u.x, y + u.y);}
+\DoxyCodeLine{54 \}}
+\DoxyCodeLine{55 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2D::operator * (\textcolor{keyword}{const} \textcolor{keywordtype}{double}\& a)\textcolor{keyword}{ const}}
+\DoxyCodeLine{56 \textcolor{keyword}{}\{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(x * a, y * a);}
+\DoxyCodeLine{58 \}}
+\DoxyCodeLine{59 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2D::operator -\/ ()\textcolor{keyword}{ const}}
+\DoxyCodeLine{60 \textcolor{keyword}{}\{}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}(-\/x, -\/y);}
+\DoxyCodeLine{62 \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 Vecteur2D::operator string()\textcolor{keyword}{ const}}
+\DoxyCodeLine{65 \textcolor{keyword}{}\{}
+\DoxyCodeLine{66     ostringstream os;}
+\DoxyCodeLine{67     os << \textcolor{stringliteral}{"{}( "{}} << x << \textcolor{stringliteral}{"{}, "{}} << y << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} os.str();}
+\DoxyCodeLine{69 \}}
+\DoxyCodeLine{70 ostream\& operator << (ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& u)}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     os << (string)u;}
+\DoxyCodeLine{73     \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{74 \}}
+\DoxyCodeLine{75 }
+
+\end{DoxyCode}
