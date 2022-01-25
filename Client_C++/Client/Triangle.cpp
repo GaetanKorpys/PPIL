@@ -88,7 +88,7 @@ Triangle::operator string()const
 		<< "Point 3 : " << _p3 << ", "
 		<< Forme::operator string() << ", "
 		<< "Aire : " << getAire()
-		<< " ] " << endl; 
+		<< " ] " << endl << endl;
 	return os.str();
 }
 
@@ -106,11 +106,11 @@ void Triangle::homothetie(const Vecteur2D& op, double r)
 	_p3.homothetie(op, r);
 }
 
-void Triangle::rotation(double angle)
+void Triangle::rotation(const Vecteur2D& op, double angle)
 {
-	_p1.rotation(angle);
-	_p2.rotation(angle);
-	_p3.rotation(angle);
+	_p1.rotation(op, angle);
+	_p2.rotation(op, angle);
+	_p3.rotation(op, angle);
 }
 
 const double Triangle::getAire()const

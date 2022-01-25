@@ -11,7 +11,7 @@ Vecteur2D::Vecteur2D(const Vecteur2D& op)
 Vecteur2D::operator string() const
 {
 	ostringstream os;
-	os << "(" << _abscisse << ", " << _ordonnee << ")";
+	os << "Vecteur (" << _abscisse << ", " << _ordonnee << ")" << endl;
 	return os.str();
 }
 
@@ -68,11 +68,11 @@ void Vecteur2D::homothetie(const Vecteur2D& op, double r)
 
 }
 
-void Vecteur2D::rotation(double angle)
+void Vecteur2D::rotation(const Vecteur2D& op, double angle)
 {
-	double tempX = _abscisse;
-	double tempY = _ordonnee;
+	double  a = _abscisse - op._abscisse;
+	double  b = _ordonnee - op._ordonnee;
 
-	_abscisse = tempX * cos(angle) - tempY * sin(angle);
-	_ordonnee = tempX * sin(angle) + tempY * cos(angle);
+	a = op._abscisse + _abscisse * cos(angle) - a * sin(angle);
+	b = op._ordonnee + _ordonnee * sin(angle) + b * cos(angle);
 }

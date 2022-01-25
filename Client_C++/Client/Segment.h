@@ -54,7 +54,7 @@ public:
 
 	void homothetie(const Vecteur2D& op, double r);
 
-	void rotation(double angle);
+	void rotation(const Vecteur2D& op, double angle);
 
 	const double getAire()const;
 

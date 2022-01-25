@@ -11,7 +11,7 @@ bool Polygone::polygoneValide(const vector<Vecteur2D>& op)const
 	return true;
 }
 
-void Polygone::copie(const vector<Vecteur2D>& op)
+void Polygone::copie(const vector<Vecteur2D >& op)
 {
 	for (int i = 0; i < op.size(); i++)
 	{
@@ -32,7 +32,7 @@ Polygone::Polygone(const vector<Vecteur2D>& op, const string& couleur):Forme(cou
 {
 	for(int i = 0; i < op.size(); i++)
 	{
-		_listePoints.push_back(op[i]);
+		_listePoints.push_back(*op[i].clone());
 	}
 }
 
@@ -43,7 +43,8 @@ Polygone::Polygone(const Polygone& op) : Forme(op.getCouleur())
 
 Polygone::~Polygone()
 {
-	
+	for (std::vector<Vecteur2D>::iterator it = _listePoints.begin(); it != _listePoints.end(); it++)
+		delete& it;
 }
 
 int Polygone::getNbPoints()const
@@ -58,8 +59,11 @@ const Vecteur2D& Polygone::getPoint(int index)const
 
 const Polygone& Polygone::operator = (const Polygone& op)
 {
-	copie(op._listePoints);
-	Forme::operator=(op);
+	if (this != &op)
+	{
+		copie(op._listePoints);
+		Forme::operator=(op);
+	}
 	return *this;
 }
 
@@ -130,7 +134,7 @@ Polygone::operator string()const
 	{
 		os << "Points " << i << " : " << _listePoints[i];
 	}
-	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl;
+	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl << endl;
 	return os.str();
 }
 
@@ -150,11 +154,11 @@ void Polygone::homothetie(const Vecteur2D& op, double r)
 	}
 }
 
-void Polygone::rotation(double angle)
+void Polygone::rotation(const Vecteur2D& op, double angle)
 {
 	for (int i = 0; i < _listePoints.size(); i++)
 	{
-		_listePoints[i].rotation(angle);
+		_listePoints[i].rotation(op, angle);
 	}
 }
 
@@ -162,15 +166,11 @@ const double Polygone::getAire()const
 {
 	if (_listePoints.size() < 3)
 		return 0;
-	double aire = 0;
 
-	for (int i = 0; i < _listePoints.size() - 1; i++) {
-		aire += _listePoints[i].getX() * _listePoints[i + 1].getY() - _listePoints[i + 1].getX() * _listePoints[i].getY();
-	}
-	aire +=
-		_listePoints[_listePoints.size() - 1].getX() * _listePoints[0].getY() - _listePoints[0].getX() * _listePoints[_listePoints.size() - 1].getY();
-
-	return 1. / 2. * aire;
+	double somme = _listePoints[_listePoints.size() - 1].determinant(_listePoints[0]);
+	for (int i = 0; i < _listePoints.size() - 1; i++)
+		somme += _listePoints[i].determinant(_listePoints[i + 1]);
+	return 0.5 * fabs(somme);
 }
 
 Polygone* Polygone::clone() const

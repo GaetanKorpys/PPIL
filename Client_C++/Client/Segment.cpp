@@ -72,7 +72,7 @@ Segment::operator string()const
 		<< "Point 2 : " << _p2 << ", "
 		<< Forme::operator string() << ", "
 		<< "Aire : " << getAire()
-		<< " ] " << endl;
+		<< " ] " << endl << endl;
 	return os.str();
 }
 
@@ -88,10 +88,10 @@ void Segment::homothetie(const Vecteur2D& op, double r)
 	_p2.homothetie(op, r);
 }
 
-void Segment::rotation(double angle)
+void Segment::rotation(const Vecteur2D& op, double angle)
 {
-	_p1.rotation(angle);
-	_p2.rotation(angle);
+	_p1.rotation(op, angle);
+	_p2.rotation(op, angle);
 }
 
 const double Segment::getAire()const

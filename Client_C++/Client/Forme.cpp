@@ -32,4 +32,3 @@ Forme::operator string()const
 }
 
 
-

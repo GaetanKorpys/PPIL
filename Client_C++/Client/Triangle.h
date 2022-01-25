@@ -26,7 +26,7 @@ class Triangle : public Forme
 
 public:
 
-	Triangle(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3, const string& couleur);
+	Triangle(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3, const string& couleur = BLACK);
 
 	Triangle(const Triangle& op);
 
@@ -65,7 +65,7 @@ public:
 
 	void homothetie(const Vecteur2D& op, double r);
 
-	void rotation(double angle);
+	void rotation(const Vecteur2D& op, double angle);
 
 	const double getAire()const;
 

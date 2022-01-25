@@ -20,6 +20,8 @@ class Polygone : public Forme
 
 public:
 
+	Polygone(){}
+
 	Polygone(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3, const string& couleur = BLACK);
 
 	Polygone(const vector<Vecteur2D>& op, const string& couleur = BLACK);
@@ -54,7 +56,7 @@ public:
 
 	void homothetie(const Vecteur2D& op, double r);
 
-	void rotation(double angle);
+	void rotation(const Vecteur2D& op, double angle);
 
 	const double getAire()const;
 

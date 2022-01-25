@@ -6,6 +6,7 @@
 #pragma once
 #include <string>
 #include <sstream>
+#include <iostream>
 
 using namespace std;
 
@@ -145,7 +146,12 @@ public:
 
 	Vecteur2D* clone()const
 	{
-		return new Vecteur2D;
+		return new Vecteur2D(*this);
+	}
+
+	void affiche(ostream& os = cout)
+	{
+		os << (*this);
 	}
 
 	///////////////////////////////////////
@@ -185,7 +191,7 @@ public:
 	 * \param angle double
 	 * \return void
 	 */
-	void rotation(double angle);
+	void rotation(const Vecteur2D& op, double angle);
 
 };
 
@@ -194,6 +200,8 @@ public:
 	///		Implémentation des méthodes inline	 ///
 	///											 ///
 	////////////////////////////////////////////////
+
+
 
 inline Vecteur2D::~Vecteur2D(){}
 

@@ -15,7 +15,7 @@ class Cercle :public Forme
 
 public:
 
-	Cercle(const Vecteur2D& op, double rayon, const string& couleur);
+	Cercle(const Vecteur2D& op, double rayon, const string& couleur = BLACK);
 
 	Cercle(const Cercle& op);
 
@@ -51,7 +51,7 @@ public:
 
 	void homothetie(const Vecteur2D& op, double r);
 
-	void rotation(double angle);
+	void rotation(const Vecteur2D& op, double angle);
 
 	const double getAire()const;
 

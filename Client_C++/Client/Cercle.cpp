@@ -56,14 +56,13 @@ Cercle::operator string()const
 		<< "Rayon: " << _rayon << ", "
 		<< Forme::operator string() << ", "
 		<< "Aire : " << getAire()
-		<< " ] " << endl;
+		<< " ] " << endl << endl;
 	return os.str();
 }
 
 void Cercle::translation(const Vecteur2D& op)
 {
 	_centre.translation(op);
-
 }
 
 void Cercle::homothetie(const Vecteur2D& op, double r)
@@ -72,10 +71,9 @@ void Cercle::homothetie(const Vecteur2D& op, double r)
 	_rayon *= fabs(r);
 }
 
-void Cercle::rotation(double angle)
+void Cercle::rotation(const Vecteur2D& op,double angle)
 {
-	_centre.rotation(angle);
-
+	_centre.rotation(op, angle);
 }
 
 const double Cercle::getAire()const

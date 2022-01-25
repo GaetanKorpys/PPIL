@@ -140,6 +140,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="Dessin.h" />
+    <ClInclude Include="Socket.h" />
     <ClInclude Include="Constante.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Forme.h" />
@@ -151,11 +153,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="Dessin.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Forme.cpp" />
+    <ClCompile Include="Groupe.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Segment.cpp" />
+    <ClCompile Include="Socket.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
   </ItemGroup>

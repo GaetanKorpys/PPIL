@@ -13,60 +13,105 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers sources\Vecteur">
+      <UniqueIdentifier>{631fa70e-d6ee-43b9-9286-a3438e51a60d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Forme">
+      <UniqueIdentifier>{f67d958e-ceb4-4a31-967f-6680892f8c72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Exception">
+      <UniqueIdentifier>{93be1f42-e45a-40f9-beab-19d1bfa6842a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Forme">
+      <UniqueIdentifier>{9673170f-5214-4c68-8ad1-c821e0d3cdf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Exception">
+      <UniqueIdentifier>{9c3ca5a2-ed24-4c69-9fda-48b186f33de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Vecteur">
+      <UniqueIdentifier>{fd58e099-4a45-400c-9152-8b69df8bfae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Constante">
+      <UniqueIdentifier>{27639b6c-c222-4576-a8b3-8f91cba82b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur">
+      <UniqueIdentifier>{ab1c90e5-1a56-4987-afee-43c7959dae46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Communication">
+      <UniqueIdentifier>{55d38734-75e0-46db-9b34-3c4084b8a1ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Communication">
+      <UniqueIdentifier>{f5bd3577-db01-44ee-8834-fca6b5c7128f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exception.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Vecteur2D.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Cercle.h">
+      <Filter>Fichiers d%27en-tête\Forme</Filter>
     </ClInclude>
     <ClInclude Include="Forme.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Segment.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Cercle.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Constante.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Forme</Filter>
     </ClInclude>
     <ClInclude Include="Polygone.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment.h">
+      <Filter>Fichiers d%27en-tête\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Fichiers d%27en-tête\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Fichiers d%27en-tête\Exception</Filter>
     </ClInclude>
     <ClInclude Include="Groupe.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="Vecteur2D.h">
+      <Filter>Fichiers d%27en-tête\Vecteur</Filter>
+    </ClInclude>
+    <ClInclude Include="Constante.h">
+      <Filter>Fichiers d%27en-tête\Constante</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket.h">
+      <Filter>Fichiers d%27en-tête\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="Dessin.h">
+      <Filter>Fichiers d%27en-tête\Communication</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Vecteur2D.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Exception.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Forme.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Segment.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="Vecteur2D.cpp">
+      <Filter>Fichiers sources\Vecteur</Filter>
     </ClCompile>
     <ClCompile Include="Cercle.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="Forme.cpp">
+      <Filter>Fichiers sources\Forme</Filter>
     </ClCompile>
     <ClCompile Include="Polygone.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="Segment.cpp">
+      <Filter>Fichiers sources\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Fichiers sources\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>Fichiers sources\Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="Groupe.cpp">
+      <Filter>Fichiers sources\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket.cpp">
+      <Filter>Fichiers sources\Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="Dessin.cpp">
+      <Filter>Fichiers sources\Communication</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

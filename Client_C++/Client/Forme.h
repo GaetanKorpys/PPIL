@@ -64,7 +64,7 @@ public :
 
 	virtual void homothetie(const Vecteur2D& op, double r) = 0;
 
-	virtual void rotation(double angle) = 0;
+	virtual void rotation(const Vecteur2D& op, double angle) = 0;
 
 	virtual const double getAire() const = 0;
 

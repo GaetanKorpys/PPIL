@@ -1,73 +1,94 @@
-#define _CRTDBG_MAP_ALLOC
+//#define _CRTDBG_MAP_ALLOC
 #include "Vecteur2D.h"
 #include "Triangle.h"
+#include "Cercle.h"
 #include "Segment.h"
+#include "Polygone.h"
+#include "Groupe.h"
 #include "Exception.h"
-#include <crtdbg.h>
+
 
 
 int main()
 {
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	cout << "essai des vecteurs 2D \n";
-	Vecteur2D u1(2, 3), u2(2, 3), v(5), w, v1(35, -63), u3(3, 4), u4(3, -4), v3;
-	cout << " u1 = " << u1 << endl;
-	cout << " u2 = " << u2 << endl;
-	cout << " u1 - u2 = " << u1 - u2 << endl;
-	cout << " 5*u1 = " << 5 * u1 << endl;
+	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-	v3.setX(3);
-
-	cout << "essai Triangles \n";
 
 	try
 	{
-		cout << "essai 1 \n";
+		cout << "Début des tests." << endl << endl; 
 
-		cout << " u1 = " << u1 << endl;
-		cout << " v = " << v << endl;
-		cout << " u3 = " << u3 << endl;
-		Triangle a(u1, v, u3, "noir");
+		cout << "Création des Vecteurs." << endl << endl;
 
-		cout << "essai 2 \n";
+		Vecteur2D a, b(3, 6), c(9, 12), d(5, 5), e(20, 14);
+
+		cout << "Affichage des vecteurs." << endl << endl;
+
 		a.affiche();
-
-		Triangle b = a;
-
 		b.affiche();
-		Vecteur2D f(0, 0);
-
-		Vecteur2D g(1, 1);
-
-		Vecteur2D h(2, 2);
-
-		Triangle c(f, g, h, "jaune");
-
 		c.affiche();
+		d.affiche();
+		e.affiche();
 
-		a.setP1(u2);
+		cout << endl << "Création des segments." << endl << endl;
 
-		cout << "essai 3 \n";
+		Segment f(a, b), g(a, b, RED), h(c, d, GREEN);
 
-		Segment s(f, g, "jaune");
+		cout << "Affichage des segments." << endl << endl;
 
-		s.affiche();
+		f.affiche();
+		g.affiche();
+		h.affiche();
 
-		Segment k(g, h, "bleu");
+		cout << endl << "Création des triangles." << endl << endl;
+
+		Triangle i(a, b, c), j(e, d, b, YELLOW);
+
+		cout << "Affichage des triangles." << endl << endl;
+
+		i.affiche();
+		j.affiche();
+
+		cout << "Création des cercles." << endl << endl;
+
+		double rayon = 3;
+
+		Cercle k(b, rayon), l(e, rayon + 2, RED);
+
+		cout << "Affichage des cercles." << endl << endl;
 
 		k.affiche();
+		l.affiche();
 
-		k = s;
+		cout << "Création d'un polygone." << endl << endl;
 
-		k.affiche();
+		Polygone m;
+		m.ajouter(a);
+		m.ajouter(b);
+		m.ajouter(c);
+		m.ajouter(d);
+		m.ajouter(e);
 
-		k.setP1(g);
+		cout << "Affichage du polygone." << endl << endl;
 
+		m.affiche();
+
+		cout << "Création d'un groupe." << endl << endl;
+
+		Groupe n;
+		n.ajouter(f);
+		n.ajouter(i);
+		n.ajouter(k);
+		n.ajouter(m);
+
+		cout << "Affichage du groupe." << endl << endl;
+
+		n.affiche();
 
 	}
 	catch (Exception e)
 	{
-		cout << e << endl;
+		cout << e << endl << endl;
 	}
 
 
