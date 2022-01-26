@@ -1,4 +1,4 @@
-//#define _CRTDBG_MAP_ALLOC
+#define _CRTDBG_MAP_ALLOC
 #include "Vecteur2D.h"
 #include "Triangle.h"
 #include "Cercle.h"
@@ -11,8 +11,7 @@
 
 int main()
 {
-	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-
+	_CrtSetDbgFlag(_CRTDBG_CHECK_ALWAYS_DF);
 
 	try
 	{
@@ -20,7 +19,7 @@ int main()
 
 		cout << "Création des Vecteurs." << endl << endl;
 
-		Vecteur2D a, b(3, 6), c(9, 12), d(5, 5), e(20, 14);
+		Vecteur2D a(0), b(3, 6), c(9, 12), d(5, 5), e(20, 14);
 
 		cout << "Affichage des vecteurs." << endl << endl;
 

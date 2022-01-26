@@ -43,8 +43,10 @@ Polygone::Polygone(const Polygone& op) : Forme(op.getCouleur())
 
 Polygone::~Polygone()
 {
-	for (std::vector<Vecteur2D>::iterator it = _listePoints.begin(); it != _listePoints.end(); it++)
-		delete& it;
+	for(int i = 0; i < _listePoints.size(); i++)
+	{
+		delete &(_listePoints[i]);
+	}
 }
 
 int Polygone::getNbPoints()const

@@ -6,6 +6,7 @@
 #include "Forme.h"
 #include <WinSock2.h>
 #include <string>
+#pragma comment(lib, "ws2_32.lib")
 
 using namespace std;
 

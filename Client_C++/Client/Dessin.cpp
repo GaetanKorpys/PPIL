@@ -4,6 +4,7 @@
 #include "Exception.h"
 #include "Socket.h"
 #include "Dessin.h"
+#pragma warning(disable:4996) 
 
 using namespace std;
 

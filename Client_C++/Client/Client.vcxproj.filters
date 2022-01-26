@@ -37,10 +37,10 @@
     <Filter Include="Fichiers d%27en-tête\Visiteur">
       <UniqueIdentifier>{ab1c90e5-1a56-4987-afee-43c7959dae46}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Communication">
+    <Filter Include="Fichiers d%27en-tête\ConnexionServeur">
       <UniqueIdentifier>{55d38734-75e0-46db-9b34-3c4084b8a1ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Communication">
+    <Filter Include="Fichiers sources\ConnexionServeur">
       <UniqueIdentifier>{f5bd3577-db01-44ee-8834-fca6b5c7128f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -73,10 +73,10 @@
       <Filter>Fichiers d%27en-tête\Constante</Filter>
     </ClInclude>
     <ClInclude Include="Socket.h">
-      <Filter>Fichiers d%27en-tête\Communication</Filter>
+      <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
     </ClInclude>
     <ClInclude Include="Dessin.h">
-      <Filter>Fichiers d%27en-tête\Communication</Filter>
+      <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -108,10 +108,10 @@
       <Filter>Fichiers sources\Forme</Filter>
     </ClCompile>
     <ClCompile Include="Socket.cpp">
-      <Filter>Fichiers sources\Communication</Filter>
+      <Filter>Fichiers sources\ConnexionServeur</Filter>
     </ClCompile>
     <ClCompile Include="Dessin.cpp">
-      <Filter>Fichiers sources\Communication</Filter>
+      <Filter>Fichiers sources\ConnexionServeur</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

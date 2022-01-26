@@ -1,6 +1,6 @@
 /**
 * \file Forme.h
-* \brief Une forme est caractérisée par une couleur.
+* \brief Une forme est caractérisée par une couleur et des points.
 * \detail Il existe 2 types de formes, les simples (Segment, Triangle ...) et les composées.
 * \detail Une forme composée aussi appelée Groupe est un ensemble de forme simple et de forme composée.
 */
@@ -37,7 +37,7 @@ public :
 		_groupe = op._groupe;
 	}
 
-	~Forme(){}
+	virtual ~Forme(){}
 
 	string getCouleur()const { return _couleur; }
 
