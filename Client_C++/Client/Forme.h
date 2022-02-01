@@ -12,6 +12,8 @@
 
 using namespace std;
 
+class VisiteurTransformation;
+
 class Forme
 {
 	string _couleur;
@@ -69,6 +71,8 @@ public :
 	virtual const double getAire() const = 0;
 
 	virtual Forme* clone() const = 0;
+
+	virtual Forme& accepte(const VisiteurTransformation& op) = 0;
 
 	friend ostream& operator << (ostream& os, const Forme& op)
 	{

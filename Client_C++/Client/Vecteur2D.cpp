@@ -53,26 +53,27 @@ double Vecteur2D::determinant(const Vecteur2D& op)const
 	return (op.getY() * _abscisse) - (op.getX() * _ordonnee);
 }
 
-void Vecteur2D::translation(const Vecteur2D& op)
+Vecteur2D& Vecteur2D::translation(const Vecteur2D& op)
 {
 	*this += op;
+	return *this;
 }
 
-void Vecteur2D::homothetie(const Vecteur2D& op, double r)
+Vecteur2D& Vecteur2D::homothetie(const Vecteur2D& op, double r)
 {
 	if(r<=0)
 	{
 		throw Exception("r doit être psoitif.");
 	}
 	(*this) = r * (*this) + (1 - r) * op;
-
+	return *this;
 }
 
-void Vecteur2D::rotation(const Vecteur2D& op, double angle)
+Vecteur2D& Vecteur2D::rotation(const Vecteur2D& op, double angle)
 {
-	double  a = _abscisse - op._abscisse;
-	double  b = _ordonnee - op._ordonnee;
+	double deltaX = _abscisse - op._abscisse, deltaY = _ordonnee - op._ordonnee;
+	_abscisse = deltaX * cos(angle) - deltaY * sin(angle) + op._abscisse;
+	_ordonnee = deltaX * sin(angle) + deltaY * cos(angle) + op._ordonnee;
 
-	a = op._abscisse + _abscisse * cos(angle) - a * sin(angle);
-	b = op._ordonnee + _ordonnee * sin(angle) + b * cos(angle);
+	return *this;
 }

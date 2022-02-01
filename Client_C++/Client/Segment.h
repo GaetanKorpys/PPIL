@@ -40,8 +40,6 @@ public:
 
 	void setP2(const Vecteur2D& p2);
 
-	void setP3(const Vecteur2D& op);
-
 	const Segment& operator = (const Segment& op);
 
 	bool operator == (const Segment& op)const;
@@ -59,6 +57,8 @@ public:
 	const double getAire()const;
 
 	Segment* clone() const;
+
+	Segment& accepte(const VisiteurTransformation& op);
 
 	friend ostream& operator << (ostream& os, const Segment& op);
 };

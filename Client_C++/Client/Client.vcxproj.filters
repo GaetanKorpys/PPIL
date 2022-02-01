@@ -43,6 +43,12 @@
     <Filter Include="Fichiers sources\ConnexionServeur">
       <UniqueIdentifier>{f5bd3577-db01-44ee-8834-fca6b5c7128f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Transformation">
+      <UniqueIdentifier>{1c216793-a50a-4d2b-bf7c-ac800654d22d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Transformation">
+      <UniqueIdentifier>{27229650-ee20-4279-b839-eb67e8611993}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h">
@@ -78,6 +84,18 @@
     <ClInclude Include="Dessin.h">
       <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
     </ClInclude>
+    <ClInclude Include="VisiteurTransformation.h">
+      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurTranslation.h">
+      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurRotation.h">
+      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurHomothetie.h">
+      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -112,6 +130,15 @@
     </ClCompile>
     <ClCompile Include="Dessin.cpp">
       <Filter>Fichiers sources\ConnexionServeur</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurRotation.cpp">
+      <Filter>Fichiers sources\Transformation</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurTranslation.cpp">
+      <Filter>Fichiers sources\Transformation</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurHomothetie.cpp">
+      <Filter>Fichiers sources\Transformation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

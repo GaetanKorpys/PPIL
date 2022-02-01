@@ -104,6 +104,11 @@ Segment* Segment::clone() const
 	return new Segment(*this);
 }
 
+Segment& Segment::accepte(const VisiteurTransformation& op)
+{
+	return op.visite(*this);
+}
+
 ostream& operator << (ostream& os, const Segment& op)
 {
 	os << (string)op;

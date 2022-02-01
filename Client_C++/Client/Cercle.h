@@ -57,5 +57,7 @@ public:
 
 	Cercle* clone() const;
 
+	Cercle& accepte(const VisiteurTransformation& op);
+
 	friend ostream& operator << (ostream& os, const Cercle& op);
 };

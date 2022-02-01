@@ -174,7 +174,7 @@ public:
 	 * \param op Vecteur2D
 	 * \return void
 	 */
-	void translation(const Vecteur2D& op);
+	Vecteur2D& translation(const Vecteur2D& op);
 
 	/**
 	 * \brief Opération d'homothétie : transformation géométrique par agrandissement ou réduction
@@ -183,7 +183,7 @@ public:
 	 * \param r double
 	 * \return void
 	 */
-	void homothetie(const Vecteur2D& op, double r);
+	Vecteur2D& homothetie(const Vecteur2D& op, double r);
 
 	/**
 	 * \brief Opération de rotation.
@@ -191,7 +191,7 @@ public:
 	 * \param angle double
 	 * \return void
 	 */
-	void rotation(const Vecteur2D& op, double angle);
+	Vecteur2D& rotation(const Vecteur2D& op, double angle);
 
 };
 

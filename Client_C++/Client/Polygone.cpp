@@ -56,7 +56,20 @@ int Polygone::getNbPoints()const
 
 const Vecteur2D& Polygone::getPoint(int index)const
 {
+	if (index < 0 || index > _listePoints.size())
+	{
+		throw Exception("Index incorrect.");
+	}
 	return _listePoints[index];
+}
+
+const Polygone& Polygone::setPoint(int index, const Vecteur2D& op)
+{
+	if (index < 0 || index > _listePoints.size())
+	{
+		throw Exception("Index incorrect.");
+	}
+	_listePoints[index] = op;
 }
 
 const Polygone& Polygone::operator = (const Polygone& op)

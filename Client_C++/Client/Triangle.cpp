@@ -125,3 +125,8 @@ Triangle* Triangle::clone() const
 {
 	return new Triangle(*this);
 }
+
+Triangle& Triangle::accepte(const VisiteurTransformation& op)
+{
+	return op.visite(*this);
+}

@@ -54,5 +54,7 @@ public:
 
 	Groupe* clone() const;
 
+	Groupe& accepte(const VisiteurTransformation& op);
+
 	friend ostream& operator << (ostream& os, const Groupe& op);
 };

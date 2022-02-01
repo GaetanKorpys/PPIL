@@ -1,5 +1,6 @@
 #include "Cercle.h"
 #include "Constante.h"
+#include "VisiteurTransformation.h"
 
 Cercle::Cercle(const Vecteur2D& centre, double rayon, const string& couleur) : Forme(couleur)
 {
@@ -84,6 +85,11 @@ const double Cercle::getAire()const
 Cercle* Cercle::clone() const
 {
 	return new Cercle(*this);
+}
+
+Cercle& Cercle::accepte(const VisiteurTransformation& op)
+{
+	return op.visite(*this);
 }
 
 ostream& operator << (ostream& os, const Cercle& op)

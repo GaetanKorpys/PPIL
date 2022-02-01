@@ -148,8 +148,12 @@
     <ClInclude Include="Groupe.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="Segment.h" />
+    <ClInclude Include="VisiteurHomothetie.h" />
+    <ClInclude Include="VisiteurRotation.h" />
+    <ClInclude Include="VisiteurTranslation.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Vecteur2D.h" />
+    <ClInclude Include="VisiteurTransformation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
@@ -163,6 +167,9 @@
     <ClCompile Include="Socket.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
+    <ClCompile Include="VisiteurHomothetie.cpp" />
+    <ClCompile Include="VisiteurRotation.cpp" />
+    <ClCompile Include="VisiteurTranslation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

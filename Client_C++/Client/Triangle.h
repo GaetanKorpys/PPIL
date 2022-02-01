@@ -71,5 +71,7 @@ public:
 
 	Triangle* clone() const;
 
+	Triangle& accepte(const VisiteurTransformation& op);
+
 	friend ostream& operator << (ostream& os, const Triangle& op);
 };

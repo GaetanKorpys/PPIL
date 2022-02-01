@@ -34,6 +34,8 @@ public:
 
 	const Vecteur2D& getPoint(int index)const;
 
+	const Polygone& setPoint(int index, const Vecteur2D& op);
+
 	const Polygone& operator = (const Polygone& op);
 
 	bool operator == (const Polygone& op)const;
@@ -61,6 +63,8 @@ public:
 	const double getAire()const;
 
 	Polygone* clone() const;
+
+	Polygone& accepte(const VisiteurTransformation& op);
 
 	friend ostream& operator << (ostream& os, const Polygone& op);
 };
