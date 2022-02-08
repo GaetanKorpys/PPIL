@@ -1,5 +1,7 @@
 #include "Groupe.h"
 
+#include "Visiteur.h"
+
 void Groupe::copie(const vector<Forme *>& op)
 {
 	for (int i = 0; i < op.size(); i++)
@@ -117,24 +119,6 @@ Groupe::operator string()const
 	return os.str();
 }
 
-void Groupe::translation(const Vecteur2D& op)
-{
-	for (int i = 0; i < _listeFormes.size(); i++)
-		_listeFormes[i]->translation(op);
-}
-
-void Groupe::homothetie(const Vecteur2D& op, double r)
-{
-	for (int i = 0; i < _listeFormes.size(); i++)
-		_listeFormes[i]->homothetie(op, r);
-}
-
-void Groupe::rotation(const Vecteur2D& op, double angle)
-{
-	for(int i = 0; i < _listeFormes.size(); i++)
-		_listeFormes[i]->rotation(op, angle);
-}
-
 const double Groupe::getAire()const
 {
 	double aire = 0;
@@ -147,7 +131,15 @@ const double Groupe::getAire()const
 
 Groupe* Groupe::clone() const
 {
-	return new Groupe(*this);
+	return new Groupe(*this);	 
+}
+
+void Groupe::accepte(const Visiteur& op)
+{
+	for(int i = 0; i < _listeFormes.size(); i++)
+	{
+		_listeFormes[i]->accepte(op);
+	}
 }
 
 ostream& operator << (ostream& os, const Groupe& op)

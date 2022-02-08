@@ -1,37 +1,48 @@
 #include "VisiteurTranslation.h"
 
-Segment& VisiteurTranslation::visite(const Segment& op)
+void VisiteurTranslation::visite(Segment& op)const
 {
-	Segment* tmp = new Segment(op);
-}
+	Vecteur2D tmpVecteur;
 
-Cercle& VisiteurTranslation::visite(const Cercle& op)
-{
-	Vecteur2D tmp = op.getCentre();
-	tmp.translation(_op);
-}
+	tmpVecteur = op.getP1();
+	op.setP1(tmpVecteur.translation(_op));
 
-Triangle& VisiteurTranslation::visite(const Triangle& op)
-{
-	Vecteur2D tmp;
-
-	tmp = op.getP1();
-	tmp.translation(_op);
-
-	tmp = op.getP2();
-	tmp.translation(_op);
-
-	tmp = op.getP3();
-	tmp.translation(_op);
+	tmpVecteur = op.getP2();
+	op.setP2(tmpVecteur.translation(_op));
 
 }
 
-Polygone& VisiteurTranslation::visite(const Polygone& op)
+void VisiteurTranslation::visite(Cercle& op)const
 {
-	Vecteur2D tmp;
+	Vecteur2D tmpVecteur = op.getCentre();
+	op.setCentre(tmpVecteur.translation(_op));
+
+}
+
+void VisiteurTranslation::visite(Triangle& op)const
+{
+	Vecteur2D tmpVecteur;
+
+	tmpVecteur = op.getP1();
+	op.setP1(tmpVecteur.translation(_op));
+
+	tmpVecteur = op.getP2();
+	op.setP2(tmpVecteur.translation(_op));
+
+	tmpVecteur = op.getP3();
+	op.setP3(tmpVecteur.translation(_op));
+
+}
+
+void VisiteurTranslation::visite(Polygone& op)const
+{
+	Vecteur2D tmpVecteur;
+
 	for (int i = 0; i < op.getNbPoints(); i++)
 	{
-		tmp = op.getPoint(i);
-		tmp.translation(_op);
+		tmpVecteur = op.getPoint(i);
+		tmpVecteur.translation(_op);
+		op.setPoint(i, tmpVecteur);
 	}
+ 
 }

@@ -43,11 +43,26 @@
     <Filter Include="Fichiers sources\ConnexionServeur">
       <UniqueIdentifier>{f5bd3577-db01-44ee-8834-fca6b5c7128f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Transformation">
+    <Filter Include="Fichiers d%27en-tête\Visiteur\Transformation">
       <UniqueIdentifier>{1c216793-a50a-4d2b-bf7c-ac800654d22d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\Transformation">
+    <Filter Include="Fichiers sources\Visiteur">
+      <UniqueIdentifier>{9d619a82-12d0-447b-b1d0-7fa2f1dd6b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteur\Transformation">
       <UniqueIdentifier>{27229650-ee20-4279-b839-eb67e8611993}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur\Sauvegarde">
+      <UniqueIdentifier>{28fb53e7-3efd-45f1-afd3-b0e5086f0ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur\Dessin">
+      <UniqueIdentifier>{bcf8b6fc-c684-4aec-9cc3-9d307b8881a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteur\Sauvegarde">
+      <UniqueIdentifier>{a3884beb-bf06-4c22-b037-fd9efc0947b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Visiteur\Dessin">
+      <UniqueIdentifier>{405d3289-10e6-4cd1-9cdf-ab9717beed28}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -84,17 +99,26 @@
     <ClInclude Include="Dessin.h">
       <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
     </ClInclude>
-    <ClInclude Include="VisiteurTransformation.h">
-      <Filter>Fichiers d%27en-tête\Transformation</Filter>
-    </ClInclude>
     <ClInclude Include="VisiteurTranslation.h">
-      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+      <Filter>Fichiers d%27en-tête\Visiteur\Transformation</Filter>
     </ClInclude>
     <ClInclude Include="VisiteurRotation.h">
-      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+      <Filter>Fichiers d%27en-tête\Visiteur\Transformation</Filter>
     </ClInclude>
     <ClInclude Include="VisiteurHomothetie.h">
-      <Filter>Fichiers d%27en-tête\Transformation</Filter>
+      <Filter>Fichiers d%27en-tête\Visiteur\Transformation</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurTxt.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Sauvegarde</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurDessin.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurJava.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
+    </ClInclude>
+    <ClInclude Include="Visiteur.h">
+      <Filter>Fichiers d%27en-tête\Visiteur</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -132,13 +156,19 @@
       <Filter>Fichiers sources\ConnexionServeur</Filter>
     </ClCompile>
     <ClCompile Include="VisiteurRotation.cpp">
-      <Filter>Fichiers sources\Transformation</Filter>
+      <Filter>Fichiers sources\Visiteur\Transformation</Filter>
     </ClCompile>
     <ClCompile Include="VisiteurTranslation.cpp">
-      <Filter>Fichiers sources\Transformation</Filter>
+      <Filter>Fichiers sources\Visiteur\Transformation</Filter>
     </ClCompile>
     <ClCompile Include="VisiteurHomothetie.cpp">
-      <Filter>Fichiers sources\Transformation</Filter>
+      <Filter>Fichiers sources\Visiteur\Transformation</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurDessin.cpp">
+      <Filter>Fichiers sources\Visiteur\Dessin</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurTxt.cpp">
+      <Filter>Fichiers sources\Visiteur\Sauvegarde</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

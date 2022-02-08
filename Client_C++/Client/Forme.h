@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class VisiteurTransformation;
+class Visiteur;
 
 class Forme
 {
@@ -62,17 +62,11 @@ public :
 		os << (*this);
 	}
 
-	virtual void translation(const Vecteur2D& op) = 0;
-
-	virtual void homothetie(const Vecteur2D& op, double r) = 0;
-
-	virtual void rotation(const Vecteur2D& op, double angle) = 0;
-
 	virtual const double getAire() const = 0;
 
 	virtual Forme* clone() const = 0;
 
-	virtual Forme& accepte(const VisiteurTransformation& op) = 0;
+	virtual void accepte(const Visiteur& op) = 0;
 
 	friend ostream& operator << (ostream& os, const Forme& op)
 	{

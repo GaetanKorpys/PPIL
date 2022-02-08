@@ -44,17 +44,11 @@ public:
 
 	operator string()const;
 
-	void translation(const Vecteur2D& op);
-
-	void homothetie(const Vecteur2D& op, double r);
-
-	void rotation(const Vecteur2D& op, double angle);
-
 	const double getAire()const;
 
 	Groupe* clone() const;
 
-	Groupe& accepte(const VisiteurTransformation& op);
+	void accepte(const Visiteur& op);
 
 	friend ostream& operator << (ostream& os, const Groupe& op);
 };

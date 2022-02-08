@@ -1,6 +1,6 @@
 #include "VisiteurRotation.h"
 
-Segment& VisiteurRotation::visite(Segment& op)const
+void VisiteurRotation::visite(Segment& op)const
 {
 	Vecteur2D tmpVecteur;
 
@@ -10,19 +10,17 @@ Segment& VisiteurRotation::visite(Segment& op)const
 	tmpVecteur = op.getP2();
 	op.setP2(tmpVecteur.rotation(_op, _angle));
 
-	return op;
 }
 
-Cercle& VisiteurRotation::visite(Cercle& op)const
+void VisiteurRotation::visite(Cercle& op)const
 {
 	Vecteur2D tmpVecteur = op.getCentre();
 
 	op.setCentre(tmpVecteur.rotation(_op, _angle));
 
-	return op;
 }
 
-Triangle& VisiteurRotation::visite(Triangle& op)const
+void VisiteurRotation::visite(Triangle& op)const
 {
 	Vecteur2D tmpVecteur;
 
@@ -35,10 +33,9 @@ Triangle& VisiteurRotation::visite(Triangle& op)const
 	tmpVecteur = op.getP3();
 	op.setP3(tmpVecteur.rotation(_op, _angle));
 
-	return op;
 }
 
-Polygone& VisiteurRotation::visite(Polygone& op)const
+void VisiteurRotation::visite(Polygone& op)const
 {
 	Vecteur2D tmpVecteur;
 
@@ -48,5 +45,4 @@ Polygone& VisiteurRotation::visite(Polygone& op)const
 		tmpVecteur.rotation(_op, _angle);
 		op.setPoint(i, tmpVecteur);
 	}
-	return op;
 }

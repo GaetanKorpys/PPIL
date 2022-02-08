@@ -1,6 +1,7 @@
 #include "Polygone.h"
+#include "Visiteur.h"
 
-bool Polygone::polygoneValide(const vector<Vecteur2D>& op)const
+bool Polygone::polygoneValide(const vector<Vecteur2D*>& op)const
 {
 	for (int i = 0; i < op.size() - 1; i++) {
 		for (int j = i + 1; j < op.size(); j++) {
@@ -11,29 +12,17 @@ bool Polygone::polygoneValide(const vector<Vecteur2D>& op)const
 	return true;
 }
 
-void Polygone::copie(const vector<Vecteur2D >& op)
+void Polygone::copie(const vector<Vecteur2D* >& op)
 {
 	for (int i = 0; i < op.size(); i++)
 	{
-		_listePoints.push_back(*op[i].clone());
+		_listePoints.push_back(( * op[i]).clone());
 	}
 }
 
-Polygone::Polygone(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3, const string& couleur):Forme(couleur)
+Polygone::Polygone(const vector<Vecteur2D*>& op, const string& couleur):Forme(couleur)
 {
-	_listePoints.push_back(p1);
-	_listePoints.push_back(p2);
-	_listePoints.push_back(p2);
-	if (!polygoneValide(_listePoints))
-		throw Exception("Impossible de construire un polygone avec ces points.");
-}
-
-Polygone::Polygone(const vector<Vecteur2D>& op, const string& couleur):Forme(couleur)
-{
-	for(int i = 0; i < op.size(); i++)
-	{
-		_listePoints.push_back(*op[i].clone());
-	}
+	copie(op);
 }
 
 Polygone::Polygone(const Polygone& op) : Forme(op.getCouleur())
@@ -43,9 +32,8 @@ Polygone::Polygone(const Polygone& op) : Forme(op.getCouleur())
 
 Polygone::~Polygone()
 {
-	for(int i = 0; i < _listePoints.size(); i++)
-	{
-		delete &(_listePoints[i]);
+	for (int i = 0; i < _listePoints.size(); ++i) {
+		delete _listePoints[i];
 	}
 }
 
@@ -60,7 +48,7 @@ const Vecteur2D& Polygone::getPoint(int index)const
 	{
 		throw Exception("Index incorrect.");
 	}
-	return _listePoints[index];
+	return *_listePoints[index];
 }
 
 const Polygone& Polygone::setPoint(int index, const Vecteur2D& op)
@@ -69,7 +57,8 @@ const Polygone& Polygone::setPoint(int index, const Vecteur2D& op)
 	{
 		throw Exception("Index incorrect.");
 	}
-	_listePoints[index] = op;
+	(* _listePoints[index]) = op;
+	return *this;;
 }
 
 const Polygone& Polygone::operator = (const Polygone& op)
@@ -106,7 +95,8 @@ bool Polygone::operator != (const Polygone& op)const
 
 void Polygone::operator + (const Vecteur2D& op)
 {
-	_listePoints.push_back(*op.clone());
+	Vecteur2D* tmp = op.clone();
+	_listePoints.push_back(tmp);
 }
 
 void Polygone::operator - (int index)
@@ -118,15 +108,16 @@ void Polygone::operator - (int index)
 	_listePoints.erase(_listePoints.begin()+index);
 }
 
+
 const Vecteur2D& Polygone::operator[](int index)const
 {
-	if(index < 0 || index > _listePoints.size())
+	if (index < 0 || index > _listePoints.size())
 	{
 		throw Exception("Index incorrect.");
 	}
 	else
 	{
-		return _listePoints[index];
+		return ( * _listePoints[index]);
 	}
 }
 
@@ -147,34 +138,10 @@ Polygone::operator string()const
 
 	for(int i = 0; i < _listePoints.size(); i++)
 	{
-		os << "Points " << i << " : " << _listePoints[i];
+		os << "Points " << i << " : " << *_listePoints[i];
 	}
 	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl << endl;
 	return os.str();
-}
-
-void Polygone::translation(const Vecteur2D& op)
-{
-	for(int i = 0; i < _listePoints.size(); i++)
-	{
-		_listePoints[i].translation(op);
-	}
-}
-
-void Polygone::homothetie(const Vecteur2D& op, double r)
-{
-	for (int i = 0; i < _listePoints.size(); i++)
-	{
-		_listePoints[i].homothetie(op, r);
-	}
-}
-
-void Polygone::rotation(const Vecteur2D& op, double angle)
-{
-	for (int i = 0; i < _listePoints.size(); i++)
-	{
-		_listePoints[i].rotation(op, angle);
-	}
 }
 
 const double Polygone::getAire()const
@@ -182,15 +149,21 @@ const double Polygone::getAire()const
 	if (_listePoints.size() < 3)
 		return 0;
 
-	double somme = _listePoints[_listePoints.size() - 1].determinant(_listePoints[0]);
+	double somme = ( * _listePoints[_listePoints.size() - 1]).determinant(*_listePoints[0]);
 	for (int i = 0; i < _listePoints.size() - 1; i++)
-		somme += _listePoints[i].determinant(_listePoints[i + 1]);
+		somme += ( * _listePoints[i]).determinant(*_listePoints[i + 1]);
 	return 0.5 * fabs(somme);
-}
+	
+} 
 
 Polygone* Polygone::clone() const
 {
 	return new Polygone(*this);
+}
+
+void Polygone::accepte(const Visiteur& op)
+{
+	op.visite(*this);
 }
 
 ostream& operator << (ostream& os, const Polygone& op)

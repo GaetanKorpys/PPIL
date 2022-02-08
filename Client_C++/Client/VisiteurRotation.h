@@ -1,7 +1,7 @@
 #pragma once
-#include "VisiteurTransformation.h"
+#include "Visiteur.h"
 
-class VisiteurRotation : public VisiteurTransformation
+class VisiteurRotation : public Visiteur
 {
 
 	Vecteur2D _op;
@@ -17,12 +17,12 @@ public:
 		_angle = angle;
 	}
 
-	virtual Segment& visite(Segment& op)const;
+	virtual void visite(Segment& op)const;
 
-	virtual Cercle& visite(Cercle& op)const;
+	virtual void visite(Cercle& op)const;
 
-	virtual Triangle& visite(Triangle& op)const;
+	virtual void visite(Triangle& op)const;
 
-	virtual Polygone& visite(Polygone& op)const;
+	virtual void visite(Polygone& op)const;
 
 };

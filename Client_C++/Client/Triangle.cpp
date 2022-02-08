@@ -1,5 +1,7 @@
 #include "Triangle.h"
 
+#include "Visiteur.h"
+
 Triangle::Triangle(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3, const string& couleur) :Forme(couleur)
 {
 	if (triangleValide(p1, p2, p3))
@@ -92,27 +94,6 @@ Triangle::operator string()const
 	return os.str();
 }
 
-void Triangle::translation(const Vecteur2D& op)
-{
-	_p1.translation(op);
-	_p2.translation(op);
-	_p3.translation(op);
-}
-
-void Triangle::homothetie(const Vecteur2D& op, double r)
-{
-	_p1.homothetie(op, r);
-	_p2.homothetie(op, r);
-	_p3.homothetie(op, r);
-}
-
-void Triangle::rotation(const Vecteur2D& op, double angle)
-{
-	_p1.rotation(op, angle);
-	_p2.rotation(op, angle);
-	_p3.rotation(op, angle);
-}
-
 const double Triangle::getAire()const
 {
 	double tmp = _p1.determinant(_p2);
@@ -126,7 +107,13 @@ Triangle* Triangle::clone() const
 	return new Triangle(*this);
 }
 
-Triangle& Triangle::accepte(const VisiteurTransformation& op)
+void Triangle::accepte(const Visiteur& op)
 {
-	return op.visite(*this);
+	op.visite(*this);
+}
+
+ostream& operator << (ostream& os, const Triangle& op)
+{
+	os << (string)op;
+	return os;
 }

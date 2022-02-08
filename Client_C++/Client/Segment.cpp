@@ -1,5 +1,7 @@
 #include "Segment.h"
 
+#include "Visiteur.h"
+
 Segment::Segment(const Vecteur2D& p1, const Vecteur2D& p2,const string& couleur ):Forme(couleur)
 {
 	if (segmentValide(p1, p2))
@@ -76,24 +78,6 @@ Segment::operator string()const
 	return os.str();
 }
 
-void Segment::translation(const Vecteur2D& op)
-{
-	_p1.translation(op);
-	_p2.translation(op);
-}
-
-void Segment::homothetie(const Vecteur2D& op, double r)
-{
-	_p1.homothetie(op, r);
-	_p2.homothetie(op, r);
-}
-
-void Segment::rotation(const Vecteur2D& op, double angle)
-{
-	_p1.rotation(op, angle);
-	_p2.rotation(op, angle);
-}
-
 const double Segment::getAire()const
 {
 	return 0;
@@ -104,9 +88,9 @@ Segment* Segment::clone() const
 	return new Segment(*this);
 }
 
-Segment& Segment::accepte(const VisiteurTransformation& op)
+void Segment::accepte(const Visiteur& op)
 {
-	return op.visite(*this);
+	op.visite(*this);
 }
 
 ostream& operator << (ostream& os, const Segment& op)

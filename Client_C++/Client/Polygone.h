@@ -12,25 +12,26 @@
 
 class Polygone : public Forme
 {
-	vector<Vecteur2D> _listePoints;
+	//vector<Vecteur2D> _listePoints;
+	vector<Vecteur2D *> _listePoints;
+	bool polygoneValide(const vector<Vecteur2D*>& op)const;
 
-	bool polygoneValide(const vector<Vecteur2D>& op)const;
-
-	void copie(const vector<Vecteur2D>& op);
+	/*void copie(const vector<Vecteur2D>& op);*/
+	void copie(const vector<Vecteur2D*>& op);
 
 public:
 
 	Polygone(){}
 
-	Polygone(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3, const string& couleur = BLACK);
-
-	Polygone(const vector<Vecteur2D>& op, const string& couleur = BLACK);
+	Polygone(const vector<Vecteur2D*>& op, const string& couleur = BLACK);
 
 	Polygone(const Polygone& op);
 
 	~Polygone();
 
 	int getNbPoints()const;
+
+	/*const Vecteur2D& getPoint(int index)const;*/
 
 	const Vecteur2D& getPoint(int index)const;
 
@@ -46,6 +47,8 @@ public:
 
 	void operator - (int index);
 
+	/*const Vecteur2D& operator[](int index)const;*/
+
 	const Vecteur2D& operator[](int index)const;
 
 	void ajouter(const Vecteur2D& op);
@@ -54,17 +57,11 @@ public:
 
 	operator string()const;
 
-	void translation(const Vecteur2D& op);
-
-	void homothetie(const Vecteur2D& op, double r);
-
-	void rotation(const Vecteur2D& op, double angle);
-
 	const double getAire()const;
 
 	Polygone* clone() const;
 
-	Polygone& accepte(const VisiteurTransformation& op);
+	void accepte(const Visiteur& op);
 
 	friend ostream& operator << (ostream& os, const Polygone& op);
 };
