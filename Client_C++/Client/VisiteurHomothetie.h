@@ -25,4 +25,6 @@ public:
 
 	virtual void visite(Polygone& op)const;
 
+	virtual void visite(Groupe& op)const;
+
 };

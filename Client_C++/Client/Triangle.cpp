@@ -90,7 +90,7 @@ Triangle::operator string()const
 		<< "Point 3 : " << _p3 << ", "
 		<< Forme::operator string() << ", "
 		<< "Aire : " << getAire()
-		<< " ] " << endl << endl;
+		<< " ] " << endl;
 	return os.str();
 }
 

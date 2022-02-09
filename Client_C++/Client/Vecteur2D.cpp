@@ -11,7 +11,7 @@ Vecteur2D::Vecteur2D(const Vecteur2D& op)
 Vecteur2D::operator string() const
 {
 	ostringstream os;
-	os << "Vecteur (" << _abscisse << ", " << _ordonnee << ")" << endl;
+	os << "Vecteur (" << _abscisse << ", " << _ordonnee << ")";
 	return os.str();
 }
 

@@ -74,7 +74,7 @@ Segment::operator string()const
 		<< "Point 2 : " << _p2 << ", "
 		<< Forme::operator string() << ", "
 		<< "Aire : " << getAire()
-		<< " ] " << endl << endl;
+		<< " ] " << endl;
 	return os.str();
 }
 

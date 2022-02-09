@@ -46,3 +46,11 @@ void VisiteurRotation::visite(Polygone& op)const
 		op.setPoint(i, tmpVecteur);
 	}
 }
+
+void VisiteurRotation::visite(Groupe& op)const
+{
+	for (int i = 0; i < op.getNbForme(); i++)
+	{
+		op[i].accepte(*this);
+	}
+}

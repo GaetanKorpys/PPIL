@@ -84,7 +84,7 @@ void Groupe::operator - (int index)
 	_listeFormes.erase(_listeFormes.begin() + index);
 }
 
-const Forme& Groupe::operator[](int index)const
+Forme& Groupe::operator[](int index)const
 {
 	if (index < 0 || index > _listeFormes.size())
 	{
@@ -115,7 +115,7 @@ Groupe::operator string()const
 	{
 		os << "Forme " << i << " : " << *_listeFormes[i];
 	}
-	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl << endl;
+	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl;
 	return os.str();
 }
 
@@ -136,10 +136,7 @@ Groupe* Groupe::clone() const
 
 void Groupe::accepte(const Visiteur& op)
 {
-	for(int i = 0; i < _listeFormes.size(); i++)
-	{
-		_listeFormes[i]->accepte(op);
-	}
+	op.visite(*this);
 }
 
 ostream& operator << (ostream& os, const Groupe& op)

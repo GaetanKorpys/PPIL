@@ -13,6 +13,7 @@ C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Clien
 C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Polygone.cpp(42,28): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
   Segment.cpp
   Triangle.cpp
+  Vecteur2D.cpp
   VisiteurHomothetie.cpp
   VisiteurRotation.cpp
   VisiteurTranslation.cpp

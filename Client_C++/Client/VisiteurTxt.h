@@ -1,18 +1,15 @@
 #pragma once
 #include "Visiteur.h"
-#include "Constante.h"
 
 class VisiteurTxt : public Visiteur
 {
-	string _chemin;
+	const static string _chemin;
 
-	int _id;
+	static int _id;
 
 	void sauvgarde(const string& ligne, const string& chemin)const;
 
 public:
-
-	VisiteurTxt(const string& chemin = SAUVGARDE, int id = 0);
 
 	virtual void visite(Segment& op) const;
 
@@ -22,5 +19,5 @@ public:
 
 	virtual void visite(Polygone& op) const;
 
-
+	virtual void visite(Groupe& op)const;
 };

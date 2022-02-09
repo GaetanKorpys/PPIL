@@ -4,6 +4,7 @@
 #include "Cercle.h"
 #include "Triangle.h"
 #include "Polygone.h"
+#include "Groupe.h"
 
 class Visiteur
 {
@@ -17,4 +18,5 @@ public:
 
 	virtual void visite(Polygone& op)const = 0;
 
+	virtual void visite(Groupe& op)const = 0;
 };

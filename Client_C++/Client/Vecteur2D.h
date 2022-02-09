@@ -151,7 +151,7 @@ public:
 
 	void affiche(ostream& os = cout)
 	{
-		os << (*this);
+		os << (*this) << endl;
 	}
 
 	///////////////////////////////////////

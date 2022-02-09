@@ -140,7 +140,7 @@ Polygone::operator string()const
 	{
 		os << "Points " << i << " : " << *_listePoints[i];
 	}
-	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl << endl;
+	os << Forme::operator string() << ", " << "Aire : " << getAire() << " ] " << endl;
 	return os.str();
 }
 

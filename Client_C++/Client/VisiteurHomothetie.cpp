@@ -44,3 +44,11 @@ void VisiteurHomothetie::visite(Polygone& op)const
 		op.setPoint(i, tmpVecteur);
 	}
 }
+
+void VisiteurHomothetie::visite(Groupe& op)const
+{
+	for(int i = 0; i < op.getNbForme(); i++)
+	{
+		op[i].accepte(*this);
+	}
+}

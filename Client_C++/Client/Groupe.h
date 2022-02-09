@@ -36,7 +36,7 @@ public:
 
 	void operator - (int index);
 
-	const Forme& operator[](int index)const;
+	Forme& operator[](int index)const;
 
 	void ajouter(const Forme& op);
 

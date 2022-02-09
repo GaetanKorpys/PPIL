@@ -57,7 +57,7 @@ Cercle::operator string()const
 		<< "Rayon: " << _rayon << ", "
 		<< Forme::operator string() << ", "
 		<< "Aire : " << getAire()
-		<< " ] " << endl << endl;
+		<< " ] " << endl;
 	return os.str();
 }
 

@@ -46,3 +46,11 @@ void VisiteurTranslation::visite(Polygone& op)const
 	}
  
 }
+
+void VisiteurTranslation::visite(Groupe& op)const
+{
+	for (int i = 0; i < op.getNbForme(); i++)
+	{
+		op[i].accepte(*this);
+	}
+}
