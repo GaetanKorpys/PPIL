@@ -71,6 +71,7 @@ Cercle* Cercle::clone() const
 	return new Cercle(*this);
 }
 
+
 void Cercle::accepte(const Visiteur& op)
 {
 	op.visite(*this);

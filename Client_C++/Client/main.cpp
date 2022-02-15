@@ -5,9 +5,11 @@
 #include "Polygone.h"
 #include "Groupe.h"
 #include "Exception.h"
+#include "Socket.h"
 #include "VisiteurHomothetie.h"
 #include "VisiteurRotation.h"
 #include "Visiteur.h"
+#include "VisiteurDessin.h"
 #include "VisiteurTranslation.h"
 #include "VisiteurTxt.h"
 
@@ -38,7 +40,7 @@ int main()
 
 		cout << "Création de 5 vecteurs : " << endl << endl;
 
-		Vecteur2D v2(2, 4), v3(3, 6), v4(9, 12), v5(5, 5), v6(20, 14);
+		Vecteur2D v2(2, 4), v3(3, 6), v4(9, 12), v5(350, 30), v6(490, 190);
 
 		v2.affiche();
 		v3.affiche();
@@ -246,7 +248,7 @@ int main()
 
 
 
-		g2.ajouter(s2);
+		g2.ajouter(s);
 		g2.ajouter(t2);
 		g2.ajouter(c2);
 
@@ -280,7 +282,7 @@ int main()
 
 
 		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test de la sauvgarde					" << endl;
+		cout << "					Test de la Sauvgarde					" << endl;
 		cout << "-------------------------------------------------------" << endl << endl;
 
 		cout << "Creation de la classe destinee a la sauvgarde." << endl << endl;
@@ -293,6 +295,20 @@ int main()
 		p.accepte(sauvgarde);
 
 		g.accepte(backUp);
+
+
+		cout << "-------------------------------------------------------" << endl;
+		cout << "					Test des Dessins				" << endl;
+		cout << "-------------------------------------------------------" << endl << endl;
+
+		VisiteurDessin dessin;
+
+		s2.accepte(dessin);
+		/*t.accepte(dessin);
+		c.accepte(dessin);
+		p.accepte(dessin);
+		g.accepte(dessin);*/
+
 	}
 	catch (Exception e)
 	{

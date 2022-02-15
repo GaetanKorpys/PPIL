@@ -55,14 +55,14 @@
     <Filter Include="Fichiers d%27en-tête\Visiteur\Sauvegarde">
       <UniqueIdentifier>{28fb53e7-3efd-45f1-afd3-b0e5086f0ff2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Visiteur\Dessin">
-      <UniqueIdentifier>{bcf8b6fc-c684-4aec-9cc3-9d307b8881a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers sources\Visiteur\Sauvegarde">
       <UniqueIdentifier>{a3884beb-bf06-4c22-b037-fd9efc0947b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Visiteur\Dessin">
+      <UniqueIdentifier>{67b439b1-0be1-4525-8708-65d7a795f435}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Fichiers sources\Visiteur\Dessin">
-      <UniqueIdentifier>{405d3289-10e6-4cd1-9cdf-ab9717beed28}</UniqueIdentifier>
+      <UniqueIdentifier>{cc31d6ef-7440-4aa6-8c52-ffc4fb8d33b4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -96,9 +96,6 @@
     <ClInclude Include="Socket.h">
       <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
     </ClInclude>
-    <ClInclude Include="Dessin.h">
-      <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
-    </ClInclude>
     <ClInclude Include="VisiteurTranslation.h">
       <Filter>Fichiers d%27en-tête\Visiteur\Transformation</Filter>
     </ClInclude>
@@ -111,14 +108,11 @@
     <ClInclude Include="VisiteurTxt.h">
       <Filter>Fichiers d%27en-tête\Visiteur\Sauvegarde</Filter>
     </ClInclude>
-    <ClInclude Include="VisiteurDessin.h">
-      <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
-    </ClInclude>
-    <ClInclude Include="VisiteurJava.h">
-      <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
-    </ClInclude>
     <ClInclude Include="Visiteur.h">
       <Filter>Fichiers d%27en-tête\Visiteur</Filter>
+    </ClInclude>
+    <ClInclude Include="VisiteurDessin.h">
+      <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -152,9 +146,6 @@
     <ClCompile Include="Socket.cpp">
       <Filter>Fichiers sources\ConnexionServeur</Filter>
     </ClCompile>
-    <ClCompile Include="Dessin.cpp">
-      <Filter>Fichiers sources\ConnexionServeur</Filter>
-    </ClCompile>
     <ClCompile Include="VisiteurRotation.cpp">
       <Filter>Fichiers sources\Visiteur\Transformation</Filter>
     </ClCompile>
@@ -164,11 +155,11 @@
     <ClCompile Include="VisiteurHomothetie.cpp">
       <Filter>Fichiers sources\Visiteur\Transformation</Filter>
     </ClCompile>
-    <ClCompile Include="VisiteurDessin.cpp">
-      <Filter>Fichiers sources\Visiteur\Dessin</Filter>
-    </ClCompile>
     <ClCompile Include="VisiteurTxt.cpp">
       <Filter>Fichiers sources\Visiteur\Sauvegarde</Filter>
+    </ClCompile>
+    <ClCompile Include="VisiteurDessin.cpp">
+      <Filter>Fichiers sources\Visiteur\Dessin</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

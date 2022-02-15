@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
-    <ClInclude Include="Dessin.h" />
     <ClInclude Include="Socket.h" />
     <ClInclude Include="Constante.h" />
     <ClInclude Include="Exception.h" />
@@ -151,7 +150,6 @@
     <ClInclude Include="Visiteur.h" />
     <ClInclude Include="VisiteurDessin.h" />
     <ClInclude Include="VisiteurHomothetie.h" />
-    <ClInclude Include="VisiteurJava.h" />
     <ClInclude Include="VisiteurRotation.h" />
     <ClInclude Include="VisiteurTranslation.h" />
     <ClInclude Include="Triangle.h" />
@@ -160,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
-    <ClCompile Include="Dessin.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Forme.cpp" />
     <ClCompile Include="Groupe.cpp" />

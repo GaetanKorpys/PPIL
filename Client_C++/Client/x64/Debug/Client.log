@@ -1,23 +1,9 @@
 ﻿  Cercle.cpp
-  Dessin.cpp
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Dessin.cpp(67,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Dessin.cpp(81,58): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Dessin.cpp(95,1): warning C4297: 'Dessin::~Dessin' : la fonction lève une exception alors qu'elle est présumée ne pas le faire
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Dessin.cpp(95,1): message : le destructeur ou l'annulateur d'allocation comporte une spécification d'exception qui ne peut pas être levée (éventuellement implicite)
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Dessin.cpp(99,1): warning C4297: 'Dessin::~Dessin' : la fonction lève une exception alors qu'elle est présumée ne pas le faire
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Dessin.cpp(99,1): message : le destructeur ou l'annulateur d'allocation comporte une spécification d'exception qui ne peut pas être levée (éventuellement implicite)
-  Forme.cpp
   Groupe.cpp
 C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Groupe.cpp(26,28): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
   Polygone.cpp
 C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\Polygone.cpp(42,28): warning C4267: 'return' : conversion de 'size_t' en 'int', perte possible de données
   Segment.cpp
   Triangle.cpp
-  Vecteur2D.cpp
-  VisiteurHomothetie.cpp
-  VisiteurRotation.cpp
-  VisiteurTranslation.cpp
-  VisiteurTxt.cpp
-  main.cpp
   Génération de code en cours...
   Client.vcxproj -> C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\x64\Debug\Client.exe

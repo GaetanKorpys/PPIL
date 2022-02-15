@@ -33,7 +33,7 @@ public:
 	/**
 	 * \brief Destructeur.
 	 */
-	inline virtual ~Vecteur2D();
+	virtual ~Vecteur2D(){}
 
 	/**
 	 * \brief Constructeur avec un couple de coordonnées (x,y).
@@ -41,7 +41,11 @@ public:
 	 * \param x double.
 	 * \param y double.
 	 */
-	inline explicit Vecteur2D(const double& x = 0, const double& y = 0);
+	Vecteur2D(const double& x = 0, const double& y = 0)
+	{
+		_abscisse = x;
+		_ordonnee = y;
+	}
 
 	/**
 	 * \brief Constructeur par recopie.
@@ -53,27 +57,39 @@ public:
 	 * \brief Getter du membre privé _abscisse.
 	 * \return double L'abscisse du vecteur.
 	 */
-	inline double getX()const;
+	double getX()const
+	{
+		return _abscisse;
+	}
 
 	/**
 	 * \brief Setter du membre privé _abscisse.
 	 * \param x const double.
 	 * \return Vecteur2D Une référence sur l'instance modifiée.
 	 */
-	inline void setX(const double x);
+	void setX(const double x)
+	{
+		_abscisse = x;
+	}
 
 	/**
 	 * \brief Getter du membre privé __ordonnee.
 	 * \return double L'ordonné du vecteur.
 	 */
-	inline double getY()const;
+	double getY()const
+	{
+		return _ordonnee;
+	}
 
 	/**
 	 * \brief Setter du membre privé _ordonnee
 	 * \param y const double.
 	 * \return Vecteur2D Une référence sur l'instance modifiée.
 	 */
-	inline void setY(const double y);
+	inline void setY(const double y)
+	{
+		_ordonnee = y;
+	}
 
 	/**
 	 * \brief Surcharge de l'opérateur addition (+).
@@ -139,7 +155,7 @@ public:
 	 * \brief Surcharge de l'opérateur <<.
 	 * \detail Modifie l'affichage du flux (généralement cout).
 	 * \param os ostream
-	 * \param u const Vecteur2D
+	 * \param op const Vecteur2D
 	 * \return ostream Le flux d'entrée modifié.
 	 */
 	friend ostream& operator << (ostream& os, const Vecteur2D& op);
@@ -149,6 +165,11 @@ public:
 		return new Vecteur2D(*this);
 	}
 
+	/**
+	 * \brief Affiche un vecteur dans le flux passé en paramètre.
+	 * \details Par défaut le flux de sortie est cout.
+	 * \param os ostream Le flux de sortie.
+	 */
 	void affiche(ostream& os = cout)
 	{
 		os << (*this) << endl;
@@ -195,55 +216,4 @@ public:
 
 };
 
-	////////////////////////////////////////////////
-	///											 ///
-	///		Implémentation des méthodes inline	 ///
-	///											 ///
-	////////////////////////////////////////////////
-
-
-
-inline Vecteur2D::~Vecteur2D(){}
-
-inline double Vecteur2D::getX() const
-{
-	return _abscisse;
-}
-
-inline void Vecteur2D::setX(double x)
-{
-	_abscisse = x;
-}
-
-inline double Vecteur2D::getY() const
-{
-	return _ordonnee;
-}
-
-inline void Vecteur2D::setY(double y)
-{
-	_abscisse = y;
-}
-
-inline const Vecteur2D operator *(const double& a, const Vecteur2D& u)
-{
-	return u * a;
-}
-
-inline Vecteur2D::Vecteur2D(const double& x, const double& y) : _abscisse(x), _ordonnee(y) {}
-
-inline const Vecteur2D Vecteur2D::operator + (const Vecteur2D& u) const
-{
-	return Vecteur2D(_abscisse + u._abscisse, _ordonnee + u._ordonnee);
-}
-
-inline const Vecteur2D Vecteur2D::operator * (const double& a) const
-{
-	return Vecteur2D(_abscisse * a, _ordonnee * a);
-}
-
-inline const Vecteur2D Vecteur2D::operator - () const
-{
-	return Vecteur2D(-_abscisse, -_ordonnee);
-}
 

@@ -11,7 +11,7 @@ Vecteur2D::Vecteur2D(const Vecteur2D& op)
 Vecteur2D::operator string() const
 {
 	ostringstream os;
-	os << "Vecteur (" << _abscisse << ", " << _ordonnee << ")";
+	os << "(" << _abscisse << ", " << _ordonnee << ")";
 	return os.str();
 }
 
@@ -20,6 +20,26 @@ ostream& operator << (ostream& os, const Vecteur2D& op)
 {
 	os << (string)op;
 	return os;
+}
+
+inline const Vecteur2D operator *(const double& a, const Vecteur2D& u)
+{
+	return u * a;
+}
+
+inline const Vecteur2D Vecteur2D::operator + (const Vecteur2D& u) const
+{
+	return Vecteur2D(_abscisse + u._abscisse, _ordonnee + u._ordonnee);
+}
+
+inline const Vecteur2D Vecteur2D::operator * (const double& a) const
+{
+	return Vecteur2D(_abscisse * a, _ordonnee * a);
+}
+
+inline const Vecteur2D Vecteur2D::operator - () const
+{
+	return Vecteur2D(-_abscisse, -_ordonnee);
 }
 
 const Vecteur2D& Vecteur2D::operator =(const Vecteur2D& op)

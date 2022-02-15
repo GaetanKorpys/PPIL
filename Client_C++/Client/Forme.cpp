@@ -1,5 +1,7 @@
 #include "Forme.h"
 
+#include "Visiteur.h"
+
 const Forme& Forme::operator = (const Forme& op)
 {
 	if (&op != this) {
@@ -30,5 +32,6 @@ Forme::operator string()const
 		<< "Groupe = " << tmp;
 	return oss.str();
 }
+
 
 

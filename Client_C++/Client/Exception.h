@@ -1,6 +1,6 @@
 /**
 * \file Exception.h
-* \brief Classe utilisé pour déclarer une exception.
+* \brief Classe utilisée pour déclarer une exception.
 */
 
 #pragma once
@@ -18,13 +18,19 @@ public:
 	* \brief Constructeur avec une chaine de caractère.
 	* \param string message
 	*/
-	inline Exception(const string& message);
+	Exception(const string& message)
+	{
+		_message = message;
+	}
 
 	/**
 	* \brief Getter du membre privé _message.
 	* \return string 
 	*/
-	inline const string& getMessage() const;
+	const string& getMessage() const
+	{
+		return _message;
+	}
 
 
 	/**
@@ -36,19 +42,3 @@ public:
 	*/
 	friend ostream& operator << (ostream& os, const Exception& e);
 };
-
-	////////////////////////////////////////////////
-	///											 ///
-	///		Implémentation des méthodes inline	 ///
-	///											 ///
-	////////////////////////////////////////////////
-
-inline Exception::Exception(const string& message)
-{
-	_message = message;
-}
-
-inline const string& Exception::getMessage() const
-{
-	return _message;
-}
