@@ -15,7 +15,7 @@ Triangle::Triangle(const Vecteur2D& p1, const Vecteur2D& p2, const Vecteur2D& p3
 	}
 }
 
-Triangle::Triangle(const Triangle& op): Forme(op.getCouleur())
+Triangle::Triangle(const Triangle& op): Forme(op.getCouleur(), op.getGroupe())
 {
 	_p1 = op._p1;
 	_p2 = op._p2;
@@ -57,6 +57,14 @@ void Triangle::setP3(const Vecteur2D& op)
 	{
 		throw Exception("Le point P3 n'est pas valide.");
 	}
+}
+
+const Vecteur2D& Triangle::getCentreGravite()const
+{
+	Vecteur2D tmp;
+	tmp.setX((getP1().getX() + getP2().getX() + getP3().getX()) / 3);
+	tmp.setY((getP1().getY() + getP2().getY() + getP3().getY()) / 3);
+	return tmp;
 }
 
 const Triangle& Triangle::operator = (const Triangle& op)

@@ -20,12 +20,14 @@ void Polygone::copie(const vector<Vecteur2D* >& op)
 	}
 }
 
+Polygone::Polygone(const string& couleur) :Forme(couleur){}
+
 Polygone::Polygone(const vector<Vecteur2D*>& op, const string& couleur):Forme(couleur)
 {
 	copie(op);
 }
 
-Polygone::Polygone(const Polygone& op) : Forme(op.getCouleur())
+Polygone::Polygone(const Polygone& op) : Forme(op.getCouleur(), op.getGroupe())
 {
 	copie(op._listePoints);
 }
@@ -58,7 +60,23 @@ const Polygone& Polygone::setPoint(int index, const Vecteur2D& op)
 		throw Exception("Index incorrect.");
 	}
 	(* _listePoints[index]) = op;
-	return *this;;
+	return *this;
+}
+
+const Vecteur2D& Polygone::getCentreGravite()const
+{
+	Vecteur2D tmp;
+	double x = 0;
+	double y = 0;
+
+	for(int i =0; i < _listePoints.size(); i++)
+	{
+		x += _listePoints[i]->getX();
+		y += _listePoints[i]->getY();
+	}
+	tmp.setX(x / _listePoints.size());
+	tmp.setY(y / _listePoints.size());
+	return tmp;
 }
 
 const Polygone& Polygone::operator = (const Polygone& op)

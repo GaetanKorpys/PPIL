@@ -15,7 +15,7 @@ Segment::Segment(const Vecteur2D& p1, const Vecteur2D& p2,const string& couleur 
 	}
 }
 
-Segment::Segment(const Segment& op) :Forme(op.getCouleur())
+Segment::Segment(const Segment& op) :Forme(op.getCouleur(), op.getGroupe())
 {
 	_p1 = op._p1;
 	_p2 = op._p2;
@@ -43,6 +43,14 @@ void Segment::setP2(const Vecteur2D& p2)
 	{
 		throw Exception("Le point P2 n'est pas valide.");
 	}
+}
+
+const Vecteur2D& Segment::getCentreGravite()const
+{
+	Vecteur2D tmp;
+	tmp.setX((getP1().getX() + getP2().getX()) / 2);
+	tmp.setY((getP1().getY() + getP2().getY()) / 2);
+	return tmp;
 }
 
 const Segment& Segment::operator = (const Segment& op)

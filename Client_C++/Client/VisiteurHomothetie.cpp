@@ -16,6 +16,7 @@ void VisiteurHomothetie::visite(Cercle& op)const
 {
 	Vecteur2D tmpVecteur = op.getCentre();
 	op.setCentre(tmpVecteur.homothetie(_op, _rapport));
+	op.setRayon(op.getRayon() * _rapport);
 }
 
 void VisiteurHomothetie::visite(Triangle& op)const

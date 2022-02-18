@@ -5,7 +5,7 @@
 #include "Polygone.h"
 #include "Groupe.h"
 #include "Exception.h"
-#include "Socket.h"
+#include "SocketSingleton.h"
 #include "VisiteurHomothetie.h"
 #include "VisiteurRotation.h"
 #include "Visiteur.h"
@@ -16,300 +16,457 @@
 
 int main()
 {
+	string reponse;
+
 	try
 	{
-		cout << "					Début des tests						" << endl << endl << endl;
+		do
+		{
+			cout << "Voulez-vous afficher les details dans la console ?" << endl;
+			cout << "[ y / n ]" << endl;
+			cin >> reponse;
+		}
+		while (reponse != "y" && reponse != "n");
+		if(reponse == "y")
+		{
+			cout << "					Debut des tests						" << endl << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Création des Transformations		" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Creation des Transformations				   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
-		Vecteur2D v(3, 5);
 
-		VisiteurTranslation translation(v);
-		VisiteurRotation rotation(v, PI/4);
-		VisiteurHomothetie homothetie(v, 2);
+			Vecteur2D v(3, 5);
+			cout << "Le vecteur utilise pour les transformations est le vecteur v = " << v << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Transformations					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			VisiteurTranslation translation(v);
+			VisiteurRotation rotation(v, PI / 4);
+			VisiteurHomothetie homothetie(v, 2);
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Vecteurs					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Transformations							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
-		cout << "Création de 5 vecteurs : " << endl << endl;
+			system("pause");
 
-		Vecteur2D v2(2, 4), v3(3, 6), v4(9, 12), v5(350, 30), v6(490, 190);
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Vecteurs							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
-		v2.affiche();
-		v3.affiche();
-		v4.affiche();
-		v5.affiche();
-		v6.affiche();
+			cout << "Affichage d'un vecteur : " << endl << endl;
 
-		Vecteur2D vt = v2;
-		Vecteur2D vh = v2;
-		Vecteur2D vr = v2;
+			Vecteur2D v2(300, 400), v3(400, 450), v4(500, 600), v5(10, 15), v6(130, 90);
+			v2.affiche();
 
-		cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
+			Vecteur2D vt = v2;
+			Vecteur2D vh = v2;
+			Vecteur2D vr = v2;
 
-		cout << "Translation de v2 avec le vecteur v." << endl << endl;
-		cout << "Avant translation v2 = " << v2 << endl;
-		vt.translation(v);
-		cout << "Après translation v2 = " << vt << endl << endl;
+			cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "Rotation de v2 avec un angle de PI/4 et le vecteur v." << endl << endl;
-		cout << "Avant rotation v2 = " << v2 << endl;
-		vr.rotation(v,PI/4);
-		cout << "Après rotation v2 = " << vr << endl << endl;
+			cout << "Translation de v2 avec le vecteur v." << endl << endl;
+			cout << "Avant translation v2 = " << v2 << endl;
+			vt.translation(v);
+			cout << "Apres translation v2 = " << vt << endl << endl;
 
-		cout << "Homothétie de v2 avec un rapport de 2 et le vecteur v."<< endl << endl;
-		cout << "Avant homothétie v2 = " << v2 << endl;
-		vh.homothetie(v,2);
-		cout << "Après homothétie v2 = " << vh << endl << endl;
+			cout << "Rotation de v2 avec un angle de PI/4 et le vecteur v." << endl << endl;
+			cout << "Avant rotation v2 = " << v2 << endl;
+			vr.rotation(v, PI / 4);
+			cout << "Apres rotation v2 = " << vr << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Vecteurs						" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			cout << "Homothetie de v2 avec un rapport de 2 et le vecteur v." << endl << endl;
+			cout << "Avant homothetie v2 = " << v2 << endl;
+			vh.homothetie(v, 2);
+			cout << "Apres homothetie v2 = " << vh << endl << endl;
 
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Vecteurs								   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Segments					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			system("pause");
 
-		cout << "Création de 2 segments : " << endl << endl;
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Segments							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
-		Segment s(v3, v4), s2(v5, v6);
+			cout << "Affichage de 2 segments : " << endl << endl;
 
-		s.affiche();
-		s2.affiche();
+			Segment s(v3, v4), s2(v5, v6);
 
-		Segment st = s;
-		Segment sr = s;
-		Segment sh = s;
+			s.affiche();
+			s2.affiche();
 
-		cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
+			Segment st = s;
+			Segment sr = s;
+			Segment sh = s;
 
-		cout << "Translation de s avec le vecteur v." << endl << endl;
-		cout << "Avant translation s = " << s << endl;
-		st.accepte(translation);
-		cout << "Après translation s = " << st << endl << endl;
+			cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "Rotation de s avec un angle de PI/4 et le vecteur v." << endl << endl;
-		cout << "Avant rotation s = " << s << endl;
-		sr.accepte(rotation);
-		cout << "Après rotation s = " << sr << endl << endl;
+			cout << "Translation de s avec le vecteur v." << endl << endl;
+			cout << "Avant translation s = " << s << endl;
+			st.accepte(translation);
+			cout << "Apres translation s = " << st << endl << endl;
 
-		cout << "Homothétie de s avec un rapport de 2 et le vecteur v." << endl << endl;
-		cout << "Avant homothétie s = " << s << endl;
-		sh.accepte(homothetie);
-		cout << "Après homothétie s = " << sh << endl << endl;
+			cout << "Rotation de s avec un angle de PI/4 et le vecteur v." << endl << endl;
+			cout << "Avant rotation s = " << s << endl;
+			sr.accepte(rotation);
+			cout << "Apres rotation s = " << sr << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Segments						" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			cout << "Homothetie de s avec un rapport de 2 et le vecteur v." << endl << endl;
+			cout << "Avant homothetie s = " << s << endl;
+			sh.accepte(homothetie);
+			cout << "Apres homothetie s = " << sh << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Triangles					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Segments								   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
-		cout << "Création de 2 triangles : " << endl << endl;
+			system("pause");
 
-		Triangle t(v, v5, v3), t2(v4, v5, v6);
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Triangles							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
-		t.affiche();
-		t2.affiche();
+			cout << "Affichage de 2 triangles : " << endl << endl;
 
-		Triangle tt = t;
-		Triangle tr = t;
-		Triangle th = t;
+			Triangle t(v, v5, v3), t2(v4, v5, v6);
 
-		cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
+			t.affiche();
+			t2.affiche();
 
-		cout << "Translation de t avec le vecteur v." << endl << endl;
-		cout << "Avant translation t = " << t << endl;
-		tt.accepte(translation);
-		cout << "Après translation t = " << tt << endl << endl;
+			Triangle tt = t;
+			Triangle tr = t;
+			Triangle th = t;
 
-		cout << "Rotation de t avec un angle de PI/4 et le vecteur v." << endl << endl;
-		cout << "Avant rotation t = " << t << endl;
-		tr.accepte(rotation);
-		cout << "Après rotation t = " << tr << endl << endl;
+			cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "Homothétie de t avec un rapport de 2 et le vecteur v." << endl << endl;
-		cout << "Avant homothétie t = " << t << endl;
-		th.accepte(homothetie);
-		cout << "Après homothétie t = " << th << endl << endl;
+			cout << "Translation de t avec le vecteur v." << endl << endl;
+			cout << "Avant translation t = " << t << endl;
+			tt.accepte(translation);
+			cout << "Apres translation t = " << tt << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Triangles						" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			cout << "Rotation de t avec un angle de PI/4 et le vecteur v." << endl << endl;
+			cout << "Avant rotation t = " << t << endl;
+			tr.accepte(rotation);
+			cout << "Apres rotation t = " << tr << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Cercles					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "Homothetie de t avec un rapport de 2 et le vecteur v." << endl << endl;
+			cout << "Avant homothetie t = " << t << endl;
+			th.accepte(homothetie);
+			cout << "Apres homothetie t = " << th << endl << endl;
 
-		cout << "Création de 2 cercles : " << endl << endl;
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Triangles								   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
-		Cercle c(v3, 5), c2(v6, 3);
+			system("pause");
 
-		c.affiche();
-		c2.affiche();
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Cercles							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
-		Cercle ct = c;
-		Cercle cr = c;
-		Cercle ch = c;
+			cout << "Affichage de 2 cercles : " << endl << endl;
 
-		cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
+			Cercle c(v3, 100), c2(v6, 50);
 
-		cout << "Translation de c avec le vecteur v." << endl << endl;
-		cout << "Avant translation c = " << c << endl;
-		ct.accepte(translation);
-		cout << "Après translation c = " << ct << endl << endl;
+			c.affiche();
+			c2.affiche();
 
-		cout << "Rotation de c avec un angle de PI/4 et le vecteur v." << endl << endl;
-		cout << "Avant rotation c = " << c << endl;
-		cr.accepte(rotation);
-		cout << "Après rotation c = " << cr << endl << endl;
+			Cercle ct = c;
+			Cercle cr = c;
+			Cercle ch = c;
 
-		cout << "Homothétie de c avec un rapport de 2 et le vecteur v." << endl << endl;
-		cout << "Avant homothétie c = " << c << endl;
-		ch.accepte(homothetie);
-		cout << "Après homothétie c = " << ch << endl << endl;
+			cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Cercles							" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			cout << "Translation de c avec le vecteur v." << endl << endl;
+			cout << "Avant translation c = " << c << endl;
+			ct.accepte(translation);
+			cout << "Apres translation c = " << ct << endl << endl;
 
+			cout << "Rotation de c avec un angle de PI/4 et le vecteur v." << endl << endl;
+			cout << "Avant rotation c = " << c << endl;
+			cr.accepte(rotation);
+			cout << "Apres rotation c = " << cr << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Polygones					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "Homothetie de c avec un rapport de 2 et le vecteur v." << endl << endl;
+			cout << "Avant homothetie c = " << c << endl;
+			ch.accepte(homothetie);
+			cout << "Apres homothetie c = " << ch << endl << endl;
 
-		cout << "Création de 2 polygones : " << endl << endl;
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Cercles									   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
-		Polygone p, p2;
+			system("pause");
 
-		p.ajouter(v);
-		p.ajouter(v2);
-		p.ajouter(v3);
-		p.ajouter(v4);
-	
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Polygones							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
+			cout << "Affichage de 2 polygones : " << endl << endl;
 
-		p2.ajouter(v);
-		p2.ajouter(v2);
-		p2.ajouter(v3);
-		p2.ajouter(v4);
-		p2.ajouter(v5);
-		p2.ajouter(v6);
+			Polygone p, p2;
 
-		p.affiche();
-		p2.affiche();
+			p.ajouter(v);
+			p.ajouter(v2);
+			p.ajouter(v3);
+			p.ajouter(v4);
 
-		Polygone pt = p;
-		Polygone pr = p;
-		Polygone ph = p;
 
-		cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "Translation de p avec le vecteur v." << endl << endl;
-		cout << "Avant translation p = " << p << endl;
-		pt.accepte(translation);
-		cout << "Après translation p = " << pt << endl << endl;
+			p2.ajouter(v);
+			p2.ajouter(v2);
+			p2.ajouter(v3);
+			p2.ajouter(v4);
+			p2.ajouter(v5);
+			p2.ajouter(v6);
 
-		cout << "Rotation de p avec un angle de PI/4 et le vecteur v." << endl << endl;
-		cout << "Avant rotation p = " << p << endl;
-		pr.accepte(rotation);
-		cout << "Après rotation p = " << pr << endl << endl;
+			p.affiche();
+			p2.affiche();
 
-		cout << "Homothétie de p avec un rapport de 2 et le vecteur v." << endl << endl;
-		cout << "Avant homothétie p = " << p << endl;
-		ph.accepte(homothetie);
-		cout << "Après homothétie p = " << ph << endl << endl;
+			Polygone pt = p;
+			Polygone pr = p;
+			Polygone ph = p;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Polygones						" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Groupes					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "Translation de p avec le vecteur v." << endl << endl;
+			cout << "Avant translation p = " << p << endl;
+			pt.accepte(translation);
+			cout << "Apres translation p = " << pt << endl << endl;
 
-		cout << "Création de 2 groupes : " << endl << endl;
+			cout << "Rotation de p avec un angle de PI/4 et le vecteur v." << endl << endl;
+			cout << "Avant rotation p = " << p << endl;
+			pr.accepte(rotation);
+			cout << "Apres rotation p = " << pr << endl << endl;
 
-		Groupe g, g2;
+			cout << "Homothetie de p avec un rapport de 2 et le vecteur v." << endl << endl;
+			cout << "Avant homothetie p = " << p << endl;
+			ph.accepte(homothetie);
+			cout << "Apres homothetie p = " << ph << endl << endl;
 
-		g.ajouter(s);
-		g.ajouter(t);
-		g.ajouter(c);
-		g.ajouter(p);
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Polygones								   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
+			system("pause");
 
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Groupes							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
 
-		g2.ajouter(s);
-		g2.ajouter(t2);
-		g2.ajouter(c2);
+			cout << "Affichage de 2 groupes : " << endl << endl;
 
-		g.affiche();
-		g2.affiche();
+			Groupe g, g2;
 
-		Groupe gt = g;
-		Groupe gr = g;
-		Groupe gh = g;
+			g.ajouter(s);
+			g.ajouter(t);
+			g.ajouter(c);
+			g.ajouter(p);
 
-		cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "Translation de g avec le vecteur v." << endl << endl;
-		cout << "Avant translation g = " << g << endl;
-		gt.accepte(translation);
-		cout << "Après translation g = " << gt << endl << endl;
 
-		cout << "Rotation de g avec un angle de PI/4 et le vecteur v." << endl << endl;
-		cout << "Avant rotation g = " << g << endl;
-		gr.accepte(rotation);
-		cout << "Après rotation g = " << gr << endl << endl;
+			g2.ajouter(s);
+			g2.ajouter(t2);
+			g2.ajouter(c2);
 
-		cout << "Homothétie de g avec un rapport de 2 et le vecteur v." << endl << endl;
-		cout << "Avant homothétie g = " << g << endl;
-		gh.accepte(homothetie);
-		cout << "Après homothétie g = " << gh << endl << endl;
+			g.affiche();
+			g2.affiche();
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Fin Groupes						" << endl;
-		cout << "-------------------------------------------------------" << endl << endl << endl;
+			Groupe gt = g;
+			Groupe gr = g;
+			Groupe gh = g;
 
+			cout << "Les 3 transformations utilisent le vecteur v : " << v << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test de la Sauvgarde					" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+			cout << "Translation de g avec le vecteur v." << endl << endl;
+			cout << "Avant translation g = " << g << endl;
+			gt.accepte(translation);
+			cout << "Apres translation g = " << gt << endl << endl;
 
-		cout << "Creation de la classe destinee a la sauvgarde." << endl << endl;
+			cout << "Rotation de g avec un angle de PI/4 et le vecteur v." << endl << endl;
+			cout << "Avant rotation g = " << g << endl;
+			gr.accepte(rotation);
+			cout << "Apres rotation g = " << gr << endl << endl;
 
-		VisiteurTxt sauvgarde, backUp;
+			cout << "Homothetie de g avec un rapport de 2 et le vecteur v." << endl << endl;
+			cout << "Avant homothetie g = " << g << endl;
+			gh.accepte(homothetie);
+			cout << "Apres homothetie g = " << gh << endl << endl;
 
-		s.accepte(sauvgarde);
-		t.accepte(sauvgarde);
-		c.accepte(sauvgarde);
-		p.accepte(sauvgarde);
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Fin Groupes							   		   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl << endl;
 
-		g.accepte(backUp);
+			do
+			{
+				cout << "Voulez-vous tester la sauvegarde dans un fichier .txt ?" << endl;
+				cout << "[ y / n ]" << endl;
+				cin >> reponse;
+			} while (reponse != "y" && reponse != "n");
+			if (reponse == "y")
+			{
+				cout << "			-------------------------------------------------------" << endl;
+				cout << "					Test de la Sauvegarde						   " << endl;
+				cout << "			-------------------------------------------------------" << endl << endl;
 
+				cout << "Creation de la classe destinee a la sauvegarde." << endl << endl;
 
-		cout << "-------------------------------------------------------" << endl;
-		cout << "					Test des Dessins				" << endl;
-		cout << "-------------------------------------------------------" << endl << endl;
+				VisiteurTxt sauvegarde;
 
-		VisiteurDessin dessin;
+				cout << "Les formes sauvegardees par defaut sont :" << endl;
+				cout << s << endl;
+				cout << t << endl;
+				cout << c << endl;
+				cout << p << endl;
+				cout << g << endl;
 
-		s2.accepte(dessin);
-		/*t.accepte(dessin);
-		c.accepte(dessin);
-		p.accepte(dessin);
-		g.accepte(dessin);*/
+				s.accepte(sauvegarde);
+				t.accepte(sauvegarde);
+				c.accepte(sauvegarde);
+				p.accepte(sauvegarde);
+				g.accepte(sauvegarde);
 
+				cout << "Sauvegarde terminee." << endl;
+			}
+		}
+
+		do
+		{
+			cout << "Voulez-vous tester le dessin des formes geometriques ?" << endl;
+			cout << "[ y / n ]" << endl;
+			cin >> reponse;
+		} while (reponse != "y" && reponse != "n");
+		if (reponse == "y")
+		{
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test des Dessins							   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
+
+
+			cout << "Pour chaque forme [ Segment, Triangle, Cercle, Polygone et Groupe(ensemble de formes) ] du sujet," << endl;
+			cout << "est effectue :" << endl;
+			cout << " 1. - Creation" << endl;
+			cout << " 2. - Rotation suivie de Translation" << endl;
+			cout << " 3. - Homothetie" << endl << endl;
+			cout << "Apres chaque etape, la forme est ajoutee a un groupe." << endl;
+
+			cout << "Il y a donc 3 dessins pour chaque formes dans la fenetre." << endl;
+
+			cout << "Une nouvelle fenetre est ouverte pour chaque forme n'appartenant pas a un groupe." << endl;
+
+
+			system("pause");
+
+			VisiteurDessin dessin;
+			Groupe groupe(RED);
+
+			//--------------------------TRIANGLE----------------------------
+
+			Triangle triangle(Vecteur2D(150, 100), Vecteur2D(100, 200), Vecteur2D(200, 200), BLACK);
+			groupe.ajouter(triangle);
+
+			VisiteurRotation rotaTriangle(triangle.getCentreGravite(), PI);
+			triangle.accepte(rotaTriangle);
+
+			VisiteurTranslation transTriangle(Vecteur2D(0, 150));
+			triangle.accepte(transTriangle);
+
+			groupe.ajouter(triangle);
+
+			VisiteurHomothetie homoTriangle(triangle.getCentreGravite(), 2);
+			triangle.accepte(homoTriangle);
+
+			groupe.ajouter(triangle);
+
+
+			//--------------------------CERCLE----------------------------
+
+			Cercle cercle(Vecteur2D(390, 100), 50, GREEN);
+			groupe.ajouter(cercle);
+
+			VisiteurRotation rotaCercle(cercle.getCentre(), PI);
+			cercle.accepte(rotaCercle);
+
+			VisiteurTranslation transCercle(Vecteur2D(0, 200));
+			cercle.accepte(transCercle);
+
+			groupe.ajouter(cercle);
+
+			VisiteurHomothetie homoCercle(cercle.getCentre(), 2);
+			cercle.accepte(homoCercle);
+
+			groupe.ajouter(cercle);
+
+			//--------------------------SEGMENT----------------------------
+
+			Segment segment(Vecteur2D(600, 100), Vecteur2D(600, 200), GREEN);
+			groupe.ajouter(segment);
+
+			VisiteurRotation rotaSegment(Vecteur2D(600, 150), PI / 2);
+			segment.accepte(rotaSegment);
+
+			groupe.ajouter(segment);
+
+			VisiteurHomothetie homoSegment(Vecteur2D(600, 150), 2);
+			segment.accepte(homoSegment);
+
+			VisiteurTranslation transSegment(Vecteur2D(0, 150));
+			segment.accepte(transSegment);
+
+			groupe.ajouter(segment);
+
+			//--------------------------POLYGONE----------------------------
+
+			Polygone polygone(CYAN);
+
+			polygone.ajouter(Vecteur2D(350, 550));
+			polygone.ajouter(Vecteur2D(450, 550));
+			polygone.ajouter(Vecteur2D(550, 650));
+			polygone.ajouter(Vecteur2D(450, 750));
+			polygone.ajouter(Vecteur2D(350, 750));
+
+			groupe.ajouter(polygone);
+
+			VisiteurRotation rotaPolygone(Vecteur2D(550, 650), PI);
+			polygone.accepte(rotaPolygone);
+
+			VisiteurTranslation transPolygone(Vecteur2D(50, 0));
+			polygone.accepte(transPolygone);
+
+			groupe.ajouter(polygone);
+
+			VisiteurHomothetie homoPolygone(Vecteur2D(670, 650), 0.5);
+			polygone.accepte(homoPolygone);
+
+			groupe.ajouter(polygone);
+
+			//On dessine le groupe
+			groupe.accepte(dessin);
+
+			//--------------------------GROUPE----------------------------
+
+			cout << "\n				------------------------------" << endl << endl;
+			cout << "Creation d'un groupe(ensemble de formes) contenant :" << endl;
+			cout << " - le groupe construit et dessine precedemment" << endl;
+			cout << " - un triangle de couleur bleu." << endl << endl;
+
+			cout << "Cette nouvelle forme n'appartient pas a un groupe." << endl << endl;
+			cout << "Ouverture d'une nouvelle fenetre." << endl;
+
+			system("pause");
+
+
+			Groupe groupe2;
+
+			groupe2.ajouter(groupe);
+
+			triangle.setCouleur(BLUE);
+			groupe2.ajouter(triangle);
+			groupe2.accepte(dessin);
+		}
 	}
+
 	catch (Exception e)
 	{
 		cout << e << endl;

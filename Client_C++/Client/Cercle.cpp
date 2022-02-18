@@ -15,7 +15,7 @@ Cercle::Cercle(const Vecteur2D& centre, double rayon, const string& couleur) : F
 	}
 }
 
-Cercle::Cercle(const Cercle& op) : Forme(op.getCouleur())
+Cercle::Cercle(const Cercle& op) : Forme(op.getCouleur(), op.getGroupe())
 {
 	if (op._rayon <= 0)
 	{

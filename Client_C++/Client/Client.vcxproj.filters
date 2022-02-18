@@ -93,7 +93,7 @@
     <ClInclude Include="Constante.h">
       <Filter>Fichiers d%27en-tête\Constante</Filter>
     </ClInclude>
-    <ClInclude Include="Socket.h">
+    <ClInclude Include="SocketSingleton.h">
       <Filter>Fichiers d%27en-tête\ConnexionServeur</Filter>
     </ClInclude>
     <ClInclude Include="VisiteurTranslation.h">
@@ -143,7 +143,7 @@
     <ClCompile Include="Groupe.cpp">
       <Filter>Fichiers sources\Forme</Filter>
     </ClCompile>
-    <ClCompile Include="Socket.cpp">
+    <ClCompile Include="SocketSingleton.cpp">
       <Filter>Fichiers sources\ConnexionServeur</Filter>
     </ClCompile>
     <ClCompile Include="VisiteurRotation.cpp">

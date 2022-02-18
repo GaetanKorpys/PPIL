@@ -75,6 +75,12 @@ public:
 	void setP2(const Vecteur2D& p2);
 
 	/**
+	 * \brief Getter du centre de gravité.
+	 * \return Vecteur2D Le centre de gravité
+	 */
+	virtual const Vecteur2D& getCentreGravite()const;
+
+	/**
 	 * \brief Surcharge de l'opérateur =.
 	 * \detail Compare l'instance avec le vecteur passé en paramètre.
 	 * \param op Segment

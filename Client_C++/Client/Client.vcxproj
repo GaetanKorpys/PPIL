@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
-    <ClInclude Include="Socket.h" />
+    <ClInclude Include="SocketSingleton.h" />
     <ClInclude Include="Constante.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Forme.h" />
@@ -164,7 +164,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Segment.cpp" />
-    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="SocketSingleton.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vecteur2D.cpp" />
     <ClCompile Include="VisiteurDessin.cpp" />

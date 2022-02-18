@@ -30,10 +30,12 @@ class Polygone : public Forme
 	void copie(const vector<Vecteur2D*>& op);
 
 public:
+
 	/**
-	 * \brief Constructeur par défaut.
+	 * \brief Constructeur
+	 * \param couleur String
 	 */
-	Polygone(){}
+	Polygone(const string& couleur = BLACK);
 
 	/**
 	 * \brief Constructeur.
@@ -73,6 +75,12 @@ public:
 	 * \return 
 	 */
 	const Polygone& setPoint(int index, const Vecteur2D& op);
+
+	/**
+	 * \brief Getter du centre de gravité.
+	 * \return Vecteur2D Le centre de gravité
+	 */
+	virtual const Vecteur2D& getCentreGravite()const;
 
 	/**
 	 * \brief Surcharge de l'opérateur =.

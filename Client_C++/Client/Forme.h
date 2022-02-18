@@ -40,6 +40,17 @@ public :
 	}
 
 	/**
+	 * \brief Constrcuteur.
+	 * \param couleur string La couleur de la forme.
+	 * \param groupe bool
+	 */
+	Forme(const string& couleur, bool groupe)
+	{
+		_couleur = couleur;
+		_groupe = groupe;
+	}
+
+	/**
 	 * \brief Constructeur par recopie.
 	 * \param op Forme Une instance de la forme à copier.
 	 */

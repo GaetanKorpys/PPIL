@@ -10,10 +10,12 @@ void Groupe::copie(const vector<Forme *>& op)
 	}
 }
 
-Groupe::Groupe(const Groupe& op):Forme(op.getCouleur())
+Groupe::Groupe(const Groupe& op):Forme(op.getCouleur(), op.getGroupe())
 {
 	copie(op._listeFormes);
 }
+
+Groupe::Groupe(const string& couleur) : Forme(couleur){}
 
 Groupe::~Groupe()
 {
@@ -67,7 +69,7 @@ void Groupe::operator + (const Forme& op)
 {
 	if(op.getGroupe())
 	{
-		throw Exception("La forme appartient déjà à un groupe.");
+		throw Exception("La forme appartient deja a un groupe.");
 	}
 	Forme* tmp = op.clone();
 	tmp->setCouleur(getCouleur());

@@ -21,9 +21,10 @@ class Groupe :public Forme
 
 public:
 	/**
-	 * \brief Constructeur par défaut.
+	 * \brief Constructeur
+	 * \param couleur string 
 	 */
-	Groupe(){}
+	Groupe(const string& couleur = BLACK);
 
 	/**
 	 * \brief Constructeur par recopie.

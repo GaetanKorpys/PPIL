@@ -97,6 +97,12 @@ public:
 	void setP3(const Vecteur2D& op);
 
 	/**
+	 * \brief Getter du centre de gravité.
+	 * \return Vecteur2D Le centre de gravité
+	 */
+	virtual const Vecteur2D& getCentreGravite()const;
+
+	/**
 	 * \brief Surcharge de l'opérateur d'affectation.
 	 * \detail Affectation par recopie d'un triangle passé en paramètre.
 	 * \param op Triangle
