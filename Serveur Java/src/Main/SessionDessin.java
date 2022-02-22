@@ -7,6 +7,10 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.net.SocketException;
 
+/**
+ * Classe interlocuteur (Thread).
+ * Une nouvelle instance est creee lorsque le serveur detecte une nouvelle connexion.
+ */
 public class SessionDessin extends Thread{
 
     int nbConnexion;
@@ -14,6 +18,12 @@ public class SessionDessin extends Thread{
     BufferedReader fluxEntrant;
     PrintStream fluxSortant;
 
+    /**
+     * Constructeur
+     * @param socket Socket
+     * @param nbConnexion int
+     * @throws IOException
+     */
     public SessionDessin(Socket socket, int nbConnexion) throws IOException {
         this.socket = socket;
         this.nbConnexion = nbConnexion;
@@ -21,6 +31,10 @@ public class SessionDessin extends Thread{
         this.fluxSortant = new PrintStream(this.socket.getOutputStream());
     }
 
+    /**
+     * Methode ecouteur qui se declenche lorsqu'une nouvelle connexion est demande.
+     * Traite les requetes reçues grâce à la classe COR (Singleton).
+     */
     public void run()
     {
         String requete;
@@ -29,7 +43,7 @@ public class SessionDessin extends Thread{
         {
             while(true)
             {
-
+                //Lit la requete (String) et la stock.
                 requete = this.fluxEntrant.readLine();
 
                 if(requete != null)
@@ -38,6 +52,9 @@ public class SessionDessin extends Thread{
 
                     requete = requete.trim();
 
+                    //Construction du COR et interprete le type de la requete :
+                    // - Ouverture d'une fenetre
+                    // - Dessin d'une forme
                     boolean interpreteOk = COR.getInstance().getRequete().resoudre(requete, objetAwt, this.fluxSortant);
                     if (!interpreteOk) {
                         System.out.println("Requete non interpretee");

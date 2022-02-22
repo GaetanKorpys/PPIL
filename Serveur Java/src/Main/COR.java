@@ -19,7 +19,11 @@ import CouleurCOR.ExpertVertCOR;
 import CouleurCOR.ExpertJauneCOR;
 import CouleurCOR.ExpertCyanCOR;
 
-
+/**
+ * Classe COR qui construit et instancie les 3 chaines de responsabilites.
+ * Utilisation du DP Singleton pour obtenir une classe unique.
+ *
+ */
 public class COR {
 
     private static COR instance = null;
@@ -27,6 +31,13 @@ public class COR {
     private Forme forme;
     private Couleur couleur;
 
+    /**
+     * Constructeur par defaut prive car la classe est un Singleton.
+     * Creation des chaines de responsabilite :
+     * - COR Requete (la requete est le dessin d'une forme ou l'ouverture d'une fenetre)
+     * - COR Forme (la forme reçu a dessine)
+     * - COR Couleur (la couleur a utilise pour le dessin)
+     */
     private COR()
     {
         RequeteCOR forme = new ExpertFormeCOR();
@@ -58,6 +69,10 @@ public class COR {
 
     }
 
+    /**
+     * Getter de l'unique instance de la classe COR.
+     * @return COR L'instance en cours ou une nouvelle si elle n'a pas ete instanciee.
+     */
     public static COR getInstance()
     {
         if(instance == null)
@@ -65,14 +80,26 @@ public class COR {
         return instance;
     }
 
+    /**
+     * Getter de COR Couleur.
+     * @return Couleur Classe mere du DP COR des couleurs.
+     */
     public Couleur getCouleur() {
         return this.couleur;
     }
 
+    /**
+     * Getter de COR Requete.
+     * @return Requete Classe mere du DP COR des requetes.
+     */
     public Requete getRequete() {
         return this.requete;
     }
 
+    /**
+     * Getter de COR Forme.
+     * @return Forme Classe mere du DP COR des formes.
+     */
     public Forme getForme() {
         return this.forme;
     }

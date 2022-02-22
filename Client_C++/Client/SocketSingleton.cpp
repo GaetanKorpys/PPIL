@@ -8,7 +8,7 @@
 
 SocketSingleton::SocketSingleton()
 {
-	_ip = "192.168.1.130";
+	_ip = "192.168.56.1";
 	_port = 8091;
 }
 
