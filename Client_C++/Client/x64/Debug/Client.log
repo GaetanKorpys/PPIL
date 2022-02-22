@@ -1,4 +1,4 @@
-﻿  SocketSingleton.cpp
-C:\Users\Gaetan\source\repos\PPIL\Client_C++\Client\SocketSingleton.cpp(86,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\Gaetan\source\repos\PPIL\Client_C++\Client\SocketSingleton.cpp(81): warning C4715: 'SocketSingleton::initialiserConnexion' : les chemins de contrôle ne retournent pas tous une valeur
-  Client.vcxproj -> C:\Users\Gaetan\source\repos\PPIL\Client_C++\x64\Debug\Client.exe
+﻿  COR.cpp
+  ExpertPolygone.cpp
+  Génération de code en cours...
+  Client.vcxproj -> C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\x64\Debug\Client.exe

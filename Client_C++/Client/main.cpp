@@ -1,6 +1,7 @@
 #include "Vecteur2D.h"
 #include "Triangle.h"
 #include "Cercle.h"
+#include "COR.h"
 #include "Segment.h"
 #include "Polygone.h"
 #include "Groupe.h"
@@ -327,9 +328,56 @@ int main()
 				p.accepte(sauvegarde);
 				g.accepte(sauvegarde);
 
-				cout << "Sauvegarde terminee." << endl;
+				cout << "Sauvegarde terminee." << endl << endl;
+
+				system("pause");
 			}
 		}
+
+
+		do
+		{
+			cout << "Voulez-vous tester le chargement de formes depuis un fichier .txt ?" << endl;
+			cout << "[ y / n ]" << endl;
+			cin >> reponse;
+		} while (reponse != "y" && reponse != "n");
+		if (reponse == "y")
+		{
+			cout << "			-------------------------------------------------------" << endl;
+			cout << "					Test du Chargement						   " << endl;
+			cout << "			-------------------------------------------------------" << endl << endl;
+
+			cout << "Il y a 5 formes qui sont engistrees dans le fichier, leurs id vont de 0 a 5. " << endl;
+
+			COR* cor = COR::getInstance();
+			Chargement* chargeurForme = cor->getChargeurForme();
+			Forme* forme = NULL;
+			string idForme;
+
+			while(reponse == "y")
+			{
+				do {
+
+					cout << "Donenz l'id de la forme: " << endl;
+					cin >> idForme;
+
+					forme = chargeurForme->resoudre(idForme);
+					if (forme == NULL)
+						cout << "L'identifiant n'existe pas." << endl;
+
+				} while (forme == NULL);
+				cout << "Affichage de la forme chargee depuis le fichier: " << endl;
+				cout << (*forme) << endl << endl;
+				forme = NULL;
+
+				cout << "Voulez-vous tester une autre forme ? " << endl;
+				cout << "[ y / n ]" << endl;
+				cin >> reponse;
+			}
+		}
+
+		system("pause");
+		cout << endl;
 
 		do
 		{

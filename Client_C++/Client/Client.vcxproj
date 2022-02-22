@@ -140,6 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h" />
+    <ClInclude Include="Chargement.h" />
+    <ClInclude Include="ChargementCOR.h" />
+    <ClInclude Include="COR.h" />
+    <ClInclude Include="ExpertCercle.h" />
+    <ClInclude Include="ExpertGroupe.h" />
+    <ClInclude Include="ExpertPolygone.h" />
+    <ClInclude Include="ExpertSegment.h" />
+    <ClInclude Include="ExpertTriangle.h" />
     <ClInclude Include="SocketSingleton.h" />
     <ClInclude Include="Constante.h" />
     <ClInclude Include="Exception.h" />
@@ -158,7 +166,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cercle.cpp" />
+    <ClCompile Include="ChargementCOR.cpp" />
+    <ClCompile Include="COR.cpp" />
     <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="ExpertCercle.cpp" />
+    <ClCompile Include="ExpertGroupe.cpp" />
+    <ClCompile Include="ExpertPolygone.cpp" />
+    <ClCompile Include="ExpertSegment.cpp" />
+    <ClCompile Include="ExpertTriangle.cpp" />
     <ClCompile Include="Forme.cpp" />
     <ClCompile Include="Groupe.cpp" />
     <ClCompile Include="main.cpp" />

@@ -64,6 +64,12 @@
     <Filter Include="Fichiers sources\Visiteur\Dessin">
       <UniqueIdentifier>{cc31d6ef-7440-4aa6-8c52-ffc4fb8d33b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\COR">
+      <UniqueIdentifier>{b5d95d94-66ce-43c4-8c4d-365e995a1196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\COR">
+      <UniqueIdentifier>{4579c264-8161-4645-b900-f4dfcfdd4021}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cercle.h">
@@ -114,6 +120,30 @@
     <ClInclude Include="VisiteurDessin.h">
       <Filter>Fichiers d%27en-tête\Visiteur\Dessin</Filter>
     </ClInclude>
+    <ClInclude Include="Chargement.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargementCOR.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertCercle.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertSegment.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertTriangle.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertPolygone.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertGroupe.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
+    <ClInclude Include="COR.h">
+      <Filter>Fichiers d%27en-tête\COR</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -160,6 +190,27 @@
     </ClCompile>
     <ClCompile Include="VisiteurDessin.cpp">
       <Filter>Fichiers sources\Visiteur\Dessin</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargementCOR.cpp">
+      <Filter>Fichiers sources\COR</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertCercle.cpp">
+      <Filter>Fichiers sources\COR</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertGroupe.cpp">
+      <Filter>Fichiers sources\COR</Filter>
+    </ClCompile>
+    <ClCompile Include="COR.cpp">
+      <Filter>Fichiers sources\COR</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertSegment.cpp">
+      <Filter>Fichiers sources\COR</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertTriangle.cpp">
+      <Filter>Fichiers sources\COR</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertPolygone.cpp">
+      <Filter>Fichiers sources\COR</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
