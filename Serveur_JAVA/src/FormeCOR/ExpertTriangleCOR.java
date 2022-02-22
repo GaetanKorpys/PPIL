@@ -5,11 +5,22 @@ import Main.FenetreDessin;
 
 import java.awt.*;
 
+/**
+ * Expert pour traiter un segment.
+ */
 public class ExpertTriangleCOR extends FormeCOR{
 
+    /**
+     * Constructeur par defaut.
+     */
     public ExpertTriangleCOR() {
     }
 
+    /**
+     * Execute la requete grace a la classe COR (Singleton) : dessine un triangle dans la fenetre.
+     * @param forme
+     * @param op
+     */
     public void dessiner(String forme, FenetreDessin op) {
         String[] donneesTriangle = forme.split(";");
         String couleurNonInterpretee = donneesTriangle[0];
@@ -27,6 +38,10 @@ public class ExpertTriangleCOR extends FormeCOR{
         op.dessinerTriangle(x, y, couleur);
     }
 
+    /**
+     * Type de la requete, ici c'est un triangle : Triangle
+     * @return String
+     */
     public String getType() {
         return "Triangle";
     }

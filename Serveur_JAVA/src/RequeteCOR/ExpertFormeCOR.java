@@ -5,10 +5,22 @@ import Main.FenetreDessin;
 
 import java.io.PrintStream;
 
+/**
+ * Expert pour traiter une requete du type forme.
+ */
 public class ExpertFormeCOR extends RequeteCOR{
 
+    /**
+     * Constructeur par defaut.
+     */
     public ExpertFormeCOR() {}
 
+    /**
+     * Execute la requete grace a la classe COR (Singleton).
+     * @param forme
+     * @param op
+     * @param fluxSortant
+     */
     public void executerRequete(String forme, FenetreDessin op, PrintStream fluxSortant) {
         boolean dessinOK = COR.getInstance().getForme().resoudre(forme, op);
         if (!dessinOK) {
@@ -20,6 +32,10 @@ public class ExpertFormeCOR extends RequeteCOR{
 
     }
 
+    /**
+     * Type de la requete, ici c'est une forme : FORME
+     * @return String
+     */
     public String getType() {
         return "FORME";
     }

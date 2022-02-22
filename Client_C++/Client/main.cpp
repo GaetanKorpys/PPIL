@@ -397,11 +397,11 @@ int main()
 			cout << " 1. - Creation" << endl;
 			cout << " 2. - Rotation suivie de Translation" << endl;
 			cout << " 3. - Homothetie" << endl << endl;
-			cout << "Apres chaque etape, la forme est ajoutee a un groupe." << endl;
+			cout << "Apres chaque etape, la forme est ajoutee a un groupe." << endl << endl;
 
-			cout << "Il y a donc 3 dessins pour chaque formes dans la fenetre." << endl;
+			cout << "Il y a donc 3 dessins pour chaque formes dans la fenetre." << endl << endl;
 
-			cout << "Une nouvelle fenetre est ouverte pour chaque forme n'appartenant pas a un groupe." << endl;
+			cout << "Une nouvelle fenetre est ouverte pour chaque forme n'appartenant pas a un groupe." << endl << endl;
 
 
 			system("pause");
@@ -494,13 +494,13 @@ int main()
 
 			//--------------------------GROUPE----------------------------
 
-			cout << "\n				------------------------------" << endl << endl;
-			cout << "Creation d'un groupe(ensemble de formes) contenant :" << endl;
+			cout << "\n				---------------- 2eme FENETRE : --------------" << endl << endl;
+			cout << "Creation d'un nouveau groupe(ensemble de formes) contenant :" << endl;
 			cout << " - le groupe construit et dessine precedemment" << endl;
 			cout << " - un triangle de couleur bleu." << endl << endl;
 
-			cout << "Cette nouvelle forme n'appartient pas a un groupe." << endl << endl;
-			cout << "Ouverture d'une nouvelle fenetre." << endl;
+			cout << "Cette nouvelle forme n'appartient pas a un groupe, elle sera donc affichee sur une nouvelle fenetre." << endl << endl;
+			cout << "Ouverture de la 2eme fenetre :" << endl;
 
 			system("pause");
 

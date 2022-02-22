@@ -5,11 +5,22 @@ import Main.FenetreDessin;
 
 import java.awt.*;
 
+/**
+ * Expert pour traiter un polygone.
+ */
 public class ExpertPolygoneCOR extends FormeCOR{
 
+    /**
+     * Constructeur par defaut.
+     */
     public ExpertPolygoneCOR() {
     }
 
+    /**
+     * Execute la requete grace a la classe COR (Singleton) : dessine un polygone dans la fenetre.
+     * @param forme
+     * @param op
+     */
     public void dessiner(String forme, FenetreDessin op) {
         String[] donneesPolygone = forme.split(";");
         String couleurNonInterpretee = donneesPolygone[0];
@@ -28,6 +39,10 @@ public class ExpertPolygoneCOR extends FormeCOR{
         op.dessinerPolygone(x, y, taille, couleur);
     }
 
+    /**
+     * Type de la requete, ici c'est un polygone : Polygone
+     * @return String
+     */
     public String getType() {
         return "Polygone";
     }

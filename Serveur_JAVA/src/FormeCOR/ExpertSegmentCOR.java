@@ -5,11 +5,22 @@ import Main.FenetreDessin;
 
 import java.awt.*;
 
+/**
+ * Expert pour traiter un segment.
+ */
 public class ExpertSegmentCOR extends FormeCOR{
 
+    /**
+     * Constructeur par defaut.
+     */
     public ExpertSegmentCOR() {
     }
 
+    /**
+     * Execute la requete grace a la classe COR (Singleton) : dessine un segment dans la fenetre.
+     * @param forme
+     * @param op
+     */
     public void dessiner(String forme, FenetreDessin op) {
         String couleurNonInterpretee = forme.split(";")[0];
         Color couleur = COR.getInstance().getCouleur().resoudre(couleurNonInterpretee);
@@ -26,6 +37,10 @@ public class ExpertSegmentCOR extends FormeCOR{
         op.dessinerSegment(pointAx, pointAy, pointBx, pointBy, couleur);
     }
 
+    /**
+     * Type de la requete, ici c'est un segment : Segment
+     * @return String
+     */
     public String getType() {
         return "Segment";
     }
