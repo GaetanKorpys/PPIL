@@ -8,7 +8,7 @@
 
 SocketSingleton::SocketSingleton()
 {
-	_ip = "192.168.1.130";
+	_ip = "192.168.1.39";
 	_port = 8091;
 }
 
@@ -26,6 +26,12 @@ bool SocketSingleton::initialiserConnexion() {
 	try
 	{
 		WSADATA wsaData;
+
+		if(_ip == "")
+		{ 
+			cout << "Veuillez ajouter l'addresse IP de votre machine : " << endl;
+			cin >> _ip;
+		}
 
 		// MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
 		r = WSAStartup(MAKEWORD(2, 0), &wsaData);
