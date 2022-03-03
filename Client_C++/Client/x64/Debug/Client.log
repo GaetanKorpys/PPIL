@@ -1,4 +1,4 @@
 ﻿  SocketSingleton.cpp
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\SocketSingleton.cpp(92,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\SocketSingleton.cpp(87): warning C4715: 'SocketSingleton::initialiserConnexion' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\SocketSingleton.cpp(102,44): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\Client\SocketSingleton.cpp(97): warning C4715: 'SocketSingleton::initialiserConnexion' : les chemins de contrôle ne retournent pas tous une valeur
   Client.vcxproj -> C:\Users\Gaetan\source\repos\Projet_Synthese_PPIL_Korpys_Gaetan\Client_C++\x64\Debug\Client.exe

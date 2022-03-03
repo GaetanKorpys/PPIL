@@ -8,7 +8,6 @@
 
 SocketSingleton::SocketSingleton()
 {
-	_ip = "192.168.1.39";
 	_port = 8091;
 }
 
@@ -23,16 +22,27 @@ SocketSingleton::~SocketSingleton(){}
 
 bool SocketSingleton::initialiserConnexion() {
 	int r;
+	string reponse;
 	try
 	{
 		WSADATA wsaData;
 
-		if(_ip == "")
-		{ 
-			cout << "Veuillez ajouter l'addresse IP de votre machine : " << endl;
-			cin >> _ip;
+		do
+		{
+			cout << "Voulez-vous tester le programme en locale (ou sur 2 machines) ?" << endl;
+			cout << "[ y / n ]" << endl;
+			cin >> reponse;
+		} while (reponse != "y" && reponse != "n");
+		if (reponse == "y")
+		{
+			_ip = "127.0.0.1";
 		}
-
+		else
+		{
+			cout << "Veuillez saisir l'adresse IP du serveur de dessin :" << endl;
+			cin >> reponse;
+			_ip = reponse;
+		}
 		// MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
 		r = WSAStartup(MAKEWORD(2, 0), &wsaData);
 
