@@ -16,7 +16,10 @@ SocketSingleton::~SocketSingleton(){}
 /* static */ SocketSingleton* SocketSingleton::getInstance()
 {
 	if (_instanceUnique == NULL)
+	{
 		_instanceUnique = new SocketSingleton();
+	}
+		
 	return _instanceUnique;
 }
 
@@ -29,6 +32,7 @@ bool SocketSingleton::initialiserConnexion() {
 
 		do
 		{
+			cout << endl;
 			cout << "Voulez-vous tester le programme en locale (ou sur 2 machines) ?" << endl;
 			cout << "[ y / n ]" << endl;
 			cin >> reponse;
@@ -126,6 +130,7 @@ void SocketSingleton::fermerConnexion()
 		if (r)
 			throw Exception("La fermeture du socket a echoue");
 		WSACleanup();
+		cout << endl;
 		cout << "Fermeture de la connexion effectuee" << endl;
 		_sock = NULL;
 	}

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Cercle" Collapsed="true">
+    <Position X="10.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAARAkAFACCAAAAASAgAAAAAAAAAAAgEAAAAAA=</HashCode>
+      <FileName>Cercle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Forme" Collapsed="true">
+    <Position X="15" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAQAABAAAAAACCAAAIQAgAgAAAAAAAMAgFAAAAAI=</HashCode>
+      <FileName>Forme.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Groupe" Collapsed="true">
+    <Position X="15" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAEAARAAAAAACAABAAQAgAAEAAAAEAAAgEAAAABg=</HashCode>
+      <FileName>Groupe.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Polygone" Collapsed="true">
+    <Position X="17.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAQABAAAAAACAIBAAQAwAAEAAAAECAAgEAAAYCA=</HashCode>
+      <FileName>Polygone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Segment" Collapsed="true">
+    <Position X="19.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgABAABAAACgAEAAQAgAAAAAAAACBAgGAABAAA=</HashCode>
+      <FileName>Segment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Triangle" Collapsed="true">
+    <Position X="12.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAABAABAAALgAAAAQAgAAAAAAAACJAgWAAAAAA=</HashCode>
+      <FileName>Triangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exception" Collapsed="true">
+    <Position X="23.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAAAAgAAA=</HashCode>
+      <FileName>Exception.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vecteur2D" Collapsed="true">
+    <Position X="23.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQQAAAIAAAACAAGGAQAAMAAAAAUAAAAgEGAAAAA=</HashCode>
+      <FileName>Vecteur2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Visiteur" Collapsed="true">
+    <Position X="15" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Visiteur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurHomothetie" Collapsed="true">
+    <Position X="19.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAEAAAAAAAAEABAAAAAAAAAAAA=</HashCode>
+      <FileName>VisiteurHomothetie.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurRotation" Collapsed="true">
+    <Position X="10.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIACAAAAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VisiteurRotation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurTranslation" Collapsed="true">
+    <Position X="12.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>VisiteurTranslation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurTxt" Collapsed="true">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAABEAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>VisiteurTxt.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VisiteurDessin" Collapsed="true">
+    <Position X="17.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAQEAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>VisiteurDessin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketSingleton" Collapsed="true">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAEAAAAAAgEAABAIAAAAABAAAQCAQAAAIAAQAA=</HashCode>
+      <FileName>SocketSingleton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chargement" Collapsed="true">
+    <Position X="15" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Chargement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChargementCOR" Collapsed="true">
+    <Position X="15" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAAAAYAAAAAAAAgAAAAAAAAAIAAAABAA=</HashCode>
+      <FileName>ChargementCOR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COR" Collapsed="true">
+    <Position X="22" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAUAAAAAAEAAAAAAAIAAAAAAAAAAAQAAAAAAgAAAAA=</HashCode>
+      <FileName>COR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpertCercle" Collapsed="true">
+    <Position X="17.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAACAAAAAAABAA=</HashCode>
+      <FileName>ExpertCercle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpertGroupe" Collapsed="true">
+    <Position X="19.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAEAAAAABAA=</HashCode>
+      <FileName>ExpertGroupe.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpertPolygone" Collapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>ExpertPolygone.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpertSegment" Collapsed="true">
+    <Position X="12.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAABAA=</HashCode>
+      <FileName>ExpertSegment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExpertTriangle" Collapsed="true">
+    <Position X="15" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>ExpertTriangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

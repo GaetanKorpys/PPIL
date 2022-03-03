@@ -2,6 +2,13 @@
 #include "SocketSingleton.h"
 #include "Constante.h"
 
+VisiteurDessin::VisiteurDessin()
+{
+	SocketSingleton::getInstance()->initialiserConnexion();
+}
+
+
+
 string VisiteurDessin::requeteFenetre()const
 {
 	return "FENETRE" + SEPARATEUR_TYPE_REQUETE + "Fenetre de dessin" + SEPARATEUR_DONNEE + to_string(LARGEUR) + SEPARATEUR_DONNEE + to_string(HAUTEUR);
@@ -23,8 +30,7 @@ void VisiteurDessin::ouvrirFenetre()const
 void VisiteurDessin::dessiner(const string& infoForme, bool groupe)const
 {
 	try {
-		if (!groupe)
-			ouvrirFenetre();
+	
 		SocketSingleton::getInstance()->envoyerRequete(infoForme);
 		cout << "Requete de dessin envoyee" << endl;
 		cout << "Attente de la reponse du serveur..." << endl << endl;
@@ -51,17 +57,9 @@ void VisiteurDessin::visite(Segment& op) const
 	os << "FORME" << SEPARATEUR_TYPE_REQUETE << "Segment"  << SEPARATEUR_TYPE_DONNEE << op.getCouleur() << SEPARATEUR_DONNEE << op.getP1() << SEPARATEUR_DONNEE << op.getP2() << SEPARATEUR_DONNEE;
 
 	try {
-		//Connexion si la forme est indépendante
-		if (!op.getGroupe())
-			SocketSingleton::getInstance()->initialiserConnexion();
 
 		dessiner(os.str(), op.getGroupe());
 
-		//Donnexion si la forme est indépendante
-		if (!op.getGroupe()) {
-			SocketSingleton::getInstance()->fermerConnexion();
-			SocketSingleton::getInstance()->killInstance();
-		}
 	}
 	catch (Exception e) {
 		cerr << e << endl;
@@ -74,16 +72,9 @@ void VisiteurDessin::visite(Triangle& op) const
 	os << "FORME" << SEPARATEUR_TYPE_REQUETE << "Triangle" << SEPARATEUR_TYPE_DONNEE << op.getCouleur() << SEPARATEUR_DONNEE << op.getP1() << SEPARATEUR_DONNEE << op.getP2() << SEPARATEUR_DONNEE << op.getP3() << SEPARATEUR_DONNEE;
 
 	try {
-		//Connexion si la forme est indépendante
-		if (!op.getGroupe())
-			SocketSingleton::getInstance()->initialiserConnexion();
 
 		dessiner(os.str(), op.getGroupe());
 
-		//Donnexion si la forme est indépendante
-		if (!op.getGroupe()) {
-			SocketSingleton::getInstance()->fermerConnexion();
-		}
 	}
 	catch (Exception e) {
 		cerr << e << endl;
@@ -96,16 +87,8 @@ void VisiteurDessin::visite(Cercle& op) const
 	os << "FORME" << SEPARATEUR_TYPE_REQUETE << "Cercle" << SEPARATEUR_TYPE_DONNEE <<  op.getCouleur() << SEPARATEUR_DONNEE << op.getRayon() << SEPARATEUR_DONNEE << op.getCentre() << SEPARATEUR_DONNEE;
 
 	try {
-		//Connexion si la forme est indépendante
-		if (!op.getGroupe())
-			SocketSingleton::getInstance()->initialiserConnexion();
 
 		dessiner(os.str(), op.getGroupe());
-
-		//Donnexion si la forme est indépendante
-		if (!op.getGroupe()) {
-			SocketSingleton::getInstance()->fermerConnexion();
-		}
 	}
 	catch (Exception e) {
 		cerr << e << endl;
@@ -123,16 +106,7 @@ void VisiteurDessin::visite(Polygone& op) const
 	
 
 	try {
-		//Connexion si la forme est indépendante
-		if (!op.getGroupe())
-			SocketSingleton::getInstance()->initialiserConnexion();
-
 		dessiner(os.str(), op.getGroupe());
-
-		//Donnexion si la forme est indépendante
-		if (!op.getGroupe()) {
-			SocketSingleton::getInstance()->fermerConnexion();
-		}
 	}
 	catch (Exception e) {
 		cerr << e << endl;
@@ -142,20 +116,9 @@ void VisiteurDessin::visite(Polygone& op) const
 void VisiteurDessin::visite(Groupe& op) const
 {
 	try {
-		//Connexion si la forme est indépendante
-		if (!op.getGroupe()) {
-			SocketSingleton::getInstance()->initialiserConnexion();
-			ouvrirFenetre();
-		}
-
 
 		for (int i = 0; i < op.getNbForme(); i++) {
 			op[i].accepte(*this);
-		}
-
-		//Donnexion si la forme est indépendante
-		if (!op.getGroupe()) {
-			SocketSingleton::getInstance()->fermerConnexion();
 		}
 	}
 	catch (Exception e) {

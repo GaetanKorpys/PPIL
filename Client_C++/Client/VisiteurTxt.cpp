@@ -19,9 +19,9 @@ void VisiteurTxt::visite(Segment& op)const
 {
 	ostringstream oss;
 	if (!op.getGroupe())
-		oss << _id << SEPARATEUR_TYPE_REQUETE;
+		oss << _id;
 
-	oss << "Segment" << SEPARATEUR_TYPE_DONNEE << op.getP1() << SEPARATEUR_DONNEE << op.getP2() << SEPARATEUR_DONNEE << op.getCouleur()  << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE;
+	oss << SEPARATEUR_TYPE_REQUETE << "Segment" << SEPARATEUR_TYPE_DONNEE << op.getP1() << SEPARATEUR_DONNEE << op.getP2() << SEPARATEUR_DONNEE << op.getCouleur()  << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE;
 
 	if (!op.getGroupe())
 		oss << endl;
@@ -39,9 +39,9 @@ void VisiteurTxt::visite(Cercle& op)const
 {
 	ostringstream oss;
 	if (!op.getGroupe())
-		oss << _id << SEPARATEUR_TYPE_REQUETE;
+		oss << _id ;
 
-	oss << "Cercle" << SEPARATEUR_TYPE_DONNEE << op.getCentre() << SEPARATEUR_DONNEE << op.getRayon() << SEPARATEUR_DONNEE << op.getCouleur()  << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE;
+	oss << SEPARATEUR_TYPE_REQUETE << "Cercle" << SEPARATEUR_TYPE_DONNEE << op.getCentre() << SEPARATEUR_DONNEE << op.getRayon() << SEPARATEUR_DONNEE << op.getCouleur()  << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE;
 
 	if (!op.getGroupe())
 		oss << endl;
@@ -60,9 +60,9 @@ void VisiteurTxt::visite(Triangle& op)const
 	ostringstream oss;
 
 	if (!op.getGroupe())
-		oss << _id << SEPARATEUR_TYPE_REQUETE;
+		oss << _id ;
 
-	oss << "Triangle" << SEPARATEUR_TYPE_DONNEE << op.getP1() << SEPARATEUR_DONNEE << op.getP2() << SEPARATEUR_DONNEE << op.getP3() << SEPARATEUR_DONNEE << op.getCouleur()  << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE;
+	oss << SEPARATEUR_TYPE_REQUETE << "Triangle" << SEPARATEUR_TYPE_DONNEE << op.getP1() << SEPARATEUR_DONNEE << op.getP2() << SEPARATEUR_DONNEE << op.getP3() << SEPARATEUR_DONNEE << op.getCouleur()  << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE;
 
 	if (!op.getGroupe())
 		oss << endl;
@@ -81,9 +81,9 @@ void VisiteurTxt::visite(Polygone& op)const
 	ostringstream oss;
 
 	if (!op.getGroupe())
-		oss << _id << SEPARATEUR_TYPE_REQUETE;
+		oss << _id ;
 
-	oss << "Polygone" << SEPARATEUR_TYPE_DONNEE;
+	oss << SEPARATEUR_TYPE_REQUETE << "Polygone" << SEPARATEUR_TYPE_DONNEE;
 	for(int i = 0; i < op.getNbPoints(); i++)
 	{
 		oss << op[i] << SEPARATEUR_DONNEE;
@@ -106,13 +106,17 @@ void VisiteurTxt::visite(Groupe& op) const
 {
 	ostringstream oss, oss2;
 
-	oss << _id << SEPARATEUR_TYPE_REQUETE << "Groupe" << SEPARATEUR_TYPE_DONNEE;
+	if (!op.getGroupe())
+		oss << _id;
+	oss << SEPARATEUR_TYPE_REQUETE << "Groupe" << SEPARATEUR_TYPE_DONNEE;
 	string ligne = oss.str();
 	sauvgarde(ligne, _chemin);
 
 	for (int i = 0; i < op.getNbForme(); i++)
 	{
 		op[i].accepte(*this);
+		//Separateur entre les formes du groupe
+		sauvgarde("-", _chemin);
 	}
 
 	oss2 << op.getCouleur() << SEPARATEUR_DONNEE << op.getGroupe() << SEPARATEUR_DONNEE << endl;

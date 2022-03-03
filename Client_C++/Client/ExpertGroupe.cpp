@@ -12,9 +12,9 @@ string ExpertGroupe::getComposant(string& copie)const {
 	string res;
 	if (copie.substr(1, copie.find(':') - 1) != "Groupe") {
 
-		res = copie.substr(1, copie.find('&') - 1);
+		res = copie.substr(1, copie.find('-') - 1);
 	
-		copie = copie.substr(copie.find('&') + 1);
+		copie = copie.substr(copie.find('-') + 1);
 
 		return res;
 	}
@@ -40,6 +40,8 @@ Forme* ExpertGroupe::traiterDemande(const string& donneeForme)const {
 
 	while (copie != "")
 	{
+		if (copie == "noir;0;")
+			break;
 		
 		infoForme = getComposant(copie);
 	

@@ -332,50 +332,53 @@ int main()
 
 				system("pause");
 			}
-		}
 
-
-		do
-		{
-			cout << "Voulez-vous tester le chargement de formes depuis un fichier .txt ?" << endl;
-			cout << "[ y / n ]" << endl;
-			cin >> reponse;
-		} while (reponse != "y" && reponse != "n");
-		if (reponse == "y")
-		{
-			cout << "			-------------------------------------------------------" << endl;
-			cout << "					Test du Chargement						   " << endl;
-			cout << "			-------------------------------------------------------" << endl << endl;
-
-			cout << "Il y a 5 formes qui sont engistrees dans le fichier, leurs id vont de 0 a 5. " << endl;
-
-			COR* cor = COR::getInstance();
-			Chargement* chargeurForme = cor->getChargeurForme();
-			Forme* forme = NULL;
-			string idForme;
-
-			while(reponse == "y")
+			do
 			{
-				do {
-
-					cout << "Donenz l'id de la forme: " << endl;
-					cin >> idForme;
-
-					forme = chargeurForme->resoudre(idForme);
-					if (forme == NULL)
-						cout << "L'identifiant n'existe pas." << endl;
-
-				} while (forme == NULL);
-				cout << "Affichage de la forme chargee depuis le fichier: " << endl;
-				cout << (*forme) << endl << endl;
-				forme = NULL;
-
-				cout << "Voulez-vous tester une autre forme ? " << endl;
+				cout << "Voulez-vous tester le chargement de formes depuis un fichier .txt ?" << endl;
 				cout << "[ y / n ]" << endl;
 				cin >> reponse;
+			} while (reponse != "y" && reponse != "n");
+			if (reponse == "y")
+			{
+				cout << "			-------------------------------------------------------" << endl;
+				cout << "					Test du Chargement						   " << endl;
+				cout << "			-------------------------------------------------------" << endl << endl;
+
+				cout << "Il y a 5 formes qui sont engistrees dans le fichier, leurs id vont de 0 a 4. " << endl;
+
+				COR* cor = COR::getInstance();
+				Chargement* chargeurForme = cor->getChargeurForme();
+				Forme* forme = NULL;
+				string idForme;
+
+				while (reponse == "y")
+				{
+					do {
+
+						cout << "Donenz l'id de la forme: " << endl;
+						cin >> idForme;
+
+						forme = chargeurForme->resoudre(idForme);
+						if (forme == NULL)
+							cout << "L'identifiant n'existe pas." << endl;
+
+					} while (forme == NULL);
+					cout << "Affichage de la forme chargee depuis le fichier: " << endl;
+					cout << (*forme) << endl << endl;
+					forme = NULL;
+
+					do
+					{
+						cout << "Voulez-vous tester une autre forme ? " << endl;
+						cout << "[ y / n ]" << endl;
+						cin >> reponse;
+					} while (reponse != "y" && reponse != "n");
+				}
 			}
 		}
 
+		cout << endl;
 		system("pause");
 		cout << endl;
 
@@ -404,8 +407,6 @@ int main()
 			cout << "Une nouvelle fenetre est ouverte pour chaque forme n'appartenant pas a un groupe." << endl << endl;
 
 
-			system("pause");
-
 			VisiteurDessin dessin;
 			Groupe groupe(RED);
 
@@ -413,7 +414,7 @@ int main()
 
 			Triangle triangle(Vecteur2D(150, 100), Vecteur2D(100, 200), Vecteur2D(200, 200), BLACK);
 			groupe.ajouter(triangle);
-
+		
 			VisiteurRotation rotaTriangle(triangle.getCentreGravite(), PI);
 			triangle.accepte(rotaTriangle);
 
@@ -426,7 +427,6 @@ int main()
 			triangle.accepte(homoTriangle);
 
 			groupe.ajouter(triangle);
-
 
 			//--------------------------CERCLE----------------------------
 
@@ -489,6 +489,7 @@ int main()
 
 			groupe.ajouter(polygone);
 
+			dessin.ouvrirFenetre();
 			//On dessine le groupe
 			groupe.accepte(dessin);
 
@@ -498,7 +499,7 @@ int main()
 			cout << "Creation d'un nouveau groupe(ensemble de formes) contenant :" << endl;
 			cout << " - le groupe construit et dessine precedemment" << endl;
 			cout << " - un triangle de couleur bleu." << endl << endl;
-
+			 
 			cout << "Cette nouvelle forme n'appartient pas a un groupe, elle sera donc affichee sur une nouvelle fenetre." << endl << endl;
 			cout << "Ouverture de la 2eme fenetre :" << endl;
 
@@ -511,7 +512,13 @@ int main()
 
 			triangle.setCouleur(BLUE);
 			groupe2.ajouter(triangle);
+
+
+			dessin.ouvrirFenetre();
 			groupe2.accepte(dessin);
+
+			SocketSingleton::getInstance()->fermerConnexion();
+			SocketSingleton::getInstance()->killInstance();
 		}
 	}
 

@@ -18,12 +18,16 @@ class VisiteurDessin : public Visiteur
 	void dessiner(const string& infoForme, bool estMarquee)const;
 
 
+	
+
+public:
+
+	VisiteurDessin();
+
 	/**
 	* \brief Envoie une requête de création de la fenêtre vers le serveur
 	*/
 	void ouvrirFenetre()const;
-
-public:
 
 	/**
 	* \brief Initialise une connexion vers le serveur, dessine un segment puis ferme la connexion
