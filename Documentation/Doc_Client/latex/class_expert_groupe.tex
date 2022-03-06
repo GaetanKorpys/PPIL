@@ -1,0 +1,103 @@
+\hypertarget{class_expert_groupe}{}\doxysection{RÃ©fÃ©rence de la classe Expert\+Groupe}
+\label{class_expert_groupe}\index{ExpertGroupe@{ExpertGroupe}}
+Graphe d\textquotesingle{}hÃ©ritage de Expert\+Groupe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_expert_groupe}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_expert_groupe_a002dc54757895057ab931364ee75e7fc}{Expert\+Groupe}} (\mbox{\hyperlink{class_chargement_c_o_r}{Chargement\+COR}} $\ast$suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+const string \mbox{\hyperlink{class_expert_groupe_afc4f3b98add1088dd20929d962fbc3b3}{get\+Type\+Forme}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le type de la forme que l\textquotesingle{}expert peut traiter (ici un groupe) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_groupe_acb3aded91134fefc7f01d970a7bc70d2}{traiter\+Demande}} (const string \&info\+Forme) const
+\begin{DoxyCompactList}\small\item\em Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_expert_groupe_a571cd89a46e168e28d3b21258477a718}{get\+Composant}} (string \&copie) const
+\begin{DoxyCompactList}\small\item\em Récupère une forme d\textquotesingle{}un groupe. La forme est ensuite supprimée du groupe pour par la suite accéder aux autre formes de ce même groupe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_expert_groupe_a002dc54757895057ab931364ee75e7fc}\label{class_expert_groupe_a002dc54757895057ab931364ee75e7fc}} 
+\index{ExpertGroupe@{ExpertGroupe}!ExpertGroupe@{ExpertGroupe}}
+\index{ExpertGroupe@{ExpertGroupe}!ExpertGroupe@{ExpertGroupe}}
+\doxysubsubsection{\texorpdfstring{ExpertGroupe()}{ExpertGroupe()}}
+{\footnotesize\ttfamily Expert\+Groupe\+::\+Expert\+Groupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chargement_c_o_r}{Chargement\+COR}} $\ast$}]{suivant }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em suivant} & Pointeur sur l\textquotesingle{}expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_expert_groupe_a571cd89a46e168e28d3b21258477a718}\label{class_expert_groupe_a571cd89a46e168e28d3b21258477a718}} 
+\index{ExpertGroupe@{ExpertGroupe}!getComposant@{getComposant}}
+\index{getComposant@{getComposant}!ExpertGroupe@{ExpertGroupe}}
+\doxysubsubsection{\texorpdfstring{getComposant()}{getComposant()}}
+{\footnotesize\ttfamily string Expert\+Groupe\+::get\+Composant (\begin{DoxyParamCaption}\item[{string \&}]{copie }\end{DoxyParamCaption}) const}
+
+
+
+Récupère une forme d\textquotesingle{}un groupe. La forme est ensuite supprimée du groupe pour par la suite accéder aux autre formes de ce même groupe. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em copier} & Chaine de caractère correspondant au groupe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string Chaine de caractère correspondant à la forme extraite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_expert_groupe_afc4f3b98add1088dd20929d962fbc3b3}\label{class_expert_groupe_afc4f3b98add1088dd20929d962fbc3b3}} 
+\index{ExpertGroupe@{ExpertGroupe}!getTypeForme@{getTypeForme}}
+\index{getTypeForme@{getTypeForme}!ExpertGroupe@{ExpertGroupe}}
+\doxysubsubsection{\texorpdfstring{getTypeForme()}{getTypeForme()}}
+{\footnotesize\ttfamily const string Expert\+Groupe\+::get\+Type\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne le type de la forme que l\textquotesingle{}expert peut traiter (ici un groupe) 
+
+\begin{DoxyReturn}{Renvoie}
+string Type de la forme 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_chargement_c_o_r_a802198f969b7da7add63a712f4009b33}{Chargement\+COR}}.
+
+\mbox{\Hypertarget{class_expert_groupe_acb3aded91134fefc7f01d970a7bc70d2}\label{class_expert_groupe_acb3aded91134fefc7f01d970a7bc70d2}} 
+\index{ExpertGroupe@{ExpertGroupe}!traiterDemande@{traiterDemande}}
+\index{traiterDemande@{traiterDemande}!ExpertGroupe@{ExpertGroupe}}
+\doxysubsubsection{\texorpdfstring{traiterDemande()}{traiterDemande()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Expert\+Groupe\+::traiter\+Demande (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em info\+Forme} & Chaine de caractères correspondant aux données de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Forme$\ast$ Un pointeur sur la forme 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_chargement_c_o_r_a26af9621ee313cc91605daef216f0f27}{Chargement\+COR}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/Expert\+Groupe.\+h\item 
+Client\+\_\+\+C++/\+Client/Expert\+Groupe.\+cpp\end{DoxyCompactItemize}

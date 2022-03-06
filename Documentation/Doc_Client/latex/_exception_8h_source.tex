@@ -1,0 +1,31 @@
+\hypertarget{_exception_8h_source}{}\doxysection{Exception.\+h}
+\label{_exception_8h_source}\index{Client\_C++/Client/Exception.h@{Client\_C++/Client/Exception.h}}
+\mbox{\hyperlink{_exception_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_exception}{Exception}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keywordtype}{string} \_message;  }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_exception_aad1be11dc85840f8a7fac731057ab715}{Exception}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& message)}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23         \_message = message;}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30     \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \mbox{\hyperlink{class_exception_aee5b51dbab2bd5513aeb462a8ac1d417}{getMessage}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{31 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} \_message;}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{43     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_exception_a73ab7dd7f77d49c7a0759020875dd318}{operator << }}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_exception}{Exception}}\& e);}
+\DoxyCodeLine{44 \};}
+
+\end{DoxyCode}

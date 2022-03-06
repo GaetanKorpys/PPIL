@@ -1,0 +1,147 @@
+\hypertarget{class_visiteur_rotation}{}\doxysection{Référence de la classe Visiteur\+Rotation}
+\label{class_visiteur_rotation}\index{VisiteurRotation@{VisiteurRotation}}
+Graphe d\textquotesingle{}héritage de Visiteur\+Rotation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_visiteur_rotation}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visiteur_rotation_a356c5a7baf9a2b2e2ed554ba60d936b0}{Visiteur\+Rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op, double angle)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}{visite}} (\mbox{\hyperlink{class_segment}{Segment}} \&op) const
+\begin{DoxyCompactList}\small\item\em Rotation d\textquotesingle{}un segment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_rotation_a484b160ed05dd17de593a8eeb31b2e6c}{visite}} (\mbox{\hyperlink{class_cercle}{Cercle}} \&op) const
+\begin{DoxyCompactList}\small\item\em Rotation d\textquotesingle{}un cercle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_rotation_a9ccaea2ee1bf32e1ac0285aa1244ce6e}{visite}} (\mbox{\hyperlink{class_triangle}{Triangle}} \&op) const
+\begin{DoxyCompactList}\small\item\em Rotation d\textquotesingle{}un triangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_rotation_a344260b20c716e4a5896d8de29d0026d}{visite}} (\mbox{\hyperlink{class_polygone}{Polygone}} \&op) const
+\begin{DoxyCompactList}\small\item\em Rotation d\textquotesingle{}un polygone. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_rotation_abfb626653e91b10492522e1cf032d657}{visite}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&op) const
+\begin{DoxyCompactList}\small\item\em Rotation d\textquotesingle{}un groupe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_visiteur_rotation_a356c5a7baf9a2b2e2ed554ba60d936b0}\label{class_visiteur_rotation_a356c5a7baf9a2b2e2ed554ba60d936b0}} 
+\index{VisiteurRotation@{VisiteurRotation}!VisiteurRotation@{VisiteurRotation}}
+\index{VisiteurRotation@{VisiteurRotation}!VisiteurRotation@{VisiteurRotation}}
+\doxysubsubsection{\texorpdfstring{VisiteurRotation()}{VisiteurRotation()}}
+{\footnotesize\ttfamily Visiteur\+Rotation\+::\+Visiteur\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op,  }\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em angle} & double \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_visiteur_rotation_a484b160ed05dd17de593a8eeb31b2e6c}\label{class_visiteur_rotation_a484b160ed05dd17de593a8eeb31b2e6c}} 
+\index{VisiteurRotation@{VisiteurRotation}!visite@{visite}}
+\index{visite@{visite}!VisiteurRotation@{VisiteurRotation}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Visiteur\+Rotation\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cercle}{Cercle}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotation d\textquotesingle{}un cercle. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em op} & \mbox{\hyperlink{class_cercle}{Cercle}} \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a8465617e90ab9cbd990e45434a6d5a2b}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_rotation_abfb626653e91b10492522e1cf032d657}\label{class_visiteur_rotation_abfb626653e91b10492522e1cf032d657}} 
+\index{VisiteurRotation@{VisiteurRotation}!visite@{visite}}
+\index{visite@{visite}!VisiteurRotation@{VisiteurRotation}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Visiteur\+Rotation\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotation d\textquotesingle{}un groupe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em op} & \mbox{\hyperlink{class_groupe}{Groupe}} \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_ab1665283be9db3b02449595edb6012b0}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_rotation_a344260b20c716e4a5896d8de29d0026d}\label{class_visiteur_rotation_a344260b20c716e4a5896d8de29d0026d}} 
+\index{VisiteurRotation@{VisiteurRotation}!visite@{visite}}
+\index{visite@{visite}!VisiteurRotation@{VisiteurRotation}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Visiteur\+Rotation\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_polygone}{Polygone}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotation d\textquotesingle{}un polygone. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em op} & \mbox{\hyperlink{class_polygone}{Polygone}} \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a1f588aacf0a0df41a1f1cd170bb1ddfb}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}\label{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}} 
+\index{VisiteurRotation@{VisiteurRotation}!visite@{visite}}
+\index{visite@{visite}!VisiteurRotation@{VisiteurRotation}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Visiteur\+Rotation\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotation d\textquotesingle{}un segment. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a48748b760eadc55f734d856abbc7b0c5}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_rotation_a9ccaea2ee1bf32e1ac0285aa1244ce6e}\label{class_visiteur_rotation_a9ccaea2ee1bf32e1ac0285aa1244ce6e}} 
+\index{VisiteurRotation@{VisiteurRotation}!visite@{visite}}
+\index{visite@{visite}!VisiteurRotation@{VisiteurRotation}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Visiteur\+Rotation\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle}{Triangle}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotation d\textquotesingle{}un triangle. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em op} & \mbox{\hyperlink{class_triangle}{Triangle}} \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a044a4db8ca6bad04c9d3483ed5c43f21}{Visiteur}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/Visiteur\+Rotation.\+h\item 
+Client\+\_\+\+C++/\+Client/Visiteur\+Rotation.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{_segment_8h_source}{}\doxysection{Segment.\+h}
+\label{_segment_8h_source}\index{Client\_C++/Client/Segment.h@{Client\_C++/Client/Segment.h}}
+\mbox{\hyperlink{_segment_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_constante_8h}{Constante.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_exception_8h}{Exception.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vecteur2_d_8h}{Vecteur2D.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_forme_8h}{Forme.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_segment}{Segment}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \_p1; }
+\DoxyCodeLine{18     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \_p2; }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{bool} segmentValide(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p1, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p2)}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{if} (p1 == p2)}
+\DoxyCodeLine{29             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_segment_a104149490ec24bec957e4ffc5503529d}{Segment}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p1, \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p2, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& couleur = \mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \mbox{\hyperlink{class_segment_a104149490ec24bec957e4ffc5503529d}{Segment}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}}\& op);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \mbox{\hyperlink{class_segment_a76b45a453304f1f485e3bc2fcad58b59}{\string~Segment}}()\{\}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57     \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& \mbox{\hyperlink{class_segment_a3037546aae39f658f8bd7734353667c1}{getP1}}()\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} \_p1; \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_segment_a20a668324dba27ac11e6b861054aa2ac}{setP1}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p1);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{69     \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_a237d83949eb3c43276b1dbe532098217}{getP2}}()\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} \_p2; \} }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_segment_a64b6a564005e2ce9cb859b1f9355c7bc}{setP2}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& p2);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& \mbox{\hyperlink{class_segment_a204098a81f4e479b945a46108dd562d5}{getCentreGravite}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{89     \textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}}\& \mbox{\hyperlink{class_segment_a2f9a1078a11ed8c2939eeea8549b7d25}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}}\& op);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_segment_aadc808d9202cacd93b5df7ca84969b0b}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_segment_a5e951012c3baf531bfd6268d6e51049d}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{110     \textcolor{keyword}{operator} string()\textcolor{keyword}{const};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{116     \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_segment_ab5d7a7584c28a3f306ce9f82b9b71d43}{getAire}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{123     \mbox{\hyperlink{class_segment}{Segment}}* \mbox{\hyperlink{class_segment_adf993f68690b48d78710a5d04f62282b}{clone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_segment_a1071bc0430657ab0c2918c7244e96a6f}{accepte}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visiteur}{Visiteur}}\& op);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{134     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_segment_a5302c369d021747c0e2edd00d113f6bf}{operator << }}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_segment}{Segment}}\& op);}
+\DoxyCodeLine{135 \};}
+
+\end{DoxyCode}

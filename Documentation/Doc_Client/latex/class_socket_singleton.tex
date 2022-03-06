@@ -1,0 +1,85 @@
+\hypertarget{class_socket_singleton}{}\doxysection{RÃ©fÃ©rence de la classe Socket\+Singleton}
+\label{class_socket_singleton}\index{SocketSingleton@{SocketSingleton}}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_singleton_aa17fbc8d6ac5e570f208fbe74c9ff477}{initialiser\+Connexion}} ()
+\begin{DoxyCompactList}\small\item\em Initialise la connexion vers le serveur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_socket_singleton_a291e01a24f10f9c68a99eec8a9d904ae}{envoyer\+Requete}} (const string \&requte)
+\begin{DoxyCompactList}\small\item\em Envoie une requête au serveur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_socket_singleton_a938892120160b25671aa3bd3519639c3}{requete\+Succes}} ()
+\begin{DoxyCompactList}\small\item\em Teste si une requête a été traitée par le serveur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_socket_singleton_a81edb750d024cdbb321f5aa8a4d3ed45}\label{class_socket_singleton_a81edb750d024cdbb321f5aa8a4d3ed45}} 
+void {\bfseries fermer\+Connexion} ()
+\begin{DoxyCompactList}\small\item\em Ferme la connexion vers le serveur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_socket_singleton_a2f7281cd63b3f6b23d8fc7b473244b4c}\label{class_socket_singleton_a2f7281cd63b3f6b23d8fc7b473244b4c}} 
+void {\bfseries kill\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Ferme l\textquotesingle{}instance unique en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_socket_singleton}{Socket\+Singleton}} $\ast$ \mbox{\hyperlink{class_socket_singleton_aa9d7bd57d200977ab163cc1db0f368c6}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Retourne une instance unique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_socket_singleton_a291e01a24f10f9c68a99eec8a9d904ae}\label{class_socket_singleton_a291e01a24f10f9c68a99eec8a9d904ae}} 
+\index{SocketSingleton@{SocketSingleton}!envoyerRequete@{envoyerRequete}}
+\index{envoyerRequete@{envoyerRequete}!SocketSingleton@{SocketSingleton}}
+\doxysubsubsection{\texorpdfstring{envoyerRequete()}{envoyerRequete()}}
+{\footnotesize\ttfamily void Socket\+Singleton\+::envoyer\+Requete (\begin{DoxyParamCaption}\item[{const string \&}]{requte }\end{DoxyParamCaption})}
+
+
+
+Envoie une requête au serveur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em str} & La chaine de caractère à envoyer au serveur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_socket_singleton_aa9d7bd57d200977ab163cc1db0f368c6}\label{class_socket_singleton_aa9d7bd57d200977ab163cc1db0f368c6}} 
+\index{SocketSingleton@{SocketSingleton}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!SocketSingleton@{SocketSingleton}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_socket_singleton}{Socket\+Singleton}} $\ast$ Socket\+Singleton\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne une instance unique. 
+
+Va créer l\textquotesingle{}instance si celle-\/ci n\textquotesingle{}existe pas ou bien juste la retourner dans le cas contraire \begin{DoxyReturn}{Renvoie}
+Singleton\+Connexion$\ast$ Pointeur sur l\textquotesingle{}instance unique 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_socket_singleton_aa17fbc8d6ac5e570f208fbe74c9ff477}\label{class_socket_singleton_aa17fbc8d6ac5e570f208fbe74c9ff477}} 
+\index{SocketSingleton@{SocketSingleton}!initialiserConnexion@{initialiserConnexion}}
+\index{initialiserConnexion@{initialiserConnexion}!SocketSingleton@{SocketSingleton}}
+\doxysubsubsection{\texorpdfstring{initialiserConnexion()}{initialiserConnexion()}}
+{\footnotesize\ttfamily bool Socket\+Singleton\+::initialiser\+Connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise la connexion vers le serveur. 
+
+\begin{DoxyReturn}{Renvoie}
+bool Booléen vrai si la connexion est réussie, faux sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_socket_singleton_a938892120160b25671aa3bd3519639c3}\label{class_socket_singleton_a938892120160b25671aa3bd3519639c3}} 
+\index{SocketSingleton@{SocketSingleton}!requeteSucces@{requeteSucces}}
+\index{requeteSucces@{requeteSucces}!SocketSingleton@{SocketSingleton}}
+\doxysubsubsection{\texorpdfstring{requeteSucces()}{requeteSucces()}}
+{\footnotesize\ttfamily bool Socket\+Singleton\+::requete\+Succes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Teste si une requête a été traitée par le serveur. 
+
+\begin{DoxyReturn}{Renvoie}
+bool Booléen vrai si la requête a été traitée, faux sinon 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/Socket\+Singleton.\+h\item 
+Client\+\_\+\+C++/\+Client/Socket\+Singleton.\+cpp\end{DoxyCompactItemize}

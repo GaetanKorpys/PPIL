@@ -1,0 +1,26 @@
+\hypertarget{_chargement_c_o_r_8h_source}{}\doxysection{Chargement\+COR.\+h}
+\label{_chargement_c_o_r_8h_source}\index{Client\_C++/Client/ChargementCOR.h@{Client\_C++/Client/ChargementCOR.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Chargement.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_chargement_c_o_r}{ChargementCOR}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_chargement}{Chargement}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{class_chargement_c_o_r}{ChargementCOR}}* \_suivant;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_chargement_c_o_r_aaf538591a9b8e37d197744fe127e7c02}{ChargementCOR}}(\mbox{\hyperlink{class_chargement_c_o_r}{ChargementCOR}}* suivant);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_forme}{Forme}}* \mbox{\hyperlink{class_chargement_c_o_r_a3cfff2709860a19e34ee30de51602f98}{resoudre}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& idForme, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& info = \textcolor{stringliteral}{"{}"{}})\textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_chargement_c_o_r_a802198f969b7da7add63a712f4009b33}{getTypeForme}}()\textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme}{Forme}}* \mbox{\hyperlink{class_chargement_c_o_r_a26af9621ee313cc91605daef216f0f27}{traiterDemande}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& infoForme)\textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_chargement_c_o_r_a754277ff414ff3c51a987f0c6843e187}{getInfoForme}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& idForme)\textcolor{keyword}{const};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_chargement_c_o_r_abf5f4cc54a984b651d657b7f33f00807}{stringToPoint}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& infoPoint)\textcolor{keyword}{const};}
+\DoxyCodeLine{48 \};}
+
+\end{DoxyCode}

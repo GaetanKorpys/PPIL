@@ -1,0 +1,82 @@
+\hypertarget{_forme_8h_source}{}\doxysection{Forme.\+h}
+\label{_forme_8h_source}\index{Client\_C++/Client/Forme.h@{Client\_C++/Client/Forme.h}}
+\mbox{\hyperlink{_forme_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_constante_8h}{Constante.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vecteur2_d_8h}{Vecteur2D.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_visiteur}{Visiteur}};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_forme}{Forme}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{keywordtype}{string} \_couleur; }
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \_groupe; }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 public :}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_forme_a3c97c1066856b548d2fe6db963a28800}{Forme}}() }
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \_couleur = \mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}};}
+\DoxyCodeLine{29         \_groupe = \textcolor{keyword}{false};}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{36     \mbox{\hyperlink{class_forme_adf47dcd2111b4e29d1b260eae2491e83}{Forme}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& couleur) }
+\DoxyCodeLine{37     \{ }
+\DoxyCodeLine{38         \_couleur = couleur; }
+\DoxyCodeLine{39         \_groupe = \textcolor{keyword}{false};}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{47     \mbox{\hyperlink{class_forme_a5a17da3b8c02671ff953e24b03dcc545}{Forme}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& couleur, \textcolor{keywordtype}{bool} groupe)}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         \_couleur = couleur;}
+\DoxyCodeLine{50         \_groupe = groupe;}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57     \mbox{\hyperlink{class_forme_a10e0a98a785ae939b5bb7e882e5bdab4}{Forme}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op) }
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59         \_couleur = op.\_couleur; }
+\DoxyCodeLine{60         \_groupe = op.\_groupe;}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme_ab4582182a0cd4da315743afce6c7f05c}{\string~Forme}}()\{\}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_forme_a260b3228a73812d69c38a4dff949bb95}{getCouleur}}()\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} \_couleur; \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_af0b5c9ab7d799511311f897bf77f3f21}{setCouleur}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& couleur) \{ \_couleur = couleur; \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_forme_a8661575f963f43b951c38b9f80c2e9e2}{getGroupe}}()\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} \_groupe; \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a8ba1586dfedf7b0c020946db4fb2feca}{setGroupe}}(\textcolor{keywordtype}{bool} groupe) \{ \_groupe = groupe; \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& \mbox{\hyperlink{class_forme_a841ef7a8c5e3fca679244798db49e294}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{106     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_forme_a33484368ad48dd116b6d293f59e5f17d}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{114     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_forme_aa74816b853a639f69427ae05db12f0a3}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{119     \textcolor{keyword}{virtual} \textcolor{keyword}{operator} string()\textcolor{keyword}{const};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{126     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a56c7f122caae3533f5fd96eb00c2dc9d}{affiche}}(ostream\& os = cout)}
+\DoxyCodeLine{127     \{}
+\DoxyCodeLine{128         os << (*this);}
+\DoxyCodeLine{129     \}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{135     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_forme_adf4346150d8f734d7a48f7661e30cab4}{getAire}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{142     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_forme}{Forme}}* \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{clone}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{149     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_forme_a7d88db61f390302f426ae1de800c2beb}{accepte}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visiteur}{Visiteur}}\& op) = 0;}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{158     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_forme_a254f0bb2fd58a9aa26c9f456daa2f982}{operator << }}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op)}
+\DoxyCodeLine{159     \{}
+\DoxyCodeLine{160         os << (string)op;}
+\DoxyCodeLine{161         \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{162     \}}
+\DoxyCodeLine{163 \};}
+\DoxyCodeLine{164 }
+
+\end{DoxyCode}

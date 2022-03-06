@@ -1,0 +1,128 @@
+\hypertarget{class_visiteur_dessin}{}\doxysection{Référence de la classe Visiteur\+Dessin}
+\label{class_visiteur_dessin}\index{VisiteurDessin@{VisiteurDessin}}
+Graphe d\textquotesingle{}héritage de Visiteur\+Dessin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_visiteur_dessin}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visiteur_dessin_ac8932fd9ff2cbfc57a76464fbd13a4ac}\label{class_visiteur_dessin_ac8932fd9ff2cbfc57a76464fbd13a4ac}} 
+void {\bfseries ouvrir\+Fenetre} () const
+\begin{DoxyCompactList}\small\item\em Envoie une requ�te de cr�ation de la fen�tre vers le serveur. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_dessin_a5abd587ae7b513d6b766ff41471da0d3}{visite}} (\mbox{\hyperlink{class_segment}{Segment}} \&op) const
+\begin{DoxyCompactList}\small\item\em Initialise une connexion vers le serveur, dessine un segment puis ferme la connexion. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_dessin_accd3bce34c6b05c79a6eec7c382923a8}{visite}} (\mbox{\hyperlink{class_cercle}{Cercle}} \&op) const
+\begin{DoxyCompactList}\small\item\em Initialise une connexion vers le serveur, dessine un cercle puis ferme la connexion. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_dessin_aec5b4eb15766717b6f1d9f9cecde5eae}{visite}} (\mbox{\hyperlink{class_triangle}{Triangle}} \&op) const
+\begin{DoxyCompactList}\small\item\em Initialise une connexion vers le serveur, dessine un triangle puis ferme la connexion. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_dessin_a9cf5e3c65f7f32610e301f63b5d7929e}{visite}} (\mbox{\hyperlink{class_polygone}{Polygone}} \&op) const
+\begin{DoxyCompactList}\small\item\em Initialise une connexion vers le serveur, dessine un polygone puis ferme la connexion. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_visiteur_dessin_ac61d2a068839291e8dc315a815a3df1e}{visite}} (\mbox{\hyperlink{class_groupe}{Groupe}} \&op) const
+\begin{DoxyCompactList}\small\item\em Initialise une connexion vers le serveur, dessine un groupe puis ferme la connexion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_visiteur_dessin_accd3bce34c6b05c79a6eec7c382923a8}\label{class_visiteur_dessin_accd3bce34c6b05c79a6eec7c382923a8}} 
+\index{VisiteurDessin@{VisiteurDessin}!visite@{visite}}
+\index{visite@{visite}!VisiteurDessin@{VisiteurDessin}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessin\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cercle}{Cercle}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialise une connexion vers le serveur, dessine un cercle puis ferme la connexion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em s} & Pointeur sur le cercle � dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a8465617e90ab9cbd990e45434a6d5a2b}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_dessin_ac61d2a068839291e8dc315a815a3df1e}\label{class_visiteur_dessin_ac61d2a068839291e8dc315a815a3df1e}} 
+\index{VisiteurDessin@{VisiteurDessin}!visite@{visite}}
+\index{visite@{visite}!VisiteurDessin@{VisiteurDessin}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessin\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialise une connexion vers le serveur, dessine un groupe puis ferme la connexion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em s} & Pointeur sur le groupe � dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_ab1665283be9db3b02449595edb6012b0}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_dessin_a9cf5e3c65f7f32610e301f63b5d7929e}\label{class_visiteur_dessin_a9cf5e3c65f7f32610e301f63b5d7929e}} 
+\index{VisiteurDessin@{VisiteurDessin}!visite@{visite}}
+\index{visite@{visite}!VisiteurDessin@{VisiteurDessin}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessin\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_polygone}{Polygone}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialise une connexion vers le serveur, dessine un polygone puis ferme la connexion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em s} & Pointeur sur le polygone � dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a1f588aacf0a0df41a1f1cd170bb1ddfb}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_dessin_a5abd587ae7b513d6b766ff41471da0d3}\label{class_visiteur_dessin_a5abd587ae7b513d6b766ff41471da0d3}} 
+\index{VisiteurDessin@{VisiteurDessin}!visite@{visite}}
+\index{visite@{visite}!VisiteurDessin@{VisiteurDessin}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessin\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialise une connexion vers le serveur, dessine un segment puis ferme la connexion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em s} & Pointeur sur le segment � dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a48748b760eadc55f734d856abbc7b0c5}{Visiteur}}.
+
+\mbox{\Hypertarget{class_visiteur_dessin_aec5b4eb15766717b6f1d9f9cecde5eae}\label{class_visiteur_dessin_aec5b4eb15766717b6f1d9f9cecde5eae}} 
+\index{VisiteurDessin@{VisiteurDessin}!visite@{visite}}
+\index{visite@{visite}!VisiteurDessin@{VisiteurDessin}}
+\doxysubsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Visiteur\+Dessin\+::visite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_triangle}{Triangle}} \&}]{op }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialise une connexion vers le serveur, dessine un triangle puis ferme la connexion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em s} & Pointeur sur le triangle � dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{class_visiteur_a044a4db8ca6bad04c9d3483ed5c43f21}{Visiteur}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/Visiteur\+Dessin.\+h\item 
+Client\+\_\+\+C++/\+Client/Visiteur\+Dessin.\+cpp\end{DoxyCompactItemize}

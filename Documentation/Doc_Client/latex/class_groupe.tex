@@ -1,0 +1,346 @@
+\hypertarget{class_groupe}{}\doxysection{RÃ©fÃ©rence de la classe Groupe}
+\label{class_groupe}\index{Groupe@{Groupe}}
+Graphe d\textquotesingle{}hÃ©ritage de Groupe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_groupe}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_groupe_aa8d2806b9f46c4a83a3ed3dd61080063}{Groupe}} (const string \&couleur=\mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}})
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe_a8b85f82b60e5f0c8377edb7dc945accf}{Groupe}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&op)
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_groupe_a99dd414922635dcc0585aabb2a330f63}\label{class_groupe_a99dd414922635dcc0585aabb2a330f63}} 
+{\bfseries $\sim$\+Groupe} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_groupe_a68690f47e1444ff7b3491731190905b9}{get\+Nb\+Forme}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de forme du groupe. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_forme}{Forme}} \& \mbox{\hyperlink{class_groupe_a69932416a28616d3b1dcb75d5a0c0a83}{get\+Forme}} (int index) const
+\begin{DoxyCompactList}\small\item\em Getter de la forme situé à l\textquotesingle{}index donné en paramètre. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_groupe}{Groupe}} \& \mbox{\hyperlink{class_groupe_ad7f2acf55c3f46230389ebf80ef75dc4}{operator=}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur =. \textbackslash{}detail Affectation par recopie d\textquotesingle{}une forme passée en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_groupe_a2f8beda801cc3cd2d1d407438e8b5720}{operator==}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&op) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur ==. \textbackslash{}detail Compare l\textquotesingle{}instance avec le groupe passé en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_groupe_afb8b90038b91ee8f1c0537e0a5a11645}{operator!=}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&op) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur !=. \textbackslash{}detail Vérifie si l\textquotesingle{}instance et le groupe passé en paramètre sont égaux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a2c5ab00d1b0c83d0c6554aec96b04715}{operator+}} (const \mbox{\hyperlink{class_forme}{Forme}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur +. \textbackslash{}detail Ajoute une forme au groupe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a77df4a3f295cee79b0e56879800718e9}{operator-\/}} (int index)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur -\/. \textbackslash{}detail Supprime une forme du groupe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} \& \mbox{\hyperlink{class_groupe_aaf3af745abc0a816a1f7e1b85ee60ad1}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a7c163e4e2cf6d44213f6d18f5b96431a}{ajouter}} (const \mbox{\hyperlink{class_forme}{Forme}} \&op)
+\begin{DoxyCompactList}\small\item\em Ajoute une forme au groupe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_a58ec4e184db21f8e924b101936f41a23}{supprimer}} (int index)
+\begin{DoxyCompactList}\small\item\em Supprime une forme du groupe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe_ab8bcab328da985da9907cffe76ca71d0}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em Surchage de l\textquotesingle{}opérateur string. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{class_groupe_afc0056987479b35eedafa6cc5b758288}{get\+Aire}} () const
+\begin{DoxyCompactList}\small\item\em Getter de l\textquotesingle{}aire du groupe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe}{Groupe}} $\ast$ \mbox{\hyperlink{class_groupe_a036a00bf7da33c70dc5f8d379f987ece}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Clone l\textquotesingle{}instance courante du groupe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_ab44e168e25fc973f4c5c9438c839e3e9}{accepte}} (const \mbox{\hyperlink{class_visiteur}{Visiteur}} \&op)
+\begin{DoxyCompactList}\small\item\em Méthode du DP \mbox{\hyperlink{class_visiteur}{Visiteur}}. \textbackslash{}detail Lance la méthode visite du visiteur passé en paramètre, celle-\/ci effectue un traitement sur l\textquotesingle{}instance en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_groupe_aec106e7268cd1b21e1abf5dfd33f3d94}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_groupe}{Groupe}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_groupe_aa8d2806b9f46c4a83a3ed3dd61080063}\label{class_groupe_aa8d2806b9f46c4a83a3ed3dd61080063}} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{Groupe()}{Groupe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}\item[{const string \&}]{couleur = {\ttfamily \mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}}} }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em couleur} & string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_groupe_a8b85f82b60e5f0c8377edb7dc945accf}\label{class_groupe_a8b85f82b60e5f0c8377edb7dc945accf}} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{Groupe()}{Groupe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Constructeur par recopie. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_groupe}{Groupe}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_groupe_ab44e168e25fc973f4c5c9438c839e3e9}\label{class_groupe_ab44e168e25fc973f4c5c9438c839e3e9}} 
+\index{Groupe@{Groupe}!accepte@{accepte}}
+\index{accepte@{accepte}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{accepte()}{accepte()}}
+{\footnotesize\ttfamily void Groupe\+::accepte (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visiteur}{Visiteur}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode du DP \mbox{\hyperlink{class_visiteur}{Visiteur}}. \textbackslash{}detail Lance la méthode visite du visiteur passé en paramètre, celle-\/ci effectue un traitement sur l\textquotesingle{}instance en cours. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_visiteur}{Visiteur}} La classe mère du DP \mbox{\hyperlink{class_visiteur}{Visiteur}} \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_a7d88db61f390302f426ae1de800c2beb}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_a7c163e4e2cf6d44213f6d18f5b96431a}\label{class_groupe_a7c163e4e2cf6d44213f6d18f5b96431a}} 
+\index{Groupe@{Groupe}!ajouter@{ajouter}}
+\index{ajouter@{ajouter}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{ajouter()}{ajouter()}}
+{\footnotesize\ttfamily void Groupe\+::ajouter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_forme}{Forme}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Ajoute une forme au groupe. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_forme}{Forme}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_groupe_a036a00bf7da33c70dc5f8d379f987ece}\label{class_groupe_a036a00bf7da33c70dc5f8d379f987ece}} 
+\index{Groupe@{Groupe}!clone@{clone}}
+\index{clone@{clone}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_groupe}{Groupe}} $\ast$ Groupe\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clone l\textquotesingle{}instance courante du groupe. 
+
+\begin{DoxyReturn}{Renvoie}
+Groupe$\ast$ Un pointeur sur une nouvelle instance d\textquotesingle{}un groupe. \textbackslash{}detail Il s\textquotesingle{}agit d\textquotesingle{}une allocation dynamique (new). 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_afc0056987479b35eedafa6cc5b758288}\label{class_groupe_afc0056987479b35eedafa6cc5b758288}} 
+\index{Groupe@{Groupe}!getAire@{getAire}}
+\index{getAire@{getAire}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getAire()}{getAire()}}
+{\footnotesize\ttfamily const double Groupe\+::get\+Aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Getter de l\textquotesingle{}aire du groupe. 
+
+\begin{DoxyReturn}{Renvoie}
+double L\textquotesingle{}aire du groupe. 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_adf4346150d8f734d7a48f7661e30cab4}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_a69932416a28616d3b1dcb75d5a0c0a83}\label{class_groupe_a69932416a28616d3b1dcb75d5a0c0a83}} 
+\index{Groupe@{Groupe}!getForme@{getForme}}
+\index{getForme@{getForme}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getForme()}{getForme()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_forme}{Forme}} \& Groupe\+::get\+Forme (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Getter de la forme situé à l\textquotesingle{}index donné en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em index} & int L\textquotesingle{}index du point dans le vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groupe_a68690f47e1444ff7b3491731190905b9}\label{class_groupe_a68690f47e1444ff7b3491731190905b9}} 
+\index{Groupe@{Groupe}!getNbForme@{getNbForme}}
+\index{getNbForme@{getNbForme}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{getNbForme()}{getNbForme()}}
+{\footnotesize\ttfamily int Groupe\+::get\+Nb\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nombre de forme du groupe. 
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groupe_ab8bcab328da985da9907cffe76ca71d0}\label{class_groupe_ab8bcab328da985da9907cffe76ca71d0}} 
+\index{Groupe@{Groupe}!operator string@{operator string}}
+\index{operator string@{operator string}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Groupe\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Surchage de l\textquotesingle{}opérateur string. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_forme_a809375f023f0f19227f3e3821ee56731}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_afb8b90038b91ee8f1c0537e0a5a11645}\label{class_groupe_afb8b90038b91ee8f1c0537e0a5a11645}} 
+\index{Groupe@{Groupe}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Groupe\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur !=. \textbackslash{}detail Vérifie si l\textquotesingle{}instance et le groupe passé en paramètre sont égaux. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_groupe}{Groupe}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groupe_a2c5ab00d1b0c83d0c6554aec96b04715}\label{class_groupe_a2c5ab00d1b0c83d0c6554aec96b04715}} 
+\index{Groupe@{Groupe}!operator+@{operator+}}
+\index{operator+@{operator+}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily void Groupe\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_forme}{Forme}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur +. \textbackslash{}detail Ajoute une forme au groupe. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_forme}{Forme}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_groupe_a77df4a3f295cee79b0e56879800718e9}\label{class_groupe_a77df4a3f295cee79b0e56879800718e9}} 
+\index{Groupe@{Groupe}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily void Groupe\+::operator-\/ (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur -\/. \textbackslash{}detail Supprime une forme du groupe. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em index} & int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_groupe_ad7f2acf55c3f46230389ebf80ef75dc4}\label{class_groupe_ad7f2acf55c3f46230389ebf80ef75dc4}} 
+\index{Groupe@{Groupe}!operator=@{operator=}}
+\index{operator=@{operator=}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_groupe}{Groupe}} \& Groupe\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur =. \textbackslash{}detail Affectation par recopie d\textquotesingle{}une forme passée en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_groupe}{Groupe}} Le groupe à copier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_groupe}{Groupe}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groupe_a2f8beda801cc3cd2d1d407438e8b5720}\label{class_groupe_a2f8beda801cc3cd2d1d407438e8b5720}} 
+\index{Groupe@{Groupe}!operator==@{operator==}}
+\index{operator==@{operator==}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Groupe\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur ==. \textbackslash{}detail Compare l\textquotesingle{}instance avec le groupe passé en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_groupe}{Groupe}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groupe_aaf3af745abc0a816a1f7e1b85ee60ad1}\label{class_groupe_aaf3af745abc0a816a1f7e1b85ee60ad1}} 
+\index{Groupe@{Groupe}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} \& Groupe\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \mbox{[}\mbox{]}. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em index} & int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_forme}{Forme}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_groupe_a58ec4e184db21f8e924b101936f41a23}\label{class_groupe_a58ec4e184db21f8e924b101936f41a23}} 
+\index{Groupe@{Groupe}!supprimer@{supprimer}}
+\index{supprimer@{supprimer}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{supprimer()}{supprimer()}}
+{\footnotesize\ttfamily void Groupe\+::supprimer (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Supprime une forme du groupe. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em index} & int \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions amies et associÃ©es}
+\mbox{\Hypertarget{class_groupe_aec106e7268cd1b21e1abf5dfd33f3d94}\label{class_groupe_aec106e7268cd1b21e1abf5dfd33f3d94}} 
+\index{Groupe@{Groupe}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Groupe@{Groupe}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em os} & ostream \\
+\hline
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ostream Le flux d\textquotesingle{}entrée modifié. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/\mbox{\hyperlink{_groupe_8h}{Groupe.\+h}}\item 
+Client\+\_\+\+C++/\+Client/Groupe.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,306 @@
+\hypertarget{class_segment}{}\doxysection{RÃ©fÃ©rence de la classe Segment}
+\label{class_segment}\index{Segment@{Segment}}
+Graphe d\textquotesingle{}hÃ©ritage de Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_segment}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment_a104149490ec24bec957e4ffc5503529d}{Segment}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p1, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p2, const string \&couleur=\mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}})
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_segment_a4a72f2318f0cd0cd8649922c6c6a6e22}{Segment}} (const \mbox{\hyperlink{class_segment}{Segment}} \&op)
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_a76b45a453304f1f485e3bc2fcad58b59}\label{class_segment_a76b45a453304f1f485e3bc2fcad58b59}} 
+{\bfseries $\sim$\+Segment} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_segment_a3037546aae39f658f8bd7734353667c1}{get\+P1}} () const
+\begin{DoxyCompactList}\small\item\em Getter du 1er Point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a20a668324dba27ac11e6b861054aa2ac}{set\+P1}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p1)
+\begin{DoxyCompactList}\small\item\em Setter du 1er point. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_a237d83949eb3c43276b1dbe532098217}{get\+P2}} () const
+\begin{DoxyCompactList}\small\item\em Getter du 2scd point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a64b6a564005e2ce9cb859b1f9355c7bc}{set\+P2}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p2)
+\begin{DoxyCompactList}\small\item\em Setter du 2scd point. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_segment_a204098a81f4e479b945a46108dd562d5}{get\+Centre\+Gravite}} () const
+\begin{DoxyCompactList}\small\item\em Getter du centre de gravité. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_segment}{Segment}} \& \mbox{\hyperlink{class_segment_a2f9a1078a11ed8c2939eeea8549b7d25}{operator=}} (const \mbox{\hyperlink{class_segment}{Segment}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur =. \textbackslash{}detail Compare l\textquotesingle{}instance avec le vecteur passé en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_segment_aadc808d9202cacd93b5df7ca84969b0b}{operator==}} (const \mbox{\hyperlink{class_segment}{Segment}} \&op) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur ==. \textbackslash{}detail Compare l\textquotesingle{}instance avec le segment passé en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_segment_a5e951012c3baf531bfd6268d6e51049d}{operator!=}} (const \mbox{\hyperlink{class_segment}{Segment}} \&op) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur !=. \textbackslash{}detail Vérifie si l\textquotesingle{}instance et le segment passé en paramètre sont égaux. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_segment_a28b3be893a35a0d73574354752c147fd}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em Surchage de l\textquotesingle{}opérateur string. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{class_segment_ab5d7a7584c28a3f306ce9f82b9b71d43}{get\+Aire}} () const
+\begin{DoxyCompactList}\small\item\em Getter de l\textquotesingle{}aire du segment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_segment}{Segment}} $\ast$ \mbox{\hyperlink{class_segment_adf993f68690b48d78710a5d04f62282b}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Clone l\textquotesingle{}instance courante du segment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a1071bc0430657ab0c2918c7244e96a6f}{accepte}} (const \mbox{\hyperlink{class_visiteur}{Visiteur}} \&op)
+\begin{DoxyCompactList}\small\item\em Méthode du DP \mbox{\hyperlink{class_visiteur}{Visiteur}}. \textbackslash{}detail Lance la méthode visite du visiteur passé en paramètre, celle-\/ci effectue un traitement sur l\textquotesingle{}instance en cours. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_segment_a5302c369d021747c0e2edd00d113f6bf}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_segment}{Segment}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_segment_a104149490ec24bec957e4ffc5503529d}\label{class_segment_a104149490ec24bec957e4ffc5503529d}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p1,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p2,  }\item[{const string \&}]{couleur = {\ttfamily \mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}}} }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p1} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em p2} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em couleur} & string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_segment_a4a72f2318f0cd0cd8649922c6c6a6e22}\label{class_segment_a4a72f2318f0cd0cd8649922c6c6a6e22}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{Segment()}{Segment()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Constructeur par recopie. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} Une instance du segment à copier. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_segment_a1071bc0430657ab0c2918c7244e96a6f}\label{class_segment_a1071bc0430657ab0c2918c7244e96a6f}} 
+\index{Segment@{Segment}!accepte@{accepte}}
+\index{accepte@{accepte}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{accepte()}{accepte()}}
+{\footnotesize\ttfamily void Segment\+::accepte (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_visiteur}{Visiteur}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Méthode du DP \mbox{\hyperlink{class_visiteur}{Visiteur}}. \textbackslash{}detail Lance la méthode visite du visiteur passé en paramètre, celle-\/ci effectue un traitement sur l\textquotesingle{}instance en cours. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_visiteur}{Visiteur}} La classe mère du DP \mbox{\hyperlink{class_visiteur}{Visiteur}} \\
+\hline
+\end{DoxyParams}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_a7d88db61f390302f426ae1de800c2beb}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_adf993f68690b48d78710a5d04f62282b}\label{class_segment_adf993f68690b48d78710a5d04f62282b}} 
+\index{Segment@{Segment}!clone@{clone}}
+\index{clone@{clone}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_segment}{Segment}} $\ast$ Segment\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clone l\textquotesingle{}instance courante du segment. 
+
+\begin{DoxyReturn}{Renvoie}
+Segment$\ast$ Un pointeur sur une nouvelle instance d\textquotesingle{}un segment. \textbackslash{}detail Il s\textquotesingle{}agit d\textquotesingle{}une allocation dynamique (new). 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_aa846673739124ed44293ceaf515f3fa8}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_ab5d7a7584c28a3f306ce9f82b9b71d43}\label{class_segment_ab5d7a7584c28a3f306ce9f82b9b71d43}} 
+\index{Segment@{Segment}!getAire@{getAire}}
+\index{getAire@{getAire}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getAire()}{getAire()}}
+{\footnotesize\ttfamily const double Segment\+::get\+Aire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Getter de l\textquotesingle{}aire du segment. 
+
+\begin{DoxyReturn}{Renvoie}
+double L\textquotesingle{}aire du segment. 
+\end{DoxyReturn}
+
+
+ImplÃ©mente \mbox{\hyperlink{class_forme_adf4346150d8f734d7a48f7661e30cab4}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a204098a81f4e479b945a46108dd562d5}\label{class_segment_a204098a81f4e479b945a46108dd562d5}} 
+\index{Segment@{Segment}!getCentreGravite@{getCentreGravite}}
+\index{getCentreGravite@{getCentreGravite}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getCentreGravite()}{getCentreGravite()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Segment\+::get\+Centre\+Gravite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Getter du centre de gravité. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Le centre de gravité 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a3037546aae39f658f8bd7734353667c1}\label{class_segment_a3037546aae39f658f8bd7734353667c1}} 
+\index{Segment@{Segment}!getP1@{getP1}}
+\index{getP1@{getP1}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getP1()}{getP1()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Segment\+::get\+P1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter du 1er Point. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a237d83949eb3c43276b1dbe532098217}\label{class_segment_a237d83949eb3c43276b1dbe532098217}} 
+\index{Segment@{Segment}!getP2@{getP2}}
+\index{getP2@{getP2}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{getP2()}{getP2()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Segment\+::get\+P2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter du 2scd point. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a28b3be893a35a0d73574354752c147fd}\label{class_segment_a28b3be893a35a0d73574354752c147fd}} 
+\index{Segment@{Segment}!operator string@{operator string}}
+\index{operator string@{operator string}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Segment\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Surchage de l\textquotesingle{}opérateur string. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_forme_a809375f023f0f19227f3e3821ee56731}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a5e951012c3baf531bfd6268d6e51049d}\label{class_segment_a5e951012c3baf531bfd6268d6e51049d}} 
+\index{Segment@{Segment}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Segment\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur !=. \textbackslash{}detail Vérifie si l\textquotesingle{}instance et le segment passé en paramètre sont égaux. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a2f9a1078a11ed8c2939eeea8549b7d25}\label{class_segment_a2f9a1078a11ed8c2939eeea8549b7d25}} 
+\index{Segment@{Segment}!operator=@{operator=}}
+\index{operator=@{operator=}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_segment}{Segment}} \& Segment\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur =. \textbackslash{}detail Compare l\textquotesingle{}instance avec le vecteur passé en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_aadc808d9202cacd93b5df7ca84969b0b}\label{class_segment_aadc808d9202cacd93b5df7ca84969b0b}} 
+\index{Segment@{Segment}!operator==@{operator==}}
+\index{operator==@{operator==}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Segment\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur ==. \textbackslash{}detail Compare l\textquotesingle{}instance avec le segment passé en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_segment_a20a668324dba27ac11e6b861054aa2ac}\label{class_segment_a20a668324dba27ac11e6b861054aa2ac}} 
+\index{Segment@{Segment}!setP1@{setP1}}
+\index{setP1@{setP1}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{setP1()}{setP1()}}
+{\footnotesize\ttfamily void Segment\+::set\+P1 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p1 }\end{DoxyParamCaption})}
+
+
+
+Setter du 1er point. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p1} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_segment_a64b6a564005e2ce9cb859b1f9355c7bc}\label{class_segment_a64b6a564005e2ce9cb859b1f9355c7bc}} 
+\index{Segment@{Segment}!setP2@{setP2}}
+\index{setP2@{setP2}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{setP2()}{setP2()}}
+{\footnotesize\ttfamily void Segment\+::set\+P2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Setter du 2scd point. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p2} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions amies et associÃ©es}
+\mbox{\Hypertarget{class_segment_a5302c369d021747c0e2edd00d113f6bf}\label{class_segment_a5302c369d021747c0e2edd00d113f6bf}} 
+\index{Segment@{Segment}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Segment@{Segment}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_segment}{Segment}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em os} & ostream \\
+\hline
+{\em op} & \mbox{\hyperlink{class_segment}{Segment}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ostream Le flux d\textquotesingle{}entrée modifié. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/\mbox{\hyperlink{_segment_8h}{Segment.\+h}}\item 
+Client\+\_\+\+C++/\+Client/Segment.\+cpp\end{DoxyCompactItemize}

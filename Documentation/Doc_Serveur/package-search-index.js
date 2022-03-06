@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"CouleurCOR"},{"l":"FormeCOR"},{"l":"Main"},{"l":"RequeteCOR"}];updateSearchResults();

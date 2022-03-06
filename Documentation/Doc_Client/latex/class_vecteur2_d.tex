@@ -1,0 +1,396 @@
+\hypertarget{class_vecteur2_d}{}\doxysection{RÃ©fÃ©rence de la classe Vecteur2D}
+\label{class_vecteur2_d}\index{Vecteur2D@{Vecteur2D}}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vecteur2_d_a6d1763227df000912a8dcdc1b0b288f9}\label{class_vecteur2_d_a6d1763227df000912a8dcdc1b0b288f9}} 
+virtual {\bfseries $\sim$\+Vecteur2D} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d_ad9dee29de356e9bd4bee597dddf431b0}{Vecteur2D}} (const double \&x=0, const double \&y=0)
+\begin{DoxyCompactList}\small\item\em Constructeur avec un couple de coordonnées (x,y). \textbackslash{}detail Par défaut, les coordonnées sont affectées à 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d_a99ebb48c6deff6e496a789e5cd5d94a8}{Vecteur2D}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op)
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_vecteur2_d_a6ee0fd59f72ec11ae9261a4266973759}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Getter du membre privé \+\_\+abscisse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vecteur2_d_ab5f292c0e0e0a19a21ca5ca3525a4bae}{setX}} (const double x)
+\begin{DoxyCompactList}\small\item\em Setter du membre privé \+\_\+abscisse. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_vecteur2_d_a87763fc846145b23c37d492c183af6b8}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Getter du membre privé \+\_\+\+\_\+ordonnee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vecteur2_d_a28b427f8a490b14f34d9d05b16e137ad}{setY}} (const double y)
+\begin{DoxyCompactList}\small\item\em Setter du membre privé \+\_\+ordonnee. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}{operator+}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&u) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur addition (+). \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_a74738c803bdd4eee9962029a9ad69f4c}{operator$\ast$}} (const double \&r) const
+\begin{DoxyCompactList}\small\item\em Surchage de l\textquotesingle{}opérateur multiplication ($\ast$). \textbackslash{}detail Muiltiplication par un réel. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Surchage de l\textquotesingle{}opérateur soustraction (-\/). \textbackslash{}detail Il s\textquotesingle{}agit ici de l\textquotesingle{}opposé d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vecteur2_d_a10c83f5b0aaa60cc01912b33e3c76fc5}\label{class_vecteur2_d_a10c83f5b0aaa60cc01912b33e3c76fc5}} 
+{\bfseries operator string} () const
+\begin{DoxyCompactList}\small\item\em Surchage de l\textquotesingle{}opérateur string. \textbackslash{}detail Conversion des coordonnées du vecteur en string. Similaire à la méthode to\+String(). \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_vecteur2_d_ab6d4dc15d652a2dd5338f29275cb6468}{operator=}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}affectation. \textbackslash{}detail Affectation par recopie d\textquotesingle{}un vecteur passé en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vecteur2_d_afe605861e80cb13681d1bdae6696bd42}{operator==}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op) const
+\begin{DoxyCompactList}\small\item\em Surchage de l\textquotesingle{}opérateur d\textquotesingle{}égalité. \textbackslash{}detail Compare l\textquotesingle{}instance avec le vecteur passé en paramètre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vecteur2_d_a66a62e683c13ac60e1bf60f021620f4c}{operator!=}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op) const
+\begin{DoxyCompactList}\small\item\em Surchagre de l\textquotesingle{}opérateur différence. \textbackslash{}detail Vérifie si l\textquotesingle{}instance et le vecteur passé en paramètre sont égaux. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_vecteur2_d_a578e5b6ee7f728567ff8e6b00b110fd4}{operator+=}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur +=. \textbackslash{}detail Modification de l\textquotesingle{}instance via le vecteur passé en paramètre \+: instance = instance + op. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vecteur2_d_af22ad92c687b6ea57b159e76f566100c}\label{class_vecteur2_d_af22ad92c687b6ea57b159e76f566100c}} 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $\ast$ {\bfseries clone} () const
+\item 
+void \mbox{\hyperlink{class_vecteur2_d_abdefc21264d2f03607a5890cbf60d6bc}{affiche}} (ostream \&os=cout)
+\begin{DoxyCompactList}\small\item\em Affiche un vecteur dans le flux passé en paramètre. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_vecteur2_d_a8f480988a44036fab49656419eda3817}{determinant}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op) const
+\begin{DoxyCompactList}\small\item\em Calcul du determinant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_vecteur2_d_a63409aa6197b8a64089e105bb65e68c1}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op)
+\begin{DoxyCompactList}\small\item\em Opération de translation. \textbackslash{}detail Similaire à l\textquotesingle{}opéarteur +=. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_vecteur2_d_aaba104f646af24e677d011cb5544d3b3}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op, double r)
+\begin{DoxyCompactList}\small\item\em Opération d\textquotesingle{}homothétie \+: transformation géométrique par agrandissement ou réduction \textbackslash{}detail Une homothétie est définie par un point invariant (\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}) et par un rapport d\textquotesingle{}homothétie (double). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& \mbox{\hyperlink{class_vecteur2_d_a33a7f808b2c8ff8561fbe696625ff7ea}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op, double angle)
+\begin{DoxyCompactList}\small\item\em Opération de rotation. \textbackslash{}detail Une rotation est définie par un point invariant (le centre de la rotation) et par un angle signé donné en radians. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_vecteur2_d_a0c7b4cb7df5e2b557de6e8cb94b4c833}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&op)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_vecteur2_d_ad9dee29de356e9bd4bee597dddf431b0}\label{class_vecteur2_d_ad9dee29de356e9bd4bee597dddf431b0}} 
+\index{Vecteur2D@{Vecteur2D}!Vecteur2D@{Vecteur2D}}
+\index{Vecteur2D@{Vecteur2D}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{Vecteur2D()}{Vecteur2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vecteur2\+D\+::\+Vecteur2D (\begin{DoxyParamCaption}\item[{const double \&}]{x = {\ttfamily 0},  }\item[{const double \&}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur avec un couple de coordonnées (x,y). \textbackslash{}detail Par défaut, les coordonnées sont affectées à 0. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em x} & double. \\
+\hline
+{\em y} & double. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vecteur2_d_a99ebb48c6deff6e496a789e5cd5d94a8}\label{class_vecteur2_d_a99ebb48c6deff6e496a789e5cd5d94a8}} 
+\index{Vecteur2D@{Vecteur2D}!Vecteur2D@{Vecteur2D}}
+\index{Vecteur2D@{Vecteur2D}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{Vecteur2D()}{Vecteur2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vecteur2\+D\+::\+Vecteur2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Constructeur par recopie. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_vecteur2_d_abdefc21264d2f03607a5890cbf60d6bc}\label{class_vecteur2_d_abdefc21264d2f03607a5890cbf60d6bc}} 
+\index{Vecteur2D@{Vecteur2D}!affiche@{affiche}}
+\index{affiche@{affiche}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Vecteur2\+D\+::affiche (\begin{DoxyParamCaption}\item[{ostream \&}]{os = {\ttfamily cout} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Affiche un vecteur dans le flux passé en paramètre. 
+
+Par défaut le flux de sortie est cout. 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em os} & ostream Le flux de sortie. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vecteur2_d_a8f480988a44036fab49656419eda3817}\label{class_vecteur2_d_a8f480988a44036fab49656419eda3817}} 
+\index{Vecteur2D@{Vecteur2D}!determinant@{determinant}}
+\index{determinant@{determinant}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::determinant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Calcul du determinant. 
+
+\begin{DoxyVerb}                    ///
+\end{DoxyVerb}
+ Méthodes métier /// /// 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a6ee0fd59f72ec11ae9261a4266973759}\label{class_vecteur2_d_a6ee0fd59f72ec11ae9261a4266973759}} 
+\index{Vecteur2D@{Vecteur2D}!getX@{getX}}
+\index{getX@{getX}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter du membre privé \+\_\+abscisse. 
+
+\begin{DoxyReturn}{Renvoie}
+double L\textquotesingle{}abscisse du vecteur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a87763fc846145b23c37d492c183af6b8}\label{class_vecteur2_d_a87763fc846145b23c37d492c183af6b8}} 
+\index{Vecteur2D@{Vecteur2D}!getY@{getY}}
+\index{getY@{getY}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily double Vecteur2\+D\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter du membre privé \+\_\+\+\_\+ordonnee. 
+
+\begin{DoxyReturn}{Renvoie}
+double L\textquotesingle{}ordonné du vecteur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_aaba104f646af24e677d011cb5544d3b3}\label{class_vecteur2_d_aaba104f646af24e677d011cb5544d3b3}} 
+\index{Vecteur2D@{Vecteur2D}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Vecteur2\+D\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op,  }\item[{double}]{r }\end{DoxyParamCaption})}
+
+
+
+Opération d\textquotesingle{}homothétie \+: transformation géométrique par agrandissement ou réduction \textbackslash{}detail Une homothétie est définie par un point invariant (\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}) et par un rapport d\textquotesingle{}homothétie (double). 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+{\em r} & double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a66a62e683c13ac60e1bf60f021620f4c}\label{class_vecteur2_d_a66a62e683c13ac60e1bf60f021620f4c}} 
+\index{Vecteur2D@{Vecteur2D}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Vecteur2\+D\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Surchagre de l\textquotesingle{}opérateur différence. \textbackslash{}detail Vérifie si l\textquotesingle{}instance et le vecteur passé en paramètre sont égaux. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a74738c803bdd4eee9962029a9ad69f4c}\label{class_vecteur2_d_a74738c803bdd4eee9962029a9ad69f4c}} 
+\index{Vecteur2D@{Vecteur2D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Surchage de l\textquotesingle{}opérateur multiplication ($\ast$). \textbackslash{}detail Muiltiplication par un réel. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em a} & const double. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une copie du résultat. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}\label{class_vecteur2_d_aaed6615f626d64f66d77e17dfdb8c2f0}} 
+\index{Vecteur2D@{Vecteur2D}!operator+@{operator+}}
+\index{operator+@{operator+}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2\+D\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{u }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur addition (+). 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em u} & const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une copie du résultat. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a578e5b6ee7f728567ff8e6b00b110fd4}\label{class_vecteur2_d_a578e5b6ee7f728567ff8e6b00b110fd4}} 
+\index{Vecteur2D@{Vecteur2D}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Vecteur2\+D\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur +=. \textbackslash{}detail Modification de l\textquotesingle{}instance via le vecteur passé en paramètre \+: instance = instance + op. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une référence de l\textquotesingle{}instance modifiée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}\label{class_vecteur2_d_afb6780dc96e5dd1a23f741946c1497b6}} 
+\index{Vecteur2D@{Vecteur2D}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Vecteur2\+D\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Surchage de l\textquotesingle{}opérateur soustraction (-\/). \textbackslash{}detail Il s\textquotesingle{}agit ici de l\textquotesingle{}opposé d\textquotesingle{}un vecteur. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une copie du résultat. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_ab6d4dc15d652a2dd5338f29275cb6468}\label{class_vecteur2_d_ab6d4dc15d652a2dd5338f29275cb6468}} 
+\index{Vecteur2D@{Vecteur2D}!operator=@{operator=}}
+\index{operator=@{operator=}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Vecteur2\+D\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}affectation. \textbackslash{}detail Affectation par recopie d\textquotesingle{}un vecteur passé en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une référence de l\textquotesingle{}instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_afe605861e80cb13681d1bdae6696bd42}\label{class_vecteur2_d_afe605861e80cb13681d1bdae6696bd42}} 
+\index{Vecteur2D@{Vecteur2D}!operator==@{operator==}}
+\index{operator==@{operator==}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Vecteur2\+D\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption}) const}
+
+
+
+Surchage de l\textquotesingle{}opérateur d\textquotesingle{}égalité. \textbackslash{}detail Compare l\textquotesingle{}instance avec le vecteur passé en paramètre. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a33a7f808b2c8ff8561fbe696625ff7ea}\label{class_vecteur2_d_a33a7f808b2c8ff8561fbe696625ff7ea}} 
+\index{Vecteur2D@{Vecteur2D}!rotation@{rotation}}
+\index{rotation@{rotation}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Vecteur2\+D\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Opération de rotation. \textbackslash{}detail Une rotation est définie par un point invariant (le centre de la rotation) et par un angle signé donné en radians. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em angle} & double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_ab5f292c0e0e0a19a21ca5ca3525a4bae}\label{class_vecteur2_d_ab5f292c0e0e0a19a21ca5ca3525a4bae}} 
+\index{Vecteur2D@{Vecteur2D}!setX@{setX}}
+\index{setX@{setX}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Vecteur2\+D\+::setX (\begin{DoxyParamCaption}\item[{const double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter du membre privé \+\_\+abscisse. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em x} & const double. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une référence sur l\textquotesingle{}instance modifiée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a28b427f8a490b14f34d9d05b16e137ad}\label{class_vecteur2_d_a28b427f8a490b14f34d9d05b16e137ad}} 
+\index{Vecteur2D@{Vecteur2D}!setY@{setY}}
+\index{setY@{setY}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Vecteur2\+D\+::setY (\begin{DoxyParamCaption}\item[{const double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter du membre privé \+\_\+ordonnee. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em y} & const double. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Une référence sur l\textquotesingle{}instance modifiée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vecteur2_d_a63409aa6197b8a64089e105bb65e68c1}\label{class_vecteur2_d_a63409aa6197b8a64089e105bb65e68c1}} 
+\index{Vecteur2D@{Vecteur2D}!translation@{translation}}
+\index{translation@{translation}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \& Vecteur2\+D\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption})}
+
+
+
+Opération de translation. \textbackslash{}detail Similaire à l\textquotesingle{}opéarteur +=. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em op} & \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des fonctions amies et associÃ©es}
+\mbox{\Hypertarget{class_vecteur2_d_a0c7b4cb7df5e2b557de6e8cb94b4c833}\label{class_vecteur2_d_a0c7b4cb7df5e2b557de6e8cb94b4c833}} 
+\index{Vecteur2D@{Vecteur2D}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vecteur2D@{Vecteur2D}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em os} & ostream \\
+\hline
+{\em op} & const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ostream Le flux d\textquotesingle{}entrée modifié. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/\mbox{\hyperlink{_vecteur2_d_8h}{Vecteur2\+D.\+h}}\item 
+Client\+\_\+\+C++/\+Client/Vecteur2\+D.\+cpp\end{DoxyCompactItemize}

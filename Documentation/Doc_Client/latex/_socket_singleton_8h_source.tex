@@ -1,0 +1,43 @@
+\hypertarget{_socket_singleton_8h_source}{}\doxysection{Socket\+Singleton.\+h}
+\label{_socket_singleton_8h_source}\index{Client\_C++/Client/SocketSingleton.h@{Client\_C++/Client/SocketSingleton.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <WinSock2.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_socket_singleton}{SocketSingleton}} }
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{static} \mbox{\hyperlink{class_socket_singleton}{SocketSingleton}}* \_instanceUnique; }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     SOCKET \_sock;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     SOCKADDR\_IN \_sockaddr;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{string} \_ip; }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \_port; }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_socket_singleton}{SocketSingleton}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \mbox{\hyperlink{class_socket_singleton}{\string~SocketSingleton}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41     \textcolor{keyword}{static} \mbox{\hyperlink{class_socket_singleton}{SocketSingleton}}* \mbox{\hyperlink{class_socket_singleton_aa9d7bd57d200977ab163cc1db0f368c6}{getInstance}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_socket_singleton_aa17fbc8d6ac5e570f208fbe74c9ff477}{initialiserConnexion}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_socket_singleton_a291e01a24f10f9c68a99eec8a9d904ae}{envoyerRequete}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& requte);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_socket_singleton_a938892120160b25671aa3bd3519639c3}{requeteSucces}}(); }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_socket_singleton_a81edb750d024cdbb321f5aa8a4d3ed45}{fermerConnexion}}();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_socket_singleton_a2f7281cd63b3f6b23d8fc7b473244b4c}{killInstance}}();}
+\DoxyCodeLine{70 \};}
+
+\end{DoxyCode}

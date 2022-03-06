@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL Gaetan Korpys:  Fichier source de Client_C++/Client/Forme.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL Gaetan Korpys
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cbd6f406266132c1900b39e66f0cbd14.html">Client_C++</a></li><li class="navelem"><a class="el" href="dir_ce8e877a43365ee226c52807b37e0b64.html">Client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Forme.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_forme_8h.html">Aller Ã  la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_constante_8h.html">Constante.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_vecteur2_d_8h.html">Vecteur2D.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_visiteur.html">Visiteur</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_forme.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_forme.html">Forme</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">string</span> _couleur; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> _groupe; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>public :</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_forme.html#a3c97c1066856b548d2fe6db963a28800">   26</a></span>    <a class="code hl_function" href="class_forme.html#a3c97c1066856b548d2fe6db963a28800">Forme</a>() </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        _couleur = <a class="code hl_variable" href="_constante_8h.html#aacd5164ed9c9701c9073d167eabfe638">BLACK</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        _groupe = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_forme.html#adf47dcd2111b4e29d1b260eae2491e83">   36</a></span>    <a class="code hl_function" href="class_forme.html#adf47dcd2111b4e29d1b260eae2491e83">Forme</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; couleur) </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    { </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        _couleur = couleur; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        _groupe = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_forme.html#a5a17da3b8c02671ff953e24b03dcc545">   47</a></span>    <a class="code hl_function" href="class_forme.html#a5a17da3b8c02671ff953e24b03dcc545">Forme</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; couleur, <span class="keywordtype">bool</span> groupe)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        _couleur = couleur;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        _groupe = groupe;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_forme.html#a10e0a98a785ae939b5bb7e882e5bdab4">   57</a></span>    <a class="code hl_function" href="class_forme.html#a10e0a98a785ae939b5bb7e882e5bdab4">Forme</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; op) </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        _couleur = op._couleur; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        _groupe = op._groupe;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_forme.html#ab4582182a0cd4da315743afce6c7f05c">   66</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_forme.html#ab4582182a0cd4da315743afce6c7f05c">~Forme</a>(){}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_forme.html#a260b3228a73812d69c38a4dff949bb95">   72</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_forme.html#a260b3228a73812d69c38a4dff949bb95">getCouleur</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> _couleur; }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_forme.html#af0b5c9ab7d799511311f897bf77f3f21">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#af0b5c9ab7d799511311f897bf77f3f21">setCouleur</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; couleur) { _couleur = couleur; }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_forme.html#a8661575f963f43b951c38b9f80c2e9e2">   84</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_forme.html#a8661575f963f43b951c38b9f80c2e9e2">getGroupe</a>()<span class="keyword">const </span>{ <span class="keywordflow">return</span> _groupe; }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_forme.html#a8ba1586dfedf7b0c020946db4fb2feca">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#a8ba1586dfedf7b0c020946db4fb2feca">setGroupe</a>(<span class="keywordtype">bool</span> groupe) { _groupe = groupe; }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; <a class="code hl_function" href="class_forme.html#a841ef7a8c5e3fca679244798db49e294">operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; op);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_forme.html#a33484368ad48dd116b6d293f59e5f17d">operator == </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; op)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_forme.html#aa74816b853a639f69427ae05db12f0a3">operator != </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; op)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">virtual</span> <span class="keyword">operator</span> string()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_forme.html#a56c7f122caae3533f5fd96eb00c2dc9d">  126</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#a56c7f122caae3533f5fd96eb00c2dc9d">affiche</a>(ostream&amp; os = cout)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        os &lt;&lt; (*this);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_forme.html#adf4346150d8f734d7a48f7661e30cab4">  135</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_forme.html#adf4346150d8f734d7a48f7661e30cab4">getAire</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_forme.html#aa846673739124ed44293ceaf515f3fa8">  142</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_forme.html">Forme</a>* <a class="code hl_function" href="class_forme.html#aa846673739124ed44293ceaf515f3fa8">clone</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_forme.html#a7d88db61f390302f426ae1de800c2beb">  149</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_forme.html#a7d88db61f390302f426ae1de800c2beb">accepte</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_visiteur.html">Visiteur</a>&amp; op) = 0;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_forme.html#a254f0bb2fd58a9aa26c9f456daa2f982">  158</a></span>    <span class="keyword">friend</span> ostream&amp; <a class="code hl_friend" href="class_forme.html#a254f0bb2fd58a9aa26c9f456daa2f982">operator &lt;&lt; </a>(ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_forme.html">Forme</a>&amp; op)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        os &lt;&lt; (string)op;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>};</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="ttc" id="a_constante_8h_html"><div class="ttname"><a href="_constante_8h.html">Constante.h</a></div><div class="ttdoc">Ce fichier contient la définition de l'ensemble des constantes utilisées dans le programme.</div></div>
+<div class="ttc" id="a_constante_8h_html_aacd5164ed9c9701c9073d167eabfe638"><div class="ttname"><a href="_constante_8h.html#aacd5164ed9c9701c9073d167eabfe638">BLACK</a></div><div class="ttdeci">const std::string BLACK</div><div class="ttdoc">Définitions de plusieurs constantes pour les couleurs.</div><div class="ttdef"><b>Definition:</b> Constante.h:30</div></div>
+<div class="ttc" id="a_vecteur2_d_8h_html"><div class="ttname"><a href="_vecteur2_d_8h.html">Vecteur2D.h</a></div><div class="ttdoc">Un vecteur peut être considéré comme un vecteur ou un point du plan, c'est un couple (x,...</div></div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:18</div></div>
+<div class="ttc" id="aclass_forme_html_a10e0a98a785ae939b5bb7e882e5bdab4"><div class="ttname"><a href="class_forme.html#a10e0a98a785ae939b5bb7e882e5bdab4">Forme::Forme</a></div><div class="ttdeci">Forme(const Forme &amp;op)</div><div class="ttdoc">Constructeur par recopie.</div><div class="ttdef"><b>Definition:</b> Forme.h:57</div></div>
+<div class="ttc" id="aclass_forme_html_a254f0bb2fd58a9aa26c9f456daa2f982"><div class="ttname"><a href="class_forme.html#a254f0bb2fd58a9aa26c9f456daa2f982">Forme::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Forme &amp;op)</div><div class="ttdoc">Surcharge de l'opérateur &lt;&lt;. \detail Modifie l'affichage du flux (généralement cout).</div><div class="ttdef"><b>Definition:</b> Forme.h:158</div></div>
+<div class="ttc" id="aclass_forme_html_a260b3228a73812d69c38a4dff949bb95"><div class="ttname"><a href="class_forme.html#a260b3228a73812d69c38a4dff949bb95">Forme::getCouleur</a></div><div class="ttdeci">string getCouleur() const</div><div class="ttdoc">Getter de la couleur.</div><div class="ttdef"><b>Definition:</b> Forme.h:72</div></div>
+<div class="ttc" id="aclass_forme_html_a33484368ad48dd116b6d293f59e5f17d"><div class="ttname"><a href="class_forme.html#a33484368ad48dd116b6d293f59e5f17d">Forme::operator==</a></div><div class="ttdeci">virtual bool operator==(const Forme &amp;op) const</div><div class="ttdoc">Surcharge de l'opérateur ==. \detail Compare l'instance avec la forme passée en paramètre.</div><div class="ttdef"><b>Definition:</b> Forme.cpp:14</div></div>
+<div class="ttc" id="aclass_forme_html_a3c97c1066856b548d2fe6db963a28800"><div class="ttname"><a href="class_forme.html#a3c97c1066856b548d2fe6db963a28800">Forme::Forme</a></div><div class="ttdeci">Forme()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition:</b> Forme.h:26</div></div>
+<div class="ttc" id="aclass_forme_html_a56c7f122caae3533f5fd96eb00c2dc9d"><div class="ttname"><a href="class_forme.html#a56c7f122caae3533f5fd96eb00c2dc9d">Forme::affiche</a></div><div class="ttdeci">virtual void affiche(ostream &amp;os=cout)</div><div class="ttdoc">Affiche une forme dans le flux passé en paramètre. \detail Par défaut le flux de sortie est cout.</div><div class="ttdef"><b>Definition:</b> Forme.h:126</div></div>
+<div class="ttc" id="aclass_forme_html_a5a17da3b8c02671ff953e24b03dcc545"><div class="ttname"><a href="class_forme.html#a5a17da3b8c02671ff953e24b03dcc545">Forme::Forme</a></div><div class="ttdeci">Forme(const string &amp;couleur, bool groupe)</div><div class="ttdoc">Constrcuteur.</div><div class="ttdef"><b>Definition:</b> Forme.h:47</div></div>
+<div class="ttc" id="aclass_forme_html_a7d88db61f390302f426ae1de800c2beb"><div class="ttname"><a href="class_forme.html#a7d88db61f390302f426ae1de800c2beb">Forme::accepte</a></div><div class="ttdeci">virtual void accepte(const Visiteur &amp;op)=0</div><div class="ttdoc">Méthode du DP Visiteur. \detail Lance la méthode visite du visiteur passé en paramètre, celle-ci effectue un ...</div></div>
+<div class="ttc" id="aclass_forme_html_a841ef7a8c5e3fca679244798db49e294"><div class="ttname"><a href="class_forme.html#a841ef7a8c5e3fca679244798db49e294">Forme::operator=</a></div><div class="ttdeci">virtual const Forme &amp; operator=(const Forme &amp;op)</div><div class="ttdoc">Surcharge de l'opérateur =. \detail Affectation par recopie d'une forme passée en paramètre.</div><div class="ttdef"><b>Definition:</b> Forme.cpp:5</div></div>
+<div class="ttc" id="aclass_forme_html_a8661575f963f43b951c38b9f80c2e9e2"><div class="ttname"><a href="class_forme.html#a8661575f963f43b951c38b9f80c2e9e2">Forme::getGroupe</a></div><div class="ttdeci">bool getGroupe() const</div><div class="ttdoc">Getter de l'appartenance à un groupe.</div><div class="ttdef"><b>Definition:</b> Forme.h:84</div></div>
+<div class="ttc" id="aclass_forme_html_a8ba1586dfedf7b0c020946db4fb2feca"><div class="ttname"><a href="class_forme.html#a8ba1586dfedf7b0c020946db4fb2feca">Forme::setGroupe</a></div><div class="ttdeci">void setGroupe(bool groupe)</div><div class="ttdoc">Setter de l'appartenance à un groupe.</div><div class="ttdef"><b>Definition:</b> Forme.h:90</div></div>
+<div class="ttc" id="aclass_forme_html_aa74816b853a639f69427ae05db12f0a3"><div class="ttname"><a href="class_forme.html#aa74816b853a639f69427ae05db12f0a3">Forme::operator!=</a></div><div class="ttdeci">virtual bool operator!=(const Forme &amp;op) const</div><div class="ttdoc">Surcharge de l'opérateur !=. \detail Vérifie si l'instance et la forme passée en paramètre sont égaux.</div><div class="ttdef"><b>Definition:</b> Forme.cpp:19</div></div>
+<div class="ttc" id="aclass_forme_html_aa846673739124ed44293ceaf515f3fa8"><div class="ttname"><a href="class_forme.html#aa846673739124ed44293ceaf515f3fa8">Forme::clone</a></div><div class="ttdeci">virtual Forme * clone() const =0</div><div class="ttdoc">Clone l'instance courante de la forme.</div></div>
+<div class="ttc" id="aclass_forme_html_ab4582182a0cd4da315743afce6c7f05c"><div class="ttname"><a href="class_forme.html#ab4582182a0cd4da315743afce6c7f05c">Forme::~Forme</a></div><div class="ttdeci">virtual ~Forme()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> Forme.h:66</div></div>
+<div class="ttc" id="aclass_forme_html_adf4346150d8f734d7a48f7661e30cab4"><div class="ttname"><a href="class_forme.html#adf4346150d8f734d7a48f7661e30cab4">Forme::getAire</a></div><div class="ttdeci">virtual const double getAire() const =0</div><div class="ttdoc">Getter de l'aire du cercle.</div></div>
+<div class="ttc" id="aclass_forme_html_adf47dcd2111b4e29d1b260eae2491e83"><div class="ttname"><a href="class_forme.html#adf47dcd2111b4e29d1b260eae2491e83">Forme::Forme</a></div><div class="ttdeci">Forme(const string &amp;couleur)</div><div class="ttdoc">Constrcuteur.</div><div class="ttdef"><b>Definition:</b> Forme.h:36</div></div>
+<div class="ttc" id="aclass_forme_html_af0b5c9ab7d799511311f897bf77f3f21"><div class="ttname"><a href="class_forme.html#af0b5c9ab7d799511311f897bf77f3f21">Forme::setCouleur</a></div><div class="ttdeci">void setCouleur(const string &amp;couleur)</div><div class="ttdoc">Setter de la couleur.</div><div class="ttdef"><b>Definition:</b> Forme.h:78</div></div>
+<div class="ttc" id="aclass_visiteur_html"><div class="ttname"><a href="class_visiteur.html">Visiteur</a></div><div class="ttdef"><b>Definition:</b> Visiteur.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

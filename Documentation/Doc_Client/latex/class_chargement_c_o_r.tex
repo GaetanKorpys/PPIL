@@ -1,0 +1,138 @@
+\hypertarget{class_chargement_c_o_r}{}\doxysection{RÃ©fÃ©rence de la classe Chargement\+COR}
+\label{class_chargement_c_o_r}\index{ChargementCOR@{ChargementCOR}}
+Graphe d\textquotesingle{}hÃ©ritage de Chargement\+COR\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.921739cm]{class_chargement_c_o_r}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chargement_c_o_r_aaf538591a9b8e37d197744fe127e7c02}{Chargement\+COR}} (\mbox{\hyperlink{class_chargement_c_o_r}{Chargement\+COR}} $\ast$suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_chargement_c_o_r_a3cfff2709860a19e34ee30de51602f98}{resoudre}} (const string \&id\+Forme, const string \&info=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Appelle un expert pour charger la forme, si l\textquotesingle{}expert ne sait pas résoudre le problème alors on passe à l\textquotesingle{}expert suivant \textbackslash{} param id\+Forme Chaine de cractère correspondant à l\textquotesingle{}identifiant de la forme à charger. \end{DoxyCompactList}\item 
+virtual const string \mbox{\hyperlink{class_chargement_c_o_r_a802198f969b7da7add63a712f4009b33}{get\+Type\+Forme}} () const =0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui retourne le type de la forme. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_chargement_c_o_r_a26af9621ee313cc91605daef216f0f27}{traiter\+Demande}} (const string \&info\+Forme) const =0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure. Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_chargement_c_o_r_a754277ff414ff3c51a987f0c6843e187}{get\+Info\+Forme}} (const string \&id\+Forme) const
+\begin{DoxyCompactList}\small\item\em Récupère les informations d\textquotesingle{}une forme en fonction de son identifiant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_chargement_c_o_r_abf5f4cc54a984b651d657b7f33f00807}{string\+To\+Point}} (const string \&info\+Point) const
+\begin{DoxyCompactList}\small\item\em Convertion d\textquotesingle{}une chaine de caractères correspondant à un point en un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_chargement_c_o_r_aaf538591a9b8e37d197744fe127e7c02}\label{class_chargement_c_o_r_aaf538591a9b8e37d197744fe127e7c02}} 
+\index{ChargementCOR@{ChargementCOR}!ChargementCOR@{ChargementCOR}}
+\index{ChargementCOR@{ChargementCOR}!ChargementCOR@{ChargementCOR}}
+\doxysubsubsection{\texorpdfstring{ChargementCOR()}{ChargementCOR()}}
+{\footnotesize\ttfamily Chargement\+COR\+::\+Chargement\+COR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chargement_c_o_r}{Chargement\+COR}} $\ast$}]{suivant }\end{DoxyParamCaption})}
+
+
+
+Constructeur à partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em suivant} & Pointeur sur l\textquotesingle{}expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_chargement_c_o_r_a754277ff414ff3c51a987f0c6843e187}\label{class_chargement_c_o_r_a754277ff414ff3c51a987f0c6843e187}} 
+\index{ChargementCOR@{ChargementCOR}!getInfoForme@{getInfoForme}}
+\index{getInfoForme@{getInfoForme}!ChargementCOR@{ChargementCOR}}
+\doxysubsubsection{\texorpdfstring{getInfoForme()}{getInfoForme()}}
+{\footnotesize\ttfamily string Chargement\+COR\+::get\+Info\+Forme (\begin{DoxyParamCaption}\item[{const string \&}]{id\+Forme }\end{DoxyParamCaption}) const}
+
+
+
+Récupère les informations d\textquotesingle{}une forme en fonction de son identifiant. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em id\+Forme} & Identifiant de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string Informations de la forme 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chargement_c_o_r_a802198f969b7da7add63a712f4009b33}\label{class_chargement_c_o_r_a802198f969b7da7add63a712f4009b33}} 
+\index{ChargementCOR@{ChargementCOR}!getTypeForme@{getTypeForme}}
+\index{getTypeForme@{getTypeForme}!ChargementCOR@{ChargementCOR}}
+\doxysubsubsection{\texorpdfstring{getTypeForme()}{getTypeForme()}}
+{\footnotesize\ttfamily virtual const string Chargement\+COR\+::get\+Type\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode virtuelle pure qui retourne le type de la forme. 
+
+\begin{DoxyReturn}{Renvoie}
+string Type de la forme 
+\end{DoxyReturn}
+
+
+ImplÃ©mentÃ© dans \mbox{\hyperlink{class_expert_cercle_a5c57d44e68c97e581efa4d5a3ec0de59}{Expert\+Cercle}}, \mbox{\hyperlink{class_expert_groupe_afc4f3b98add1088dd20929d962fbc3b3}{Expert\+Groupe}}, \mbox{\hyperlink{class_expert_polygone_ad07f2f7e6c12fa2a5e87bd851d024ad3}{Expert\+Polygone}}, \mbox{\hyperlink{class_expert_segment_a149471e3b99555b02e5b03943862c968}{Expert\+Segment}}, et \mbox{\hyperlink{class_expert_triangle_a39e37fa138d5559a3e383bdb4c60be25}{Expert\+Triangle}}.
+
+\mbox{\Hypertarget{class_chargement_c_o_r_a3cfff2709860a19e34ee30de51602f98}\label{class_chargement_c_o_r_a3cfff2709860a19e34ee30de51602f98}} 
+\index{ChargementCOR@{ChargementCOR}!resoudre@{resoudre}}
+\index{resoudre@{resoudre}!ChargementCOR@{ChargementCOR}}
+\doxysubsubsection{\texorpdfstring{resoudre()}{resoudre()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Chargement\+COR\+::resoudre (\begin{DoxyParamCaption}\item[{const string \&}]{id\+Forme,  }\item[{const string \&}]{info = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Appelle un expert pour charger la forme, si l\textquotesingle{}expert ne sait pas résoudre le problème alors on passe à l\textquotesingle{}expert suivant \textbackslash{} param id\+Forme Chaine de cractère correspondant à l\textquotesingle{}identifiant de la forme à charger. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em info} & Chaine de caractère contenant les informations de la forme à charger (vide par défaut) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Forme$\ast$ Pointeur sur la forme chargée 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chargement_c_o_r_abf5f4cc54a984b651d657b7f33f00807}\label{class_chargement_c_o_r_abf5f4cc54a984b651d657b7f33f00807}} 
+\index{ChargementCOR@{ChargementCOR}!stringToPoint@{stringToPoint}}
+\index{stringToPoint@{stringToPoint}!ChargementCOR@{ChargementCOR}}
+\doxysubsubsection{\texorpdfstring{stringToPoint()}{stringToPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Chargement\+COR\+::string\+To\+Point (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Point }\end{DoxyParamCaption}) const}
+
+
+
+Convertion d\textquotesingle{}une chaine de caractères correspondant à un point en un \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Point converti depuis une chaine de caractères 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_chargement_c_o_r_a26af9621ee313cc91605daef216f0f27}\label{class_chargement_c_o_r_a26af9621ee313cc91605daef216f0f27}} 
+\index{ChargementCOR@{ChargementCOR}!traiterDemande@{traiterDemande}}
+\index{traiterDemande@{traiterDemande}!ChargementCOR@{ChargementCOR}}
+\doxysubsubsection{\texorpdfstring{traiterDemande()}{traiterDemande()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Chargement\+COR\+::traiter\+Demande (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode virtuelle pure. Extrait les données d\textquotesingle{}une forme à partir d\textquotesingle{}une chaine de caractères. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em info\+Forme} & Chaine de caractères correspondant aux données de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Forme$\ast$ Un pointeur sur la forme 
+\end{DoxyReturn}
+
+
+ImplÃ©mentÃ© dans \mbox{\hyperlink{class_expert_cercle_aa198c98822105a256e029ada7de9ff67}{Expert\+Cercle}}, \mbox{\hyperlink{class_expert_groupe_acb3aded91134fefc7f01d970a7bc70d2}{Expert\+Groupe}}, \mbox{\hyperlink{class_expert_polygone_aded4e9965c3b7ef6c1efccac2ff18c46}{Expert\+Polygone}}, \mbox{\hyperlink{class_expert_segment_ab9ea54691ccf78419de77977bfeb3424}{Expert\+Segment}}, et \mbox{\hyperlink{class_expert_triangle_aedf17d41afb1f127bfc0912360d9c583}{Expert\+Triangle}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/Chargement\+COR.\+h\item 
+Client\+\_\+\+C++/\+Client/Chargement\+COR.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\hypertarget{_visiteur_rotation_8h_source}{}\doxysection{Visiteur\+Rotation.\+h}
+\label{_visiteur_rotation_8h_source}\index{Client\_C++/Client/VisiteurRotation.h@{Client\_C++/Client/VisiteurRotation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Visiteur.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_visiteur_rotation}{VisiteurRotation}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_visiteur}{Visiteur}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \_op;}
+\DoxyCodeLine{8     \textcolor{keywordtype}{double} \_angle;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_visiteur_rotation_a356c5a7baf9a2b2e2ed554ba60d936b0}{VisiteurRotation}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& op, \textcolor{keywordtype}{double} angle)}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         \textcolor{keywordflow}{if} (angle < 0)}
+\DoxyCodeLine{19             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_exception}{Exception}}(\textcolor{stringliteral}{"{}Impossible de construre une Rotation avec un angle < 0."{}});}
+\DoxyCodeLine{20         \_op = op;}
+\DoxyCodeLine{21         \_angle = angle;}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}{visite}}(\mbox{\hyperlink{class_segment}{Segment}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}{visite}}(\mbox{\hyperlink{class_cercle}{Cercle}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}{visite}}(\mbox{\hyperlink{class_triangle}{Triangle}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}{visite}}(\mbox{\hyperlink{class_polygone}{Polygone}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_visiteur_rotation_a4b66aaf61447720b0d41abb645aeb157}{visite}}(\mbox{\hyperlink{class_groupe}{Groupe}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{53 \};}
+
+\end{DoxyCode}

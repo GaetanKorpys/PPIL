@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL Gaetan Korpys:  Fichier source de Client_C++/Client/Polygone.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL Gaetan Korpys
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cbd6f406266132c1900b39e66f0cbd14.html">Client_C++</a></li><li class="navelem"><a class="el" href="dir_ce8e877a43365ee226c52807b37e0b64.html">Client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Polygone.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_polygone_8h.html">Aller Ã  la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_exception_8h.html">Exception.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_constante_8h.html">Constante.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_vecteur2_d_8h.html">Vecteur2D.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_forme_8h.html">Forme.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_polygone.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_polygone.html">Polygone</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_forme.html">Forme</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    vector&lt;Vecteur2D *&gt; _listePoints;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> polygoneValide(<span class="keyword">const</span> vector&lt;Vecteur2D*&gt;&amp; op)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> copie(<span class="keyword">const</span> vector&lt;Vecteur2D*&gt;&amp; op);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_function" href="class_polygone.html#a8750300aeb42cdcff3c2450087490436">Polygone</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; couleur = <a class="code hl_variable" href="_constante_8h.html#aacd5164ed9c9701c9073d167eabfe638">BLACK</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="class_polygone.html#a8750300aeb42cdcff3c2450087490436">Polygone</a>(<span class="keyword">const</span> vector&lt;Vecteur2D*&gt;&amp; op, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; couleur = <a class="code hl_variable" href="_constante_8h.html#aacd5164ed9c9701c9073d167eabfe638">BLACK</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="class_polygone.html#a8750300aeb42cdcff3c2450087490436">Polygone</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; op);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="class_polygone.html#ae293043ea9d180259771515a6496cd8c">~Polygone</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_polygone.html#a1487d8c92753d1a596583d130b12993e">getNbPoints</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; <a class="code hl_function" href="class_polygone.html#a0ccf6486293f1373149afa75cccf9045">getPoint</a>(<span class="keywordtype">int</span> index)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; <a class="code hl_function" href="class_polygone.html#af5875c8af78d2c0f48da55f6559dced4">setPoint</a>(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; op);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; <a class="code hl_function" href="class_polygone.html#af2b35c59c24dd6d501323cf2ea6db39f">getCentreGravite</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; <a class="code hl_function" href="class_polygone.html#aaced1a02ca8f8fb7ddce9e1856059004">operator = </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; op);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polygone.html#a8fc6e0768385ebd966b34641e67e90e8">operator == </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; op)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polygone.html#a8588933bfea0375d9e0c417e474cba61">operator != </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; op)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_polygone.html#af2acc29b5ebe669c5be6618225fe6fbf">operator + </a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; op);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_polygone.html#aab1a898dcb0ed90b9d7d6c6fc1a3d5e7">operator - </a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; <a class="code hl_function" href="class_polygone.html#a6a0da803235aa2821c84ab776887caa7">operator[]</a>(<span class="keywordtype">int</span> index)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_polygone.html#ad49ca4a72284ef7e3f63abbe21d8ba66">ajouter</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a>&amp; op);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_polygone.html#a393fd9f49ce84acb5eff738bb75c4ffe">supprimer</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">operator</span> string()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_polygone.html#a07880a169f0241140d15cdbca13a3622">getAire</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_class" href="class_polygone.html">Polygone</a>* <a class="code hl_function" href="class_polygone.html#aadd28a0ed89728b444fc7513f5fe8d7d">clone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_polygone.html#a63c552a8f5e93b84ce5a4922420d1eb9">accepte</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_visiteur.html">Visiteur</a>&amp; op);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">friend</span> ostream&amp; <a class="code hl_friend" href="class_polygone.html#aa7659287f611a6f47598756949200b12">operator &lt;&lt; </a>(ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_polygone.html">Polygone</a>&amp; op);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>};</div>
+<div class="ttc" id="a_constante_8h_html"><div class="ttname"><a href="_constante_8h.html">Constante.h</a></div><div class="ttdoc">Ce fichier contient la définition de l'ensemble des constantes utilisées dans le programme.</div></div>
+<div class="ttc" id="a_constante_8h_html_aacd5164ed9c9701c9073d167eabfe638"><div class="ttname"><a href="_constante_8h.html#aacd5164ed9c9701c9073d167eabfe638">BLACK</a></div><div class="ttdeci">const std::string BLACK</div><div class="ttdoc">Définitions de plusieurs constantes pour les couleurs.</div><div class="ttdef"><b>Definition:</b> Constante.h:30</div></div>
+<div class="ttc" id="a_exception_8h_html"><div class="ttname"><a href="_exception_8h.html">Exception.h</a></div><div class="ttdoc">Classe utilisée pour déclarer une exception.</div></div>
+<div class="ttc" id="a_forme_8h_html"><div class="ttname"><a href="_forme_8h.html">Forme.h</a></div><div class="ttdoc">Une forme est caractérisée par une couleur et des points. \detail Il existe 2 types de formes,...</div></div>
+<div class="ttc" id="a_vecteur2_d_8h_html"><div class="ttname"><a href="_vecteur2_d_8h.html">Vecteur2D.h</a></div><div class="ttdoc">Un vecteur peut être considéré comme un vecteur ou un point du plan, c'est un couple (x,...</div></div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:18</div></div>
+<div class="ttc" id="aclass_polygone_html"><div class="ttname"><a href="class_polygone.html">Polygone</a></div><div class="ttdef"><b>Definition:</b> Polygone.h:14</div></div>
+<div class="ttc" id="aclass_polygone_html_a07880a169f0241140d15cdbca13a3622"><div class="ttname"><a href="class_polygone.html#a07880a169f0241140d15cdbca13a3622">Polygone::getAire</a></div><div class="ttdeci">const double getAire() const</div><div class="ttdoc">Getter de l'aire du polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:165</div></div>
+<div class="ttc" id="aclass_polygone_html_a0ccf6486293f1373149afa75cccf9045"><div class="ttname"><a href="class_polygone.html#a0ccf6486293f1373149afa75cccf9045">Polygone::getPoint</a></div><div class="ttdeci">const Vecteur2D &amp; getPoint(int index) const</div><div class="ttdoc">Getter du point situé à l'index donné en paramètre.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:47</div></div>
+<div class="ttc" id="aclass_polygone_html_a1487d8c92753d1a596583d130b12993e"><div class="ttname"><a href="class_polygone.html#a1487d8c92753d1a596583d130b12993e">Polygone::getNbPoints</a></div><div class="ttdeci">int getNbPoints() const</div><div class="ttdoc">Retourne le nombre de points du polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:42</div></div>
+<div class="ttc" id="aclass_polygone_html_a393fd9f49ce84acb5eff738bb75c4ffe"><div class="ttname"><a href="class_polygone.html#a393fd9f49ce84acb5eff738bb75c4ffe">Polygone::supprimer</a></div><div class="ttdeci">void supprimer(int index)</div><div class="ttdoc">Supprime un point du polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:147</div></div>
+<div class="ttc" id="aclass_polygone_html_a63c552a8f5e93b84ce5a4922420d1eb9"><div class="ttname"><a href="class_polygone.html#a63c552a8f5e93b84ce5a4922420d1eb9">Polygone::accepte</a></div><div class="ttdeci">void accepte(const Visiteur &amp;op)</div><div class="ttdoc">Méthode du DP Visiteur. \detail Lance la méthode visite du visiteur passé en paramètre, celle-ci effectue un ...</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:182</div></div>
+<div class="ttc" id="aclass_polygone_html_a6a0da803235aa2821c84ab776887caa7"><div class="ttname"><a href="class_polygone.html#a6a0da803235aa2821c84ab776887caa7">Polygone::operator[]</a></div><div class="ttdeci">const Vecteur2D &amp; operator[](int index) const</div><div class="ttdoc">Surcharge de l'opérateur [].</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:130</div></div>
+<div class="ttc" id="aclass_polygone_html_a8588933bfea0375d9e0c417e474cba61"><div class="ttname"><a href="class_polygone.html#a8588933bfea0375d9e0c417e474cba61">Polygone::operator!=</a></div><div class="ttdeci">bool operator!=(const Polygone &amp;op) const</div><div class="ttdoc">Surcharge de l'opérateur !=. \detail Vérifie si l'instance et le polygone passé en paramètre sont égaux.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:109</div></div>
+<div class="ttc" id="aclass_polygone_html_a8750300aeb42cdcff3c2450087490436"><div class="ttname"><a href="class_polygone.html#a8750300aeb42cdcff3c2450087490436">Polygone::Polygone</a></div><div class="ttdeci">Polygone(const string &amp;couleur=BLACK)</div><div class="ttdoc">Constructeur.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:23</div></div>
+<div class="ttc" id="aclass_polygone_html_a8fc6e0768385ebd966b34641e67e90e8"><div class="ttname"><a href="class_polygone.html#a8fc6e0768385ebd966b34641e67e90e8">Polygone::operator==</a></div><div class="ttdeci">bool operator==(const Polygone &amp;op) const</div><div class="ttdoc">Surcharge de l'opérateur ==. \detail Compare l'instance avec le polygone passé en paramètre.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:92</div></div>
+<div class="ttc" id="aclass_polygone_html_aa7659287f611a6f47598756949200b12"><div class="ttname"><a href="class_polygone.html#aa7659287f611a6f47598756949200b12">Polygone::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Polygone &amp;op)</div><div class="ttdoc">Surcharge de l'opérateur &lt;&lt;. \detail Modifie l'affichage du flux (généralement cout).</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:187</div></div>
+<div class="ttc" id="aclass_polygone_html_aab1a898dcb0ed90b9d7d6c6fc1a3d5e7"><div class="ttname"><a href="class_polygone.html#aab1a898dcb0ed90b9d7d6c6fc1a3d5e7">Polygone::operator-</a></div><div class="ttdeci">void operator-(int index)</div><div class="ttdoc">Surcharge de l'opérateur -. \detail Supprime un point du polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:120</div></div>
+<div class="ttc" id="aclass_polygone_html_aaced1a02ca8f8fb7ddce9e1856059004"><div class="ttname"><a href="class_polygone.html#aaced1a02ca8f8fb7ddce9e1856059004">Polygone::operator=</a></div><div class="ttdeci">const Polygone &amp; operator=(const Polygone &amp;op)</div><div class="ttdoc">Surcharge de l'opérateur =. \detail Affectation par recopie d'un point passé en paramètre.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:82</div></div>
+<div class="ttc" id="aclass_polygone_html_aadd28a0ed89728b444fc7513f5fe8d7d"><div class="ttname"><a href="class_polygone.html#aadd28a0ed89728b444fc7513f5fe8d7d">Polygone::clone</a></div><div class="ttdeci">Polygone * clone() const</div><div class="ttdoc">Clone l'instance courante du polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:177</div></div>
+<div class="ttc" id="aclass_polygone_html_ad49ca4a72284ef7e3f63abbe21d8ba66"><div class="ttname"><a href="class_polygone.html#ad49ca4a72284ef7e3f63abbe21d8ba66">Polygone::ajouter</a></div><div class="ttdeci">void ajouter(const Vecteur2D &amp;op)</div><div class="ttdoc">Ajoute un point au polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:142</div></div>
+<div class="ttc" id="aclass_polygone_html_ae293043ea9d180259771515a6496cd8c"><div class="ttname"><a href="class_polygone.html#ae293043ea9d180259771515a6496cd8c">Polygone::~Polygone</a></div><div class="ttdeci">~Polygone()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:35</div></div>
+<div class="ttc" id="aclass_polygone_html_af2acc29b5ebe669c5be6618225fe6fbf"><div class="ttname"><a href="class_polygone.html#af2acc29b5ebe669c5be6618225fe6fbf">Polygone::operator+</a></div><div class="ttdeci">void operator+(const Vecteur2D &amp;op)</div><div class="ttdoc">Surcharge de l'opérateur +. \detail Ajoute un point au polygone.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:114</div></div>
+<div class="ttc" id="aclass_polygone_html_af2b35c59c24dd6d501323cf2ea6db39f"><div class="ttname"><a href="class_polygone.html#af2b35c59c24dd6d501323cf2ea6db39f">Polygone::getCentreGravite</a></div><div class="ttdeci">virtual const Vecteur2D &amp; getCentreGravite() const</div><div class="ttdoc">Getter du centre de gravité.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:66</div></div>
+<div class="ttc" id="aclass_polygone_html_af5875c8af78d2c0f48da55f6559dced4"><div class="ttname"><a href="class_polygone.html#af5875c8af78d2c0f48da55f6559dced4">Polygone::setPoint</a></div><div class="ttdeci">const Polygone &amp; setPoint(int index, const Vecteur2D &amp;op)</div><div class="ttdoc">Modifie le point situé à l'index donné en paramètre.</div><div class="ttdef"><b>Definition:</b> Polygone.cpp:56</div></div>
+<div class="ttc" id="aclass_vecteur2_d_html"><div class="ttname"><a href="class_vecteur2_d.html">Vecteur2D</a></div><div class="ttdef"><b>Definition:</b> Vecteur2D.h:27</div></div>
+<div class="ttc" id="aclass_visiteur_html"><div class="ttname"><a href="class_visiteur.html">Visiteur</a></div><div class="ttdef"><b>Definition:</b> Visiteur.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

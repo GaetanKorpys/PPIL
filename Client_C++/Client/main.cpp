@@ -23,7 +23,7 @@ int main()
 	{
 		do
 		{
-			cout << "Voulez-vous afficher les details dans la console ?" << endl;
+			cout << "Voulez-vous afficher les details dans la console (Test Sauvegarde + Chargement) ?" << endl;
 			cout << "[ y / n ]" << endl;
 			cin >> reponse;
 		}
@@ -404,10 +404,12 @@ int main()
 
 			cout << "Il y a donc 3 dessins pour chaque formes dans la fenetre." << endl << endl;
 
-			cout << "Une nouvelle fenetre est ouverte pour chaque forme n'appartenant pas a un groupe." << endl << endl;
+			cout << "Une nouvelle fenetre sera ouverte pour le second dessin." << endl << endl;
 
 
 			VisiteurDessin dessin;
+			dessin.ouvrirFenetre(); //Ouverture de la 1ere fenetre
+
 			Groupe groupe(RED);
 
 			//--------------------------TRIANGLE----------------------------
@@ -489,8 +491,7 @@ int main()
 
 			groupe.ajouter(polygone);
 
-			dessin.ouvrirFenetre();
-			//On dessine le groupe
+			
 			groupe.accepte(dessin);
 
 			//--------------------------GROUPE----------------------------
@@ -499,12 +500,13 @@ int main()
 			cout << "Creation d'un nouveau groupe(ensemble de formes) contenant :" << endl;
 			cout << " - le groupe construit et dessine precedemment" << endl;
 			cout << " - un triangle de couleur bleu." << endl << endl;
-			 
-			cout << "Cette nouvelle forme n'appartient pas a un groupe, elle sera donc affichee sur une nouvelle fenetre." << endl << endl;
+
 			cout << "Ouverture de la 2eme fenetre :" << endl;
 
 			system("pause");
 
+
+			dessin.ouvrirFenetre(); //Ouverture de la 2eme fenetre
 
 			Groupe groupe2;
 
@@ -513,10 +515,10 @@ int main()
 			triangle.setCouleur(BLUE);
 			groupe2.ajouter(triangle);
 
-
-			dessin.ouvrirFenetre();
 			groupe2.accepte(dessin);
 
+
+			//--------------------------GESTION SOCKET----------------------------
 			SocketSingleton::getInstance()->fermerConnexion();
 			SocketSingleton::getInstance()->killInstance();
 		}

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL Gaetan Korpys:  Fichier source de Client_C++/Client/ChargementCOR.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL Gaetan Korpys
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cbd6f406266132c1900b39e66f0cbd14.html">Client_C++</a></li><li class="navelem"><a class="el" href="dir_ce8e877a43365ee226c52807b37e0b64.html">Client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ChargementCOR.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Chargement.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_chargement_c_o_r.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_chargement_c_o_r.html">ChargementCOR</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_chargement.html">Chargement</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_class" href="class_chargement_c_o_r.html">ChargementCOR</a>* _suivant;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_chargement_c_o_r.html#aaf538591a9b8e37d197744fe127e7c02">ChargementCOR</a>(<a class="code hl_class" href="class_chargement_c_o_r.html">ChargementCOR</a>* suivant);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="class_forme.html">Forme</a>* <a class="code hl_function" href="class_chargement_c_o_r.html#a3cfff2709860a19e34ee30de51602f98">resoudre</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; idForme, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; info = <span class="stringliteral">&quot;&quot;</span>)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_chargement_c_o_r.html#a802198f969b7da7add63a712f4009b33">   27</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code hl_function" href="class_chargement_c_o_r.html#a802198f969b7da7add63a712f4009b33">getTypeForme</a>()<span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_chargement_c_o_r.html#a26af9621ee313cc91605daef216f0f27">   34</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_forme.html">Forme</a>* <a class="code hl_function" href="class_chargement_c_o_r.html#a26af9621ee313cc91605daef216f0f27">traiterDemande</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; infoForme)<span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_chargement_c_o_r.html#a754277ff414ff3c51a987f0c6843e187">getInfoForme</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; idForme)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_class" href="class_vecteur2_d.html">Vecteur2D</a> <a class="code hl_function" href="class_chargement_c_o_r.html#abf5f4cc54a984b651d657b7f33f00807">stringToPoint</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; infoPoint)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="ttc" id="aclass_chargement_c_o_r_html"><div class="ttname"><a href="class_chargement_c_o_r.html">ChargementCOR</a></div><div class="ttdef"><b>Definition:</b> ChargementCOR.h:5</div></div>
+<div class="ttc" id="aclass_chargement_c_o_r_html_a26af9621ee313cc91605daef216f0f27"><div class="ttname"><a href="class_chargement_c_o_r.html#a26af9621ee313cc91605daef216f0f27">ChargementCOR::traiterDemande</a></div><div class="ttdeci">virtual Forme * traiterDemande(const string &amp;infoForme) const =0</div><div class="ttdoc">Méthode virtuelle pure. Extrait les données d'une forme à partir d'une chaine de caractères.</div></div>
+<div class="ttc" id="aclass_chargement_c_o_r_html_a3cfff2709860a19e34ee30de51602f98"><div class="ttname"><a href="class_chargement_c_o_r.html#a3cfff2709860a19e34ee30de51602f98">ChargementCOR::resoudre</a></div><div class="ttdeci">Forme * resoudre(const string &amp;idForme, const string &amp;info=&quot;&quot;) const</div><div class="ttdoc">Appelle un expert pour charger la forme, si l'expert ne sait pas résoudre le problème alors on passe à l'ex...</div><div class="ttdef"><b>Definition:</b> ChargementCOR.cpp:30</div></div>
+<div class="ttc" id="aclass_chargement_c_o_r_html_a754277ff414ff3c51a987f0c6843e187"><div class="ttname"><a href="class_chargement_c_o_r.html#a754277ff414ff3c51a987f0c6843e187">ChargementCOR::getInfoForme</a></div><div class="ttdeci">string getInfoForme(const string &amp;idForme) const</div><div class="ttdoc">Récupère les informations d'une forme en fonction de son identifiant.</div><div class="ttdef"><b>Definition:</b> ChargementCOR.cpp:6</div></div>
+<div class="ttc" id="aclass_chargement_c_o_r_html_a802198f969b7da7add63a712f4009b33"><div class="ttname"><a href="class_chargement_c_o_r.html#a802198f969b7da7add63a712f4009b33">ChargementCOR::getTypeForme</a></div><div class="ttdeci">virtual const string getTypeForme() const =0</div><div class="ttdoc">Méthode virtuelle pure qui retourne le type de la forme.</div></div>
+<div class="ttc" id="aclass_chargement_c_o_r_html_aaf538591a9b8e37d197744fe127e7c02"><div class="ttname"><a href="class_chargement_c_o_r.html#aaf538591a9b8e37d197744fe127e7c02">ChargementCOR::ChargementCOR</a></div><div class="ttdeci">ChargementCOR(ChargementCOR *suivant)</div><div class="ttdoc">Constructeur à partir d'un pointeur sur l'expert suivant.</div><div class="ttdef"><b>Definition:</b> ChargementCOR.cpp:4</div></div>
+<div class="ttc" id="aclass_chargement_c_o_r_html_abf5f4cc54a984b651d657b7f33f00807"><div class="ttname"><a href="class_chargement_c_o_r.html#abf5f4cc54a984b651d657b7f33f00807">ChargementCOR::stringToPoint</a></div><div class="ttdeci">Vecteur2D stringToPoint(const string &amp;infoPoint) const</div><div class="ttdoc">Convertion d'une chaine de caractères correspondant à un point en un Vecteur2D.</div><div class="ttdef"><b>Definition:</b> ChargementCOR.cpp:21</div></div>
+<div class="ttc" id="aclass_chargement_html"><div class="ttname"><a href="class_chargement.html">Chargement</a></div><div class="ttdef"><b>Definition:</b> Chargement.h:5</div></div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:18</div></div>
+<div class="ttc" id="aclass_vecteur2_d_html"><div class="ttname"><a href="class_vecteur2_d.html">Vecteur2D</a></div><div class="ttdef"><b>Definition:</b> Vecteur2D.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

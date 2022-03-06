@@ -1,0 +1,83 @@
+\hypertarget{class_expert_triangle}{}\doxysection{R√©f√©rence de la classe Expert\+Triangle}
+\label{class_expert_triangle}\index{ExpertTriangle@{ExpertTriangle}}
+Graphe d\textquotesingle{}h√©ritage de Expert\+Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_expert_triangle}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_expert_triangle_a69852e713c3949387cd8f2c8de796f3b}{Expert\+Triangle}} (\mbox{\hyperlink{class_chargement_c_o_r}{Chargement\+COR}} $\ast$suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur ‡ partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. \end{DoxyCompactList}\item 
+const string \mbox{\hyperlink{class_expert_triangle_a39e37fa138d5559a3e383bdb4c60be25}{get\+Type\+Forme}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le type de la forme que l\textquotesingle{}expert peut traiter (ici un triangle) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_expert_triangle_aedf17d41afb1f127bfc0912360d9c583}{traiter\+Demande}} (const string \&info\+Forme) const
+\begin{DoxyCompactList}\small\item\em Extrait les donnÈes d\textquotesingle{}une forme ‡ partir d\textquotesingle{}une chaine de caractËres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_expert_triangle_a69852e713c3949387cd8f2c8de796f3b}\label{class_expert_triangle_a69852e713c3949387cd8f2c8de796f3b}} 
+\index{ExpertTriangle@{ExpertTriangle}!ExpertTriangle@{ExpertTriangle}}
+\index{ExpertTriangle@{ExpertTriangle}!ExpertTriangle@{ExpertTriangle}}
+\doxysubsubsection{\texorpdfstring{ExpertTriangle()}{ExpertTriangle()}}
+{\footnotesize\ttfamily Expert\+Triangle\+::\+Expert\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chargement_c_o_r}{Chargement\+COR}} $\ast$}]{suivant }\end{DoxyParamCaption})}
+
+
+
+Constructeur ‡ partir d\textquotesingle{}un pointeur sur l\textquotesingle{}expert suivant. 
+
+
+\begin{DoxyParams}{Param√®tres}
+{\em suivant} & Pointeur sur l\textquotesingle{}expert suivant \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_expert_triangle_a39e37fa138d5559a3e383bdb4c60be25}\label{class_expert_triangle_a39e37fa138d5559a3e383bdb4c60be25}} 
+\index{ExpertTriangle@{ExpertTriangle}!getTypeForme@{getTypeForme}}
+\index{getTypeForme@{getTypeForme}!ExpertTriangle@{ExpertTriangle}}
+\doxysubsubsection{\texorpdfstring{getTypeForme()}{getTypeForme()}}
+{\footnotesize\ttfamily const string Expert\+Triangle\+::get\+Type\+Forme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne le type de la forme que l\textquotesingle{}expert peut traiter (ici un triangle) 
+
+\begin{DoxyReturn}{Renvoie}
+string Type de la forme 
+\end{DoxyReturn}
+
+
+Impl√©mente \mbox{\hyperlink{class_chargement_c_o_r_a802198f969b7da7add63a712f4009b33}{Chargement\+COR}}.
+
+\mbox{\Hypertarget{class_expert_triangle_aedf17d41afb1f127bfc0912360d9c583}\label{class_expert_triangle_aedf17d41afb1f127bfc0912360d9c583}} 
+\index{ExpertTriangle@{ExpertTriangle}!traiterDemande@{traiterDemande}}
+\index{traiterDemande@{traiterDemande}!ExpertTriangle@{ExpertTriangle}}
+\doxysubsubsection{\texorpdfstring{traiterDemande()}{traiterDemande()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Expert\+Triangle\+::traiter\+Demande (\begin{DoxyParamCaption}\item[{const string \&}]{info\+Forme }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Extrait les donnÈes d\textquotesingle{}une forme ‡ partir d\textquotesingle{}une chaine de caractËres. 
+
+
+\begin{DoxyParams}{Param√®tres}
+{\em info\+Forme} & Chaine de caractËres correspondant aux donnÈes de la forme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Forme$\ast$ Un pointeur sur la forme 
+\end{DoxyReturn}
+
+
+Impl√©mente \mbox{\hyperlink{class_chargement_c_o_r_a26af9621ee313cc91605daef216f0f27}{Chargement\+COR}}.
+
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/Expert\+Triangle.\+h\item 
+Client\+\_\+\+C++/\+Client/Expert\+Triangle.\+cpp\end{DoxyCompactItemize}

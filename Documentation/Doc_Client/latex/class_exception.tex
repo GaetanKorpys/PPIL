@@ -1,0 +1,76 @@
+\hypertarget{class_exception}{}\doxysection{RÃ©fÃ©rence de la classe Exception}
+\label{class_exception}\index{Exception@{Exception}}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_exception_aad1be11dc85840f8a7fac731057ab715}{Exception}} (const string \&message)
+\begin{DoxyCompactList}\small\item\em Constructeur avec une chaine de caractère. \end{DoxyCompactList}\item 
+const string \& \mbox{\hyperlink{class_exception_aee5b51dbab2bd5513aeb462a8ac1d417}{get\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Getter du membre privé \+\_\+message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_exception_a73ab7dd7f77d49c7a0759020875dd318}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_exception}{Exception}} \&e)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_exception_aad1be11dc85840f8a7fac731057ab715}\label{class_exception_aad1be11dc85840f8a7fac731057ab715}} 
+\index{Exception@{Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{Exception()}{Exception()}}
+{\footnotesize\ttfamily Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{const string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur avec une chaine de caractère. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em string} & message \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_exception_aee5b51dbab2bd5513aeb462a8ac1d417}\label{class_exception_aee5b51dbab2bd5513aeb462a8ac1d417}} 
+\index{Exception@{Exception}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily const string \& Exception\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter du membre privé \+\_\+message. 
+
+\begin{DoxyReturn}{Renvoie}
+string 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des fonctions amies et associÃ©es}
+\mbox{\Hypertarget{class_exception_a73ab7dd7f77d49c7a0759020875dd318}\label{class_exception_a73ab7dd7f77d49c7a0759020875dd318}} 
+\index{Exception@{Exception}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_exception}{Exception}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \textbackslash{}detail Modifie l\textquotesingle{}affichage du flux (généralement cout). 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em os} & ostream \\
+\hline
+{\em e} & \mbox{\hyperlink{class_exception}{Exception}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ostream Flux sortant 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+Client\+\_\+\+C++/\+Client/\mbox{\hyperlink{_exception_8h}{Exception.\+h}}\end{DoxyCompactItemize}

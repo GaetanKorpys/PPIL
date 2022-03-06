@@ -1,0 +1,59 @@
+\hypertarget{_cercle_8h_source}{}\doxysection{Cercle.\+h}
+\label{_cercle_8h_source}\index{Client\_C++/Client/Cercle.h@{Client\_C++/Client/Cercle.h}}
+\mbox{\hyperlink{_cercle_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_exception_8h}{Exception.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vecteur2_d_8h}{Vecteur2D.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_forme_8h}{Forme.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_cercle}{Cercle}} :\textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \_centre; }
+\DoxyCodeLine{15     \textcolor{keywordtype}{double} \_rayon; }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_cercle_a8c7612e2a56bc88064a33399a20bcaf0}{Cercle}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& op, \textcolor{keywordtype}{double} rayon, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& couleur = \mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}});}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_cercle_a8c7612e2a56bc88064a33399a20bcaf0}{Cercle}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}}\& op);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_cercle_a56cf93b56461ba960b822b9a095b09ad}{\string~Cercle}}()\{\}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41     \textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& \mbox{\hyperlink{class_cercle_a7f3717971519416c789f42ee771ab9ef}{getCentre}}()\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} \_centre; \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cercle_ac32cf43ab91937caf98d1a130f99937c}{setCentre}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}\& centre) \{ \_centre = centre; \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}{getRayon}}()\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} \_rayon; \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cercle_ab166965772a83365ac4b7514c0089434}{setRayon}}(\textcolor{keywordtype}{double} rayon)}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{if} (rayon <= 0)}
+\DoxyCodeLine{62         \{}
+\DoxyCodeLine{63             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_exception}{Exception}}(\textcolor{stringliteral}{"{}Impossible de construire un cercle avec ce rayon."{}});}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{66         \{}
+\DoxyCodeLine{67             \_rayon = rayon;}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{77     \textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}}\& \mbox{\hyperlink{class_cercle_a2ca2749b6e6a40f8ce5564e92d65b703}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}}\& op);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cercle_a5b5b604113fe1db7b63624892c968c04}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_cercle_a94722ce86b2a0e376e70f9b5142721d0}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98     \textcolor{keyword}{operator} string()\textcolor{keyword}{const};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{104     \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_cercle_a2477495263095a5553f2bcfa524f03ac}{getAire}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{111     \mbox{\hyperlink{class_cercle}{Cercle}}* \mbox{\hyperlink{class_cercle_aa1990e18112f2fdd860571c576232d3f}{clone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cercle_ad67242d86202471b813719512f0c0ee8}{accepte}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visiteur}{Visiteur}}\& op);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{122     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_cercle_a8a40a8bbdb19a83bd46dc6b4d034455b}{operator << }}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_cercle}{Cercle}}\& op);}
+\DoxyCodeLine{123 \};}
+
+\end{DoxyCode}

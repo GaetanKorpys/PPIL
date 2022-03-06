@@ -1,0 +1,55 @@
+\hypertarget{_groupe_8h_source}{}\doxysection{Groupe.\+h}
+\label{_groupe_8h_source}\index{Client\_C++/Client/Groupe.h@{Client\_C++/Client/Groupe.h}}
+\mbox{\hyperlink{_groupe_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_forme_8h}{Forme.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_exception_8h}{Exception.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_groupe}{Groupe}} :\textcolor{keyword}{public} \mbox{\hyperlink{class_forme}{Forme}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     vector<Forme *> \_listeFormes;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} copie(\textcolor{keyword}{const} vector<Forme *>\& op);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_groupe_aa8d2806b9f46c4a83a3ed3dd61080063}{Groupe}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& couleur = \mbox{\hyperlink{_constante_8h_aacd5164ed9c9701c9073d167eabfe638}{BLACK}});}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \mbox{\hyperlink{class_groupe_aa8d2806b9f46c4a83a3ed3dd61080063}{Groupe}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_groupe}{Groupe}}\& op);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \mbox{\hyperlink{class_groupe_a99dd414922635dcc0585aabb2a330f63}{\string~Groupe}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_groupe_a68690f47e1444ff7b3491731190905b9}{getNbForme}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{51     \textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& \mbox{\hyperlink{class_groupe_a69932416a28616d3b1dcb75d5a0c0a83}{getForme}}(\textcolor{keywordtype}{int} index)\textcolor{keyword}{const};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{59     \textcolor{keyword}{const} \mbox{\hyperlink{class_groupe}{Groupe}}\& \mbox{\hyperlink{class_groupe_ad7f2acf55c3f46230389ebf80ef75dc4}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_groupe}{Groupe}}\& op);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_groupe_a2f8beda801cc3cd2d1d407438e8b5720}{operator == }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_groupe}{Groupe}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_groupe_afb8b90038b91ee8f1c0537e0a5a11645}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_groupe}{Groupe}}\& op)\textcolor{keyword}{const};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_a2c5ab00d1b0c83d0c6554aec96b04715}{operator + }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_a77df4a3f295cee79b0e56879800718e9}{operator -\/ }}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{96     \mbox{\hyperlink{class_forme}{Forme}}\& \mbox{\hyperlink{class_groupe_aaf3af745abc0a816a1f7e1b85ee60ad1}{operator[]}}(\textcolor{keywordtype}{int} index)\textcolor{keyword}{const};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_a7c163e4e2cf6d44213f6d18f5b96431a}{ajouter}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_forme}{Forme}}\& op);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_a58ec4e184db21f8e924b101936f41a23}{supprimer}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{113     \textcolor{keyword}{operator} string()\textcolor{keyword}{const};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{119     \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_groupe_afc0056987479b35eedafa6cc5b758288}{getAire}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{126     \mbox{\hyperlink{class_groupe}{Groupe}}* \mbox{\hyperlink{class_groupe_a036a00bf7da33c70dc5f8d379f987ece}{clone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_groupe_ab44e168e25fc973f4c5c9438c839e3e9}{accepte}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_visiteur}{Visiteur}}\& op);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{137     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_groupe_aec106e7268cd1b21e1abf5dfd33f3d94}{operator << }}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_groupe}{Groupe}}\& op);}
+\DoxyCodeLine{138 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,49 @@
+\hypertarget{_vecteur2_d_8h}{}\doxysection{RÃ©fÃ©rence du fichier Client\+\_\+\+C++/\+Client/\+Vecteur2D.h}
+\label{_vecteur2_d_8h}\index{Client\_C++/Client/Vecteur2D.h@{Client\_C++/Client/Vecteur2D.h}}
+
+
+Un vecteur peut être considéré comme un vecteur ou un point du plan, c\textquotesingle{}est un couple (x,y) de coordonnées réelles.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\const T \mbox{\hyperlink{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}{operator-\/}} (const T \&u, const T \&v)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur (-\/). \textbackslash{}detail Définition du template. Il permet d\textquotesingle{}utiliser une variable dont le type n\textquotesingle{}est pas connu lors de la compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Un vecteur peut être considéré comme un vecteur ou un point du plan, c\textquotesingle{}est un couple (x,y) de coordonnées réelles. 
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}\label{_vecteur2_d_8h_a5a9b69f6416273e0d8729ca8f8a05885}} 
+\index{Vecteur2D.h@{Vecteur2D.h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vecteur2D.h@{Vecteur2D.h}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T operator-\/ (\begin{DoxyParamCaption}\item[{const T \&}]{u,  }\item[{const T \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Surcharge de l\textquotesingle{}opérateur (-\/). \textbackslash{}detail Définition du template. Il permet d\textquotesingle{}utiliser une variable dont le type n\textquotesingle{}est pas connu lors de la compilation. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em u} & T (type générique). \\
+\hline
+{\em v} & T (type générique). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+u + (-\/v). 
+\end{DoxyReturn}
